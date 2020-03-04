@@ -1,0 +1,248 @@
+1
+00:00:00,000 --> 00:00:07,000
+[Treehouse]
+
+2
+00:00:08,000 --> 00:00:12,000
+In the last video, we saw how to create strings and learned about the escape characters for quotes.
+
+3
+00:00:12,000 --> 00:00:17,000
+No we'll see some other escape characters that we can use in JavaScript strings.
+
+4
+00:00:17,000 --> 00:00:20,000
+For instance, the backslash itself needs to be escaped,
+
+5
+00:00:20,000 --> 00:00:25,000
+because the backslash special meaning is itself escaping.
+
+6
+00:00:25,000 --> 00:00:29,000
+For instance, if we have something like a path on a Windows computer,
+
+7
+00:00:29,000 --> 00:00:35,000
+the path uses backslashes to delimit the folders in its path.
+
+8
+00:00:35,000 --> 00:00:44,000
+You might have something like c:\folder\myfile.txt.
+
+9
+00:00:44,000 --> 00:00:51,000
+Let's do a console.log with our path.
+
+10
+00:00:51,000 --> 00:00:57,000
+If we refresh our page, if we look at our string, we see it's not what we wanted.
+
+11
+00:00:57,000 --> 00:01:03,000
+It's c:oldermyfile.txt, which is not what we wanted. What can we do?
+
+12
+00:01:03,000 --> 00:01:08,000
+Let's go back to our JavaScript file, and we can actually see that TextMate is 
+
+13
+00:01:08,000 --> 00:01:13,000
+highlighting the backslash and f and the backslash and m.
+
+14
+00:01:13,000 --> 00:01:17,000
+That's because the backslash and the next character defined what character 
+
+15
+00:01:17,000 --> 00:01:20,000
+we're escaping inside of our strings.
+
+16
+00:01:20,000 --> 00:01:23,000
+If we actually look back in our output from our browser,
+
+17
+00:01:23,000 --> 00:01:30,000
+we'll notice not only are the backslashes missing, but the f is missing from &quot;folder.&quot;
+
+18
+00:01:30,000 --> 00:01:34,000
+That's because backslash f has a special meaning inside of a string.
+
+19
+00:01:34,000 --> 00:01:37,000
+There are only a few backslash escape characters 
+
+20
+00:01:37,000 --> 00:01:40,000
+that we really need to worry about, but right now 
+
+21
+00:01:40,000 --> 00:01:44,000
+lets just focus on getting our backslashes into our string.
+
+22
+00:01:44,000 --> 00:01:47,000
+To add a literal backslash into a string in JavaScript 
+
+23
+00:01:47,000 --> 00:01:51,000
+all we need to do is do backslash backslash.
+
+24
+00:01:51,000 --> 00:01:54,000
+Though it appears there are two backslashes in our string, 
+
+25
+00:01:54,000 --> 00:01:59,000
+it'll only be displayed as one when we actually use our string.
+
+26
+00:01:59,000 --> 00:02:03,000
+We'll do the same thing for our other backslash by adding another backslash.
+
+27
+00:02:03,000 --> 00:02:09,000
+Now if we save out our strings.js and return to our browser and refresh,
+
+28
+00:02:09,000 --> 00:02:12,000
+we'll see that the string now contains the characters that we want,
+
+29
+00:02:12,000 --> 00:02:17,000
+ including our backslashes and that missing backslash f.
+
+30
+00:02:17,000 --> 00:02:21,000
+Now what if we want to create a string with multiple lines.
+
+31
+00:02:21,000 --> 00:02:29,000
+Well, let's try to do that. We'll create a variable called &quot;multiline,&quot;
+
+32
+00:02:29,000 --> 00:02:34,000
+and we want our string to say &quot;This is line 1&quot; 
+
+33
+00:02:34,000 --> 00:02:43,000
+then &quot;This is line 2&quot; and finally &quot;This is line 3.&quot;
+
+34
+00:02:43,000 --> 00:02:47,000
+We might expect this to work and create a string with 3 lines in it, 
+
+35
+00:02:47,000 --> 00:02:52,000
+but if we save it out and refresh, we get another syntax error.
+
+36
+00:02:52,000 --> 00:02:58,000
+That is because we cannot create a string that spans multiple lines in JavaScript.
+
+37
+00:02:58,000 --> 00:03:01,000
+The closing quotation mark must come on the same line 
+
+38
+00:03:01,000 --> 00:03:04,000
+as the opening quotation mark for it to be a valid string.
+
+39
+00:03:04,000 --> 00:03:13,000
+So if we try to smash all these together and save it out, and we refresh, it will work. 
+
+40
+00:03:13,000 --> 00:03:17,000
+Let's do a console.log to see what the actual result is.
+
+41
+00:03:23,000 --> 00:03:28,000
+We can refresh and see that we get a string that's all on one line.
+
+42
+00:03:28,000 --> 00:03:33,000
+We can make the string multiple lines by using another special character.
+
+43
+00:03:33,000 --> 00:03:36,000
+In order to create multiple lines inside of our string,
+
+44
+00:03:36,000 --> 00:03:40,000
+ the character we're going to use is called a &quot;new line character.&quot;
+
+45
+00:03:40,000 --> 00:03:45,000
+All we do to use this is figure out where we want our line to break.
+
+46
+00:03:45,000 --> 00:03:50,000
+For instance, our first line will break right after the character &quot;1&quot; and before &quot;This.&quot;
+
+47
+00:03:50,000 --> 00:03:54,000
+We insert our character by doing backslash n.
+
+48
+00:03:54,000 --> 00:04:01,000
+If we save this out, and we refresh it, we'll see now our string contains two lines.
+
+49
+00:04:01,000 --> 00:04:05,000
+We can easily make this 3 lines by just including another special 
+
+50
+00:04:05,000 --> 00:04:09,000
+new line character where we want our line to break.
+
+51
+00:04:09,000 --> 00:04:16,000
+If we save this out and refresh, we now have a 3-line string exactly like we wanted it.
+
+52
+00:04:16,000 --> 00:04:20,000
+Now there is one more special character that we use fairly regularly,
+
+53
+00:04:20,000 --> 00:04:23,000
+and it's the &quot;tab&quot; character.
+
+54
+00:04:23,000 --> 00:04:26,000
+This is the character that would normally be 
+
+55
+00:04:26,000 --> 00:04:29,000
+inserted when you hit the &quot;tab&quot; key on your keyboard.
+
+56
+00:04:29,000 --> 00:04:33,000
+To insert a tab, all we do is backslash t, 
+
+57
+00:04:33,000 --> 00:04:38,000
+and a new tab character will be inserted into our string in its place.
+
+58
+00:04:38,000 --> 00:04:42,000
+If we refresh, we can see now a tab character 
+
+59
+00:04:42,000 --> 00:04:46,000
+appears between &quot;this&quot; and &quot;is&quot; on the third line of our string.
+
+60
+00:04:46,000 --> 00:04:49,000
+Now you've seen how to create strings in JavaScript. 
+
+61
+00:04:49,000 --> 00:04:53,000
+In the next video, we'll see how to joint strings together to create new strings.
+
+62
+00:04:53,000 --> 00:04:56,000
+[Treehouse]
+

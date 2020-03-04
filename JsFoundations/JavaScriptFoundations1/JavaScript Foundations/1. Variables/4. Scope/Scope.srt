@@ -1,0 +1,668 @@
+1
+00:00:00,000 --> 00:00:07,000
+[? Music ?] [Treehouse] 
+
+2
+00:00:07,000 --> 00:00:09,000
+In the previous videos, we saw how variables behave
+
+3
+00:00:09,000 --> 00:00:11,000
+when defined in our scripts.
+
+4
+00:00:11,000 --> 00:00:16,000
+Now we'll take a look and see how they behave when defined inside of functions.
+
+5
+00:00:16,000 --> 00:00:18,000
+Now we've seen how to declare our variables and the different names
+
+6
+00:00:18,000 --> 00:00:20,000
+and ways we can declare them.
+
+7
+00:00:20,000 --> 00:00:23,000
+But there's an important part of variables that we call &quot;scope&quot;
+
+8
+00:00:23,000 --> 00:00:26,000
+that's really important for you to understand
+
+9
+00:00:26,000 --> 00:00:29,000
+if you're going to be programming in JavaScript.
+
+10
+00:00:29,000 --> 00:00:33,000
+Variables themselves are limited to where they can be used.
+
+11
+00:00:33,000 --> 00:00:35,000
+If you create a variable from within a function,
+
+12
+00:00:35,000 --> 00:00:40,000
+you can only use that variable from somewhere inside of that function.
+
+13
+00:00:40,000 --> 00:00:42,000
+Let's take a look at an example.
+
+14
+00:00:42,000 --> 00:00:46,000
+The first thing I'm going to do is create a variable called &quot;world.&quot;
+
+15
+00:00:46,000 --> 00:00:53,000
+And this will be a string that just contains the string &quot;World!&quot;
+
+16
+00:00:53,000 --> 00:00:56,000
+Nothing new here, but now I'm going to create a function.
+
+17
+00:00:56,000 --> 00:00:59,000
+You'll remember from Intro to Programming that functions
+
+18
+00:00:59,000 --> 00:01:02,000
+are a construct that allow us to store
+
+19
+00:01:02,000 --> 00:01:06,000
+pieces of code into something that we can execute later.
+
+20
+00:01:06,000 --> 00:01:08,000
+The way we define a function is 
+
+21
+00:01:08,000 --> 00:01:11,000
+using the function keyword, giving that function a name.
+
+22
+00:01:11,000 --> 00:01:16,000
+For instance, I will give this function the name &quot;sayHello.&quot;
+
+23
+00:01:16,000 --> 00:01:19,000
+It's important to understand that actually this name of our function
+
+24
+00:01:19,000 --> 00:01:22,000
+must follow the same rules as variables
+
+25
+00:01:22,000 --> 00:01:24,000
+because actually what's happening here is we're creating a variable
+
+26
+00:01:24,000 --> 00:01:28,000
+called &quot;sayHello,&quot; and its value is a function.
+
+27
+00:01:28,000 --> 00:01:31,000
+This is just a special way of defining a variable
+
+28
+00:01:31,000 --> 00:01:34,000
+whose value is a function.
+
+29
+00:01:34,000 --> 00:01:36,000
+After our function name, we have parentheses, 
+
+30
+00:01:36,000 --> 00:01:38,000
+and we're not going to take any arguments, 
+
+31
+00:01:38,000 --> 00:01:42,000
+so these parentheses are empty.
+
+32
+00:01:42,000 --> 00:01:46,000
+And then we'll have our curly braces to define the body of our code.
+
+33
+00:01:46,000 --> 00:01:50,000
+Now this is where function scope comes into play.
+
+34
+00:01:50,000 --> 00:01:53,000
+Let's create a variable inside of our function called &quot;hello&quot;
+
+35
+00:01:53,000 --> 00:01:57,000
+and give it the value &quot;Hello &quot; with a space.
+
+36
+00:01:57,000 --> 00:02:01,000
+Then the next line of our function will be &quot;console.log,&quot;
+
+37
+00:02:01,000 --> 00:02:03,000
+and this will output to our console.
+
+38
+00:02:03,000 --> 00:02:08,000
+And the value we want to output is the concatenation of the 2 strings.
+
+39
+00:02:08,000 --> 00:02:11,000
+First is hello, and then we want to concatenate that 
+
+40
+00:02:11,000 --> 00:02:19,000
+using the plus operator, which means to join the strings together with world.
+
+41
+00:02:19,000 --> 00:02:24,000
+We're using 2 variables in here to create a string of Hello World.
+
+42
+00:02:24,000 --> 00:02:27,000
+Now to actually run this, we must invoke sayHello,
+
+43
+00:02:27,000 --> 00:02:30,000
+and to do that we simply do sayHello 
+
+44
+00:02:30,000 --> 00:02:35,000
+and then parentheses to actually execute the function.
+
+45
+00:02:35,000 --> 00:02:37,000
+Let's save that.
+
+46
+00:02:37,000 --> 00:02:41,000
+Let's go back here, and I want to comment out a lot of our other stuff right here.
+
+47
+00:02:41,000 --> 00:02:48,000
+What I'm going to do is just comment it out,
+
+48
+00:02:48,000 --> 00:02:51,000
+and now the only console.log we have is inside sayHello.
+
+49
+00:02:51,000 --> 00:02:57,000
+Now when we save this out and we visit our browser and refresh,
+
+50
+00:02:57,000 --> 00:03:00,000
+we see Hello World! is printed into our console,
+
+51
+00:03:00,000 --> 00:03:03,000
+and this is from the sayHello function.
+
+52
+00:03:03,000 --> 00:03:06,000
+In this piece of code, we see a couple of interesting things.
+
+53
+00:03:06,000 --> 00:03:10,000
+First, we're able to define a variable inside of sayHello,
+
+54
+00:03:10,000 --> 00:03:13,000
+and that variable name is &quot;Hello.&quot;
+
+55
+00:03:13,000 --> 00:03:15,000
+And you can see we were able to access it on the line
+
+56
+00:03:15,000 --> 00:03:17,000
+with console.log.
+
+57
+00:03:17,000 --> 00:03:20,000
+The variable &quot;Hello&quot; is able to be used.
+
+58
+00:03:20,000 --> 00:03:22,000
+But we're also able to access world,
+
+59
+00:03:22,000 --> 00:03:25,000
+and world is actually defined outside of the function
+
+60
+00:03:25,000 --> 00:03:28,000
+in what we call the global scope,
+
+61
+00:03:28,000 --> 00:03:30,000
+and that means world can be accessed anywhere
+
+62
+00:03:30,000 --> 00:03:35,000
+from inside any function or outside any function.
+
+63
+00:03:35,000 --> 00:03:38,000
+Now globals are special because we want to make sure that they
+
+64
+00:03:38,000 --> 00:03:40,000
+never interact with each other, so you want to be careful
+
+65
+00:03:40,000 --> 00:03:43,000
+with the global variables you create.
+
+66
+00:03:43,000 --> 00:03:45,000
+If you include a library or another JavaScript file
+
+67
+00:03:45,000 --> 00:03:47,000
+that has its own globals,
+
+68
+00:03:47,000 --> 00:03:51,000
+if both of your scripts have a global variable with the same name,
+
+69
+00:03:51,000 --> 00:03:54,000
+one is going to override the other, so you should be very careful
+
+70
+00:03:54,000 --> 00:03:57,000
+when defining global variables like world.
+
+71
+00:03:57,000 --> 00:04:00,000
+In our case, it's okay because we know this is our only script,
+
+72
+00:04:00,000 --> 00:04:03,000
+and we know that world will not be used in any other context
+
+73
+00:04:03,000 --> 00:04:06,000
+except for this context.
+
+74
+00:04:06,000 --> 00:04:08,000
+So, after our sayHello invocation,
+
+75
+00:04:08,000 --> 00:04:14,000
+what do we think that the values of world and the hello variables would be?
+
+76
+00:04:14,000 --> 00:04:16,000
+Let's check it out.
+
+77
+00:04:16,000 --> 00:04:18,000
+We'll do console.log, and we'll put a little message here,
+
+78
+00:04:18,000 --> 00:04:21,000
+&quot;world outside sayHello.&quot;
+
+79
+00:04:21,000 --> 00:04:24,000
+And as our second argument, we'll have the world variable.
+
+80
+00:04:24,000 --> 00:04:26,000
+Let's run this.
+
+81
+00:04:26,000 --> 00:04:30,000
+If we refresh, we can see we get our console &quot;world outside sayHello.&quot;
+
+82
+00:04:30,000 --> 00:04:34,000
+Its value is world, and that makes sense.
+
+83
+00:04:34,000 --> 00:04:36,000
+We defined its value to be world right up there.
+
+84
+00:04:36,000 --> 00:04:39,000
+Nothing has changed by the time we get to console.log,
+
+85
+00:04:39,000 --> 00:04:42,000
+so its value is fairly predictable.
+
+86
+00:04:42,000 --> 00:04:47,000
+But what happens if we try to access hello from outside of the sayHello function?
+
+87
+00:04:47,000 --> 00:04:52,000
+Well, we could do console.log with &quot;hello outside sayHello&quot;
+
+88
+00:04:52,000 --> 00:04:55,000
+and pass in hello as the argument.
+
+89
+00:04:55,000 --> 00:04:59,000
+So if we save this out and run it,
+
+90
+00:04:59,000 --> 00:05:03,000
+what we actually get is an uncaught reference error which tells us
+
+91
+00:05:03,000 --> 00:05:06,000
+hello is not defined, and that's because  we defined hello
+
+92
+00:05:06,000 --> 00:05:09,000
+from inside of sayHello,
+
+93
+00:05:09,000 --> 00:05:14,000
+which means that's the only place that we're ever able to access that variable.
+
+94
+00:05:14,000 --> 00:05:17,000
+We're able to use it on our console.log(hello + world) line
+
+95
+00:05:17,000 --> 00:05:22,000
+because it also resides inside of the body of our sayHello function.
+
+96
+00:05:22,000 --> 00:05:24,000
+However, our console.log at the end of our script 
+
+97
+00:05:24,000 --> 00:05:27,000
+is outside of our sayHello function,
+
+98
+00:05:27,000 --> 00:05:30,000
+which means that it cannot access our hello variable.
+
+99
+00:05:30,000 --> 00:05:33,000
+Now, this is good because our hello from inside of our function
+
+100
+00:05:33,000 --> 00:05:37,000
+does not interact with any variables outside of it,
+
+101
+00:05:37,000 --> 00:05:40,000
+so it's a great way to keep your information contained.
+
+102
+00:05:40,000 --> 00:05:42,000
+However, any time you use a variable, you need to make sure
+
+103
+00:05:42,000 --> 00:05:44,000
+that it's in scope.
+
+104
+00:05:44,000 --> 00:05:49,000
+Now, JavaScript allows us to actually create functions inside of functions,
+
+105
+00:05:49,000 --> 00:05:54,000
+so let's take a look at how that interacts with how we're able to use variables.
+
+106
+00:05:54,000 --> 00:05:56,000
+I'm going to modify our code here.
+
+107
+00:05:56,000 --> 00:05:59,000
+The first thing I'm going to do is I'm going to comment out this line here
+
+108
+00:05:59,000 --> 00:06:02,000
+because it triggers an error and is not allowed.
+
+109
+00:06:02,000 --> 00:06:06,000
+So, we're going to keep the first line of our sayHello function the same.
+
+110
+00:06:06,000 --> 00:06:11,000
+However, we're going to create another function inside of sayHello
+
+111
+00:06:11,000 --> 00:06:15,000
+by doing &quot;function,&quot; and we'll call this &quot;inner.&quot;
+
+112
+00:06:15,000 --> 00:06:18,000
+And we'll declare it the exact same way.
+
+113
+00:06:18,000 --> 00:06:22,000
+Now, what I'm going to do is I'm going to move our final console.log(hello + world)
+
+114
+00:06:22,000 --> 00:06:26,000
+inside of our inner function.
+
+115
+00:06:26,000 --> 00:06:29,000
+And to add a little bit more to this, what I'll do is inside of our inner function
+
+116
+00:06:29,000 --> 00:06:33,000
+define a variable called &quot;extra.&quot;
+
+117
+00:06:33,000 --> 00:06:40,000
+And we'll say, &quot;There is more!&quot;
+
+118
+00:06:40,000 --> 00:06:43,000
+And we'll add that to our console.log.
+
+119
+00:06:43,000 --> 00:06:46,000
+Now right now if we executed sayHello, nothing would happen
+
+120
+00:06:46,000 --> 00:06:49,000
+because we're not executing our inner function,
+
+121
+00:06:49,000 --> 00:06:51,000
+so we'll do the same type of thing.
+
+122
+00:06:51,000 --> 00:06:55,000
+We'll execute inner right after we define it.
+
+123
+00:06:55,000 --> 00:06:58,000
+Let's save this out,
+
+124
+00:06:58,000 --> 00:07:00,000
+and we'll refresh our page.
+
+125
+00:07:00,000 --> 00:07:05,000
+And now we can see it prints our &quot;Hello world! There is more!&quot;
+
+126
+00:07:05,000 --> 00:07:09,000
+We see there's an extension of what we saw in the last example.
+
+127
+00:07:09,000 --> 00:07:12,000
+From 2 layers deep inside of a function definition,
+
+128
+00:07:12,000 --> 00:07:15,000
+we're able to access world, which is global,
+
+129
+00:07:15,000 --> 00:07:18,000
+but we're also able to access hello, and that's because 
+
+130
+00:07:18,000 --> 00:07:22,000
+this line right here, though it resides inside of inner,
+
+131
+00:07:22,000 --> 00:07:28,000
+the inner function itself also resides inside of sayHello where hello is defined,
+
+132
+00:07:28,000 --> 00:07:33,000
+therefore, inside of inner we have access to that hello variable.
+
+133
+00:07:33,000 --> 00:07:35,000
+And of course we also--from inside of inner--
+
+134
+00:07:35,000 --> 00:07:41,000
+have access to the extra variable, which is itself defined inside of inner.
+
+135
+00:07:41,000 --> 00:07:44,000
+If we want to determine whether or not we can use a variable,
+
+136
+00:07:44,000 --> 00:07:47,000
+we'll take a look at the line where it's used,
+
+137
+00:07:47,000 --> 00:07:50,000
+and then we'll take a look at the functions defined around it
+
+138
+00:07:50,000 --> 00:07:52,000
+and see if we can't find that variable.
+
+139
+00:07:52,000 --> 00:07:55,000
+For instance, if we wanted to check for hello,
+
+140
+00:07:55,000 --> 00:07:57,000
+we see it's on this line inside of inner.
+
+141
+00:07:57,000 --> 00:08:00,000
+Is hello defined in the function inner?
+
+142
+00:08:00,000 --> 00:08:04,000
+No, only extra is, so what we can do is we'll go and see
+
+143
+00:08:04,000 --> 00:08:08,000
+the function wrapped around that, and that function is sayHello,
+
+144
+00:08:08,000 --> 00:08:11,000
+and there we do find the variable Hello.
+
+145
+00:08:11,000 --> 00:08:14,000
+By going up the level of nested functions,
+
+146
+00:08:14,000 --> 00:08:17,000
+we're able to find hello, and therefore, we're able to use it.
+
+147
+00:08:17,000 --> 00:08:20,000
+The same goes with extra except we find it 
+
+148
+00:08:20,000 --> 00:08:22,000
+right in the function where it's used.
+
+149
+00:08:22,000 --> 00:08:25,000
+And the same goes for world because as we move up 
+
+150
+00:08:25,000 --> 00:08:28,000
+and out of sayHello, we enter the global scope
+
+151
+00:08:28,000 --> 00:08:30,000
+where world is defined.
+
+152
+00:08:30,000 --> 00:08:33,000
+However, in these lines here, like we commented out,
+
+153
+00:08:33,000 --> 00:08:38,000
+we cannot use hello because if we take a look at where this console.log lies,
+
+154
+00:08:38,000 --> 00:08:41,000
+it lies in the global scope, so the only place we can look
+
+155
+00:08:41,000 --> 00:08:45,000
+for the hello variable is inside of the global scope
+
+156
+00:08:45,000 --> 00:08:49,000
+where it's definitely not defined, and that's how we get our errors.
+
+157
+00:08:49,000 --> 00:08:51,000
+It's pretty simple.
+
+158
+00:08:51,000 --> 00:08:54,000
+Any time that you're trying to determine what variables you have access to,
+
+159
+00:08:54,000 --> 00:08:58,000
+take a look at the function most immediately defined around your code.
+
+160
+00:08:58,000 --> 00:09:02,000
+If it's not there, look at the next level function defined around that
+
+161
+00:09:02,000 --> 00:09:04,000
+until you reach the global scope.
+
+162
+00:09:04,000 --> 00:09:07,000
+Once you've reached the global scope, if you have not found that variable,
+
+163
+00:09:07,000 --> 00:09:10,000
+then it's not a variable that you can use.
+
+164
+00:09:10,000 --> 00:09:14,000
+So now we've seen how functions affect the scope of our variables.
+
+165
+00:09:14,000 --> 00:09:17,000
+Up next, we'll see what happens when 2 variables
+
+166
+00:09:17,000 --> 00:09:20,000
+in different scopes share the same name.
+
+167
+00:09:20,000 --> 00:09:22,000
+[? Music ?] [Treehouse] 
+

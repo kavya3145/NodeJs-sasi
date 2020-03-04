@@ -1,0 +1,588 @@
+1
+00:00:00,000 --> 00:00:07,000
+[? Music ?] [Treehouse] 
+
+2
+00:00:07,000 --> 00:00:10,000
+So far we've seen what happens when we declare a variable
+
+3
+00:00:10,000 --> 00:00:12,000
+and define its value immediately.
+
+4
+00:00:12,000 --> 00:00:14,000
+Now we'll see what happens when we want to declare a variable
+
+5
+00:00:14,000 --> 00:00:17,000
+without giving it a value.
+
+6
+00:00:17,000 --> 00:00:19,000
+So far we've declared all of our variables using this format,
+
+7
+00:00:19,000 --> 00:00:25,000
+the key word bar, the name of our variable, in this case myVar,
+
+8
+00:00:25,000 --> 00:00:29,000
+equals and then some value.
+
+9
+00:00:29,000 --> 00:00:33,000
+Now, when we declare a variable, we actually do not need to initialize the value,
+
+10
+00:00:33,000 --> 00:00:36,000
+and that means we can actually leave off the last 2 parts here,
+
+11
+00:00:36,000 --> 00:00:40,000
+the value and equals sign, and simply be left with var
+
+12
+00:00:40,000 --> 00:00:44,000
+and then the name of our variable, in this case myVar.
+
+13
+00:00:44,000 --> 00:00:48,000
+What happens when we declare a variable in this way?
+
+14
+00:00:48,000 --> 00:00:53,000
+Let's save this out, jump into our browser.
+
+15
+00:00:53,000 --> 00:00:55,000
+Now we've run our page as we've refreshed it,
+
+16
+00:00:55,000 --> 00:00:58,000
+and if we actually test out in our JavaScript console down here
+
+17
+00:00:58,000 --> 00:01:06,000
+myVar, we'll see that the value that it gives us back is undefined.
+
+18
+00:01:06,000 --> 00:01:11,000
+Now, undefined represents a non-value that was never defined. 
+
+19
+00:01:11,000 --> 00:01:14,000
+There's another non-value called null.
+
+20
+00:01:14,000 --> 00:01:17,000
+Undefined and null are very similar, but null can be used
+
+21
+00:01:17,000 --> 00:01:22,000
+when you simply want to indicate that a variable truly is empty
+
+22
+00:01:22,000 --> 00:01:25,000
+and that it's not simply empty by default.
+
+23
+00:01:25,000 --> 00:01:29,000
+How can we test to see if a variable is defined?
+
+24
+00:01:29,000 --> 00:01:32,000
+Well, we've declared myVar here, and its value is undefined,
+
+25
+00:01:32,000 --> 00:01:35,000
+so let's try to see if we can evaluate whether or not 
+
+26
+00:01:35,000 --> 00:01:38,000
+it is undefined using a piece of code.
+
+27
+00:01:38,000 --> 00:01:41,000
+We're going to use console.log, 
+
+28
+00:01:41,000 --> 00:01:44,000
+and that is built into our browser, and what this allows us to do,
+
+29
+00:01:44,000 --> 00:01:48,000
+as we've seen before, is print out text to our JavaScript console
+
+30
+00:01:48,000 --> 00:01:50,000
+that we have in the bottom of our page.
+
+31
+00:01:50,000 --> 00:01:53,000
+We simply pass it a value, and it will print it out to the console
+
+32
+00:01:53,000 --> 00:01:55,000
+that we have on our page.
+
+33
+00:01:55,000 --> 00:01:58,000
+To get a true or false value based on whether it's undefined,
+
+34
+00:01:58,000 --> 00:02:01,000
+what we can do is use the type of operator, 
+
+35
+00:02:01,000 --> 00:02:06,000
+and that's typeof, and you'll see we have it highlighted here
+
+36
+00:02:06,000 --> 00:02:09,000
+because it's a key word in JavaScript.
+
+37
+00:02:09,000 --> 00:02:12,000
+The way typeof works is we use the typeof key word
+
+38
+00:02:12,000 --> 00:02:17,000
+and then the name of a variable, in this case, myVar.
+
+39
+00:02:17,000 --> 00:02:21,000
+If we pass in this, let's see what happens in our console.
+
+40
+00:02:21,000 --> 00:02:27,000
+If we refresh, we can now see this line here undefined.
+
+41
+00:02:27,000 --> 00:02:30,000
+So, when we do typeof and undefined variable, 
+
+42
+00:02:30,000 --> 00:02:32,000
+we get the string undefined.
+
+43
+00:02:32,000 --> 00:02:36,000
+Now, if we wanted to test if a variable is undefined,
+
+44
+00:02:36,000 --> 00:02:38,000
+for instance, for use in an if statement,
+
+45
+00:02:38,000 --> 00:02:43,000
+we can use this expression, &quot;typeof myVar ===&quot; 
+
+46
+00:02:43,000 --> 00:02:48,000
+and then the string &quot;undefined.&quot;
+
+47
+00:02:48,000 --> 00:02:52,000
+Now, what this is doing is it's taking the typeof myVar,
+
+48
+00:02:52,000 --> 00:02:54,000
+which in this case would be the string undefined,
+
+49
+00:02:54,000 --> 00:02:58,000
+and comparing it to another string undefined.
+
+50
+00:02:58,000 --> 00:03:02,000
+The 3 equal signs is the operator that will test for the equality
+
+51
+00:03:02,000 --> 00:03:04,000
+of both sides of it.
+
+52
+00:03:04,000 --> 00:03:07,000
+If we have the string undefined on the left and the string undefined
+
+53
+00:03:07,000 --> 00:03:10,000
+on the right, this will all evaluate to true.
+
+54
+00:03:10,000 --> 00:03:12,000
+Let's test it out.
+
+55
+00:03:12,000 --> 00:03:16,000
+And now we can see console.log now evaluates to true.
+
+56
+00:03:16,000 --> 00:03:19,000
+If you ever want to test to see if a variable is undefined,
+
+57
+00:03:19,000 --> 00:03:21,000
+that's how we can do it.
+
+58
+00:03:21,000 --> 00:03:25,000
+Now, you may see in some other code testing for undefined in a different way.
+
+59
+00:03:25,000 --> 00:03:29,000
+Let's try &quot;console.log,&quot; 
+
+60
+00:03:29,000 --> 00:03:34,000
+and we'll do &quot;myVar,&quot;
+
+61
+00:03:34,000 --> 00:03:39,000
+and without the typeof operator we will compare it to undefined,
+
+62
+00:03:39,000 --> 00:03:44,000
+and this is undefined the key word, not the string.
+
+63
+00:03:44,000 --> 00:03:47,000
+Instead we're simply testing if myVar itself
+
+64
+00:03:47,000 --> 00:03:50,000
+is equal to undefined.
+
+65
+00:03:50,000 --> 00:03:53,000
+Now, if we test this out, it appears it's true,
+
+66
+00:03:53,000 --> 00:03:57,000
+and so you may think, &quot;Hey, that's an easier way to test for it.&quot;
+
+67
+00:03:57,000 --> 00:03:59,000
+&quot;Why don't we always do that?&quot;
+
+68
+00:03:59,000 --> 00:04:03,000
+Well, undefined in JavaScript is actually a bit of a quirky key word
+
+69
+00:04:03,000 --> 00:04:06,000
+in that it's not really a key word at all.
+
+70
+00:04:06,000 --> 00:04:10,000
+It's actually a variable that's set by JavaScript,
+
+71
+00:04:10,000 --> 00:04:14,000
+and because of that it's possible to accidentally overwrite
+
+72
+00:04:14,000 --> 00:04:18,000
+the value of undefined or perhaps intentionally overwrite the value of undefined
+
+73
+00:04:18,000 --> 00:04:21,000
+to mess up somebody else's code.
+
+74
+00:04:21,000 --> 00:04:25,000
+What happens if somewhere else in your code we said something like 
+
+75
+00:04:25,000 --> 00:04:29,000
+&quot;undefined = true?&quot;
+
+76
+00:04:29,000 --> 00:04:33,000
+You may think that's pretty silly to be allowed, and it kind of is,
+
+77
+00:04:33,000 --> 00:04:35,000
+but this is something that can actually happen in your code,
+
+78
+00:04:35,000 --> 00:04:38,000
+so you need to be very careful when testing for undefined.
+
+79
+00:04:38,000 --> 00:04:42,000
+So, if undefined = true is somewhere in our code
+
+80
+00:04:42,000 --> 00:04:47,000
+and we run it, instead of true true now we get true false,
+
+81
+00:04:47,000 --> 00:04:52,000
+so that's why we can't trust the actual undefined value that we have here.
+
+82
+00:04:52,000 --> 00:04:56,000
+Now, there are ways that we could enforce that our undefined is untampered with,
+
+83
+00:04:56,000 --> 00:05:00,000
+however, it's best practice just to use typeof myVar
+
+84
+00:05:00,000 --> 00:05:03,000
+is equal to the string undefined.
+
+85
+00:05:03,000 --> 00:05:07,000
+That way you can be pretty sure that myVar is truly undefined
+
+86
+00:05:07,000 --> 00:05:10,000
+and undefined itself, if its value has been tampered with,
+
+87
+00:05:10,000 --> 00:05:12,000
+it doesn't matter.
+
+88
+00:05:12,000 --> 00:05:15,000
+We talked a little bit about how undefined represents an empty value,
+
+89
+00:05:15,000 --> 00:05:18,000
+meaning that it hasn't been set to.
+
+90
+00:05:18,000 --> 00:05:20,000
+But what about null?
+
+91
+00:05:20,000 --> 00:05:24,000
+For instance, we could say &quot;var x = null,&quot;
+
+92
+00:05:24,000 --> 00:05:30,000
+and null is a key word that means nothing or empty.
+
+93
+00:05:30,000 --> 00:05:34,000
+Both null and undefined are what we call falsy values.
+
+94
+00:05:34,000 --> 00:05:38,000
+If we remember, in an if statement if we have a falsy value
+
+95
+00:05:38,000 --> 00:05:41,000
+it will not execute, so we could, for instance, say
+
+96
+00:05:41,000 --> 00:05:46,000
+&quot;myVar,&quot; and in the if block here
+
+97
+00:05:46,000 --> 00:05:55,000
+we'll do &quot;console.log If,&quot; and we'll use an else here,
+
+98
+00:05:55,000 --> 00:06:00,000
+and in the else block we'll do &quot;console.log Else.&quot;
+
+99
+00:06:00,000 --> 00:06:05,000
+Now we'll see which of these two get printed to our code.
+
+100
+00:06:05,000 --> 00:06:09,000
+In this case, we can see else because myVar has the value undefined,
+
+101
+00:06:09,000 --> 00:06:12,000
+and let's see what happens if we put an x.
+
+102
+00:06:12,000 --> 00:06:15,000
+Again, we see else, and that's because null and undefined
+
+103
+00:06:15,000 --> 00:06:20,000
+are both falsy values like false or the number 0.
+
+104
+00:06:20,000 --> 00:06:23,000
+Now, because undefined and null are so similar,
+
+105
+00:06:23,000 --> 00:06:29,000
+oftentimes we want to check if a value is either null or undefined.
+
+106
+00:06:29,000 --> 00:06:32,000
+But sometimes we want to do something different 
+
+107
+00:06:32,000 --> 00:06:36,000
+if it is actually false or the value is 0.
+
+108
+00:06:36,000 --> 00:06:41,000
+If we want to check for either of the empty values null or undefined,
+
+109
+00:06:41,000 --> 00:06:45,000
+one easy way we could do this is to do our variable
+
+110
+00:06:45,000 --> 00:06:48,000
+== null.
+
+111
+00:06:48,000 --> 00:06:51,000
+Now, you may think that only works for null, but let's check it out.
+
+112
+00:06:51,000 --> 00:06:54,000
+Right now we have x == null,
+
+113
+00:06:54,000 --> 00:06:57,000
+and as you might expect, if we run it
+
+114
+00:06:57,000 --> 00:07:00,000
+we see the if statement executes, and that's because x is null
+
+115
+00:07:00,000 --> 00:07:05,000
+and null == null makes sense that it would be true.
+
+116
+00:07:05,000 --> 00:07:07,000
+Null is null.
+
+117
+00:07:07,000 --> 00:07:12,000
+But let's see what happens if we do myVar.
+
+118
+00:07:12,000 --> 00:07:14,000
+Does myVar = null?
+
+119
+00:07:14,000 --> 00:07:17,000
+Well, it's undefined, so you'd think it might not,
+
+120
+00:07:17,000 --> 00:07:20,000
+but if we refresh, we see that it does.
+
+121
+00:07:20,000 --> 00:07:23,000
+That's because the == or double equals operator
+
+122
+00:07:23,000 --> 00:07:26,000
+is not strict in how it compares things.
+
+123
+00:07:26,000 --> 00:07:30,000
+Sometimes it will sort of change the value when it evaluates it.
+
+124
+00:07:30,000 --> 00:07:33,000
+For instance, undefined and null are so similar
+
+125
+00:07:33,000 --> 00:07:36,000
+that the double equals operator considers them
+
+126
+00:07:36,000 --> 00:07:38,000
+to be equivalent.
+
+127
+00:07:38,000 --> 00:07:41,000
+I'm going to comment out this undefined = true 
+
+128
+00:07:41,000 --> 00:07:45,000
+for the purposes of demonstration here so we have the true value of undefined
+
+129
+00:07:45,000 --> 00:07:50,000
+available to us, and if we were to check undefined
+
+130
+00:07:50,000 --> 00:07:56,000
+== null we see that it evaluates to true.
+
+131
+00:07:56,000 --> 00:07:59,000
+You'll remember that there's also a triple equals operator,
+
+132
+00:07:59,000 --> 00:08:02,000
+and this is the strict equality operator.
+
+133
+00:08:02,000 --> 00:08:06,000
+And this will not change values if they're close enough to each other,
+
+134
+00:08:06,000 --> 00:08:11,000
+so if we do undefined === null,
+
+135
+00:08:11,000 --> 00:08:14,000
+we'll see it's false because strictly they're not equal,
+
+136
+00:08:14,000 --> 00:08:17,000
+but conceptually they kind of are, which is why double equals
+
+137
+00:08:17,000 --> 00:08:21,000
+returns true and triple equals returns false.
+
+138
+00:08:21,000 --> 00:08:24,000
+In most cases, you want to use the triple equals because you don't want
+
+139
+00:08:24,000 --> 00:08:28,000
+any unexpected changing of variables when comparing them.
+
+140
+00:08:28,000 --> 00:08:32,000
+But in this case, when checking something double equals null,
+
+141
+00:08:32,000 --> 00:08:36,000
+it has the convenience of allowing  you to check if it's null or undefined.
+
+142
+00:08:36,000 --> 00:08:39,000
+This is a special use case that you can use if you ever want to check
+
+143
+00:08:39,000 --> 00:08:42,000
+that a value is either null or undefined
+
+144
+00:08:42,000 --> 00:08:47,000
+as opposed to null, undefined, false, or 0.
+
+145
+00:08:47,000 --> 00:08:50,000
+Up next, we'll see how variables are accessible at different points in our program
+
+146
+00:08:50,000 --> 00:08:54,000
+by learning about variable scope.
+
+147
+00:08:54,000 --> 00:08:56,000
+[? Music ?] [Treehouse] 
+

@@ -1,0 +1,492 @@
+1
+00:00:00,000 --> 00:00:07,000
+[? Music ?] [Treehouse]
+
+2
+00:00:07,000 --> 00:00:09,000
+In the last video, we saw examples of how to create
+
+3
+00:00:09,000 --> 00:00:12,000
+and use variables in JavaScript.
+
+4
+00:00:12,000 --> 00:00:14,000
+Now we'll take a look at the rules that JavaScript places
+
+5
+00:00:14,000 --> 00:00:17,000
+on the names of our variables.
+
+6
+00:00:17,000 --> 00:00:20,000
+Now we're back in our myscript.js file.
+
+7
+00:00:20,000 --> 00:00:22,000
+So far we've declared 2 variables:
+
+8
+00:00:22,000 --> 00:00:25,000
+one called color, and one called myDiv.
+
+9
+00:00:25,000 --> 00:00:28,000
+One stores a string, and one stores an actual div
+
+10
+00:00:28,000 --> 00:00:30,000
+that we have on our page.
+
+11
+00:00:30,000 --> 00:00:32,000
+Now, we've seen 2 different names for variables. 
+
+12
+00:00:32,000 --> 00:00:37,000
+So far they all have just been letters, and they started with lower case.
+
+13
+00:00:37,000 --> 00:00:40,000
+But there are a lot of different names we could give our variables.
+
+14
+00:00:40,000 --> 00:00:42,000
+However, there are some restrictions. 
+
+15
+00:00:42,000 --> 00:00:45,000
+Let's take a look at how we name our variables.
+
+16
+00:00:45,000 --> 00:00:48,000
+First of all, the names of our variables should be descriptive
+
+17
+00:00:48,000 --> 00:00:51,000
+of what the value of that variable is.
+
+18
+00:00:51,000 --> 00:00:53,000
+If you give a variable a meaningless name, 
+
+19
+00:00:53,000 --> 00:00:56,000
+it will be very hard to understand in your code later,
+
+20
+00:00:56,000 --> 00:01:00,000
+even if you think you know what's going on right now.
+
+21
+00:01:00,000 --> 00:01:03,000
+The rules for naming our variable are as follows.
+
+22
+00:01:03,000 --> 00:01:05,000
+It can start with any letter.
+
+23
+00:01:05,000 --> 00:01:10,000
+That's A-Z, and that could be upper case or lower case,
+
+24
+00:01:10,000 --> 00:01:13,000
+or it could start with an underscore, 
+
+25
+00:01:13,000 --> 00:01:20,000
+or it could start with a dollar sign.
+
+26
+00:01:20,000 --> 00:01:27,000
+We can continue with either A-Z, upper case or lower case,
+
+27
+00:01:27,000 --> 00:01:32,000
+or any number 0-9, or an underscore,
+
+28
+00:01:32,000 --> 00:01:34,000
+or a dollar sign.
+
+29
+00:01:34,000 --> 00:01:37,000
+And these are what make up our valid variable names.
+
+30
+00:01:37,000 --> 00:01:42,000
+However, you may notice that we cannot start a variable name with a number.
+
+31
+00:01:42,000 --> 00:01:44,000
+That would not be legal, so let's take a look at some valid 
+
+32
+00:01:44,000 --> 00:01:48,000
+and invalid variable names.
+
+33
+00:01:48,000 --> 00:01:54,000
+For instance, we could have a var called &quot;car.&quot;
+
+34
+00:01:54,000 --> 00:01:56,000
+Our variable name doesn't have to start with a lower case, 
+
+35
+00:01:56,000 --> 00:02:02,000
+so we could have something like Color with a capital C.
+
+36
+00:02:02,000 --> 00:02:06,000
+We could even start our variable with an underscore
+
+37
+00:02:06,000 --> 00:02:15,000
+and say something like _myVariable.
+
+38
+00:02:15,000 --> 00:02:21,000
+Or we could start with a dollar sign,
+
+39
+00:02:21,000 --> 00:02:23,000
+or we could do something with numbers in it
+
+40
+00:02:23,000 --> 00:02:26,000
+so long as the numbers aren't the first character in the variable name,
+
+41
+00:02:26,000 --> 00:02:33,000
+so it would be something like &quot;a&quot; with a bunch of numbers. 
+
+42
+00:02:33,000 --> 00:02:35,000
+But that's probably not a great variable name.
+
+43
+00:02:35,000 --> 00:02:38,000
+If we were to save this out and go to our browser
+
+44
+00:02:38,000 --> 00:02:41,000
+and refresh, we're going to take a look at the JavaScript console,
+
+45
+00:02:41,000 --> 00:02:46,000
+which in Chrome you can pull up by doing Command, Option, J
+
+46
+00:02:46,000 --> 00:02:50,000
+or opening it from the developer's tools like we saw in Intro to Programming.
+
+47
+00:02:50,000 --> 00:02:52,000
+Now, right now you can see that there are no errors
+
+48
+00:02:52,000 --> 00:02:54,000
+ in our code, which is a good sign.
+
+49
+00:02:54,000 --> 00:02:58,000
+If we had an invalid variable name, we would see some errors.
+
+50
+00:02:58,000 --> 00:03:05,000
+Let's see what those errors might look like.
+
+51
+00:03:05,000 --> 00:03:12,000
+One thing you might want to try is a variable like &quot;3colors.&quot;
+
+52
+00:03:12,000 --> 00:03:16,000
+If we were to do that and we run our code, 
+
+53
+00:03:16,000 --> 00:03:20,000
+we get an error here, and it says &quot;Uncaught syntax error.&quot;
+
+54
+00:03:20,000 --> 00:03:22,000
+&quot;Unexpected token illegal.&quot;
+
+55
+00:03:22,000 --> 00:03:26,000
+And that's because it did not recognize the number &quot;3colors&quot;
+
+56
+00:03:26,000 --> 00:03:30,000
+as a valid variable name, so this is an error you might encounter in your code
+
+57
+00:03:30,000 --> 00:03:33,000
+if you incorrectly name a variable.
+
+58
+00:03:33,000 --> 00:03:36,000
+Some other errors you could make are using something like
+
+59
+00:03:36,000 --> 00:03:39,000
+a percentage sign.
+
+60
+00:03:39,000 --> 00:03:42,000
+If we comment out the line before and refresh,
+
+61
+00:03:42,000 --> 00:03:45,000
+we can see now we're getting a slightly different message.
+
+62
+00:03:45,000 --> 00:03:47,000
+&quot;Unexpected token %.&quot;
+
+63
+00:03:47,000 --> 00:03:50,000
+That's because it understood part of it, but then it saw the percentage sign
+
+64
+00:03:50,000 --> 00:03:54,000
+and did not know what that meant because that's not a valid character
+
+65
+00:03:54,000 --> 00:03:58,000
+to have in a variable name, so let's comment this one out. 
+
+66
+00:03:58,000 --> 00:04:01,000
+And let's look at another invalid variable name.
+
+67
+00:04:01,000 --> 00:04:04,000
+For instance, we could do &quot;var person-name.&quot;
+
+68
+00:04:04,000 --> 00:04:10,000
+You might be tempted to do something like that.
+
+69
+00:04:10,000 --> 00:04:13,000
+However, if we take a look, we see &quot;Unexpected token -,&quot;
+
+70
+00:04:13,000 --> 00:04:16,000
+again, because dash is not a valid variable name.
+
+71
+00:04:16,000 --> 00:04:18,000
+And if you think about it, it makes sense.
+
+72
+00:04:18,000 --> 00:04:22,000
+A dash in JavaScript is the sign for subtraction,
+
+73
+00:04:22,000 --> 00:04:26,000
+so it doesn't really make sense to have it in the middle of a variable name. 
+
+74
+00:04:26,000 --> 00:04:28,000
+And that same rule goes for all sorts of other characters.
+
+75
+00:04:28,000 --> 00:04:36,000
+For instance, we can't have a variable called &quot;@you,&quot;
+
+76
+00:04:36,000 --> 00:04:39,000
+because again, we have an illegal token.
+
+77
+00:04:39,000 --> 00:04:43,000
+We'll just comment all of these out so we don't get these errors again.
+
+78
+00:04:43,000 --> 00:04:45,000
+Now, even within the rules of naming our variables, 
+
+79
+00:04:45,000 --> 00:04:49,000
+there are some words that we just can't use as variable names, 
+
+80
+00:04:49,000 --> 00:04:51,000
+and that's because they're reserved for special uses in 
+
+81
+00:04:51,000 --> 00:04:54,000
+the actual JavaScript language. 
+
+82
+00:04:54,000 --> 00:04:57,000
+For instance, the set of JavaScript key words that are already defined 
+
+83
+00:04:57,000 --> 00:04:59,000
+in JavaScript are not usable.
+
+84
+00:04:59,000 --> 00:05:03,000
+For instance, things like if, else, function, continue, 
+
+85
+00:05:03,000 --> 00:05:05,000
+switch, and more. 
+
+86
+00:05:05,000 --> 00:05:08,000
+These are actual words that we use inside of our JavaScript code
+
+87
+00:05:08,000 --> 00:05:11,000
+to define the behavior of our code, 
+
+88
+00:05:11,000 --> 00:05:13,000
+and if we named a variable after one of these names, 
+
+89
+00:05:13,000 --> 00:05:16,000
+our code simply wouldn't work.
+
+90
+00:05:16,000 --> 00:05:18,000
+For instance, let's see what would happen
+
+91
+00:05:18,000 --> 00:05:20,000
+if we tried to give a variable the name--
+
+92
+00:05:20,000 --> 00:05:27,000
+let's say something like &quot;continue = true.&quot;
+
+93
+00:05:27,000 --> 00:05:30,000
+Now, we can see right away our text editor, 
+
+94
+00:05:30,000 --> 00:05:33,000
+for instance, has highlighted continue because it recognizes
+
+95
+00:05:33,000 --> 00:05:36,000
+continue as a reserved word in JavaScript.
+
+96
+00:05:36,000 --> 00:05:39,000
+That's our clue that we shouldn't use that word.
+
+97
+00:05:39,000 --> 00:05:41,000
+If we go back and actually run our code, 
+
+98
+00:05:41,000 --> 00:05:44,000
+we see &quot;Unexpected token continue.&quot;
+
+99
+00:05:44,000 --> 00:05:46,000
+Again, that's because continue actually has 
+
+100
+00:05:46,000 --> 00:05:49,000
+a very specific meaning in JavaScript.
+
+101
+00:05:49,000 --> 00:05:51,000
+Besides the key words that we actually use in JavaScript,
+
+102
+00:05:51,000 --> 00:05:53,000
+there are a couple other groups of words
+
+103
+00:05:53,000 --> 00:05:56,000
+that you may not expect to be reserved.
+
+104
+00:05:56,000 --> 00:05:59,000
+For instance, this set of words is actually reserved for
+
+105
+00:05:59,000 --> 00:06:01,000
+possible future use in JavaScript.
+
+106
+00:06:01,000 --> 00:06:06,000
+For instance, class, export, extends, and super.
+
+107
+00:06:06,000 --> 00:06:09,000
+They're not actually used in JavaScript right now,
+
+108
+00:06:09,000 --> 00:06:12,000
+but we can still not use them as variable names because 
+
+109
+00:06:12,000 --> 00:06:17,000
+they're reserved for possible future use in future versions of JavaScript,
+
+110
+00:06:17,000 --> 00:06:21,000
+and this is so your code doesn't break if JavaScript is updated later.
+
+111
+00:06:21,000 --> 00:06:24,000
+Finally, there are a set of key words that are new features 
+
+112
+00:06:24,000 --> 00:06:26,000
+in later versions of JavaScript.
+
+113
+00:06:26,000 --> 00:06:30,000
+These are features that might work in some browsers but not all.
+
+114
+00:06:30,000 --> 00:06:34,000
+These include the let key word, package, yield,
+
+115
+00:06:34,000 --> 00:06:37,000
+protected, private, and static.
+
+116
+00:06:37,000 --> 00:06:39,000
+Again, these key words you may not use all the time, 
+
+117
+00:06:39,000 --> 00:06:42,000
+or you may depending on your environment, but again,
+
+118
+00:06:42,000 --> 00:06:44,000
+you cannot use them as variable names
+
+119
+00:06:44,000 --> 00:06:48,000
+because JavaScript does have them as reserved words. 
+
+120
+00:06:48,000 --> 00:06:51,000
+Now you should be familiar with what variable names you can use
+
+121
+00:06:51,000 --> 00:06:53,000
+and what variable names you cannot use.
+
+122
+00:06:53,000 --> 00:06:58,000
+In the next video, we'll learn about a special value called undefined. 
+
+123
+00:06:58,000 --> 00:07:00,000
+[? Music ?] [Treehouse]
+

@@ -1,0 +1,532 @@
+1
+00:00:00,000 --> 00:00:07,000
+[? Music ?] [Treehouse] 
+
+2
+00:00:08,000 --> 00:00:11,000
+Sometimes we want to store more than one value into a single variable.
+
+3
+00:00:11,000 --> 00:00:14,000
+That's where arrays are useful.
+
+4
+00:00:14,000 --> 00:00:16,000
+An array allows us to store a list of ordered values
+
+5
+00:00:16,000 --> 00:00:18,000
+into a single value.
+
+6
+00:00:18,000 --> 00:00:22,000
+In this video, we'll see how to create arrays in JavaScript.
+
+7
+00:00:22,000 --> 00:00:24,000
+Arrays represent lists of objects.
+
+8
+00:00:24,000 --> 00:00:27,000
+We're going to see how we're going to create them in JavaScript.
+
+9
+00:00:27,000 --> 00:00:30,000
+We'll be working on this page in our Chrome,
+
+10
+00:00:30,000 --> 00:00:33,000
+and we're going to be continuing to experiment with the developer's tools,
+
+11
+00:00:33,000 --> 00:00:36,000
+which we open by hitting Command, Option, J
+
+12
+00:00:36,000 --> 00:00:40,000
+or locating the developer's tools from your menu.
+
+13
+00:00:40,000 --> 00:00:43,000
+Now, I just have a basic page here, and we can see what that page looks like
+
+14
+00:00:43,000 --> 00:00:46,000
+if we go to our editor, and we see index.html,
+
+15
+00:00:46,000 --> 00:00:50,000
+and at the end of our page we're including an arrays.js,
+
+16
+00:00:50,000 --> 00:00:53,000
+and right now it's an empty JavaScript file,
+
+17
+00:00:53,000 --> 00:00:56,000
+but this is where we'll be experimenting with JavaScript arrays.
+
+18
+00:00:56,000 --> 00:00:59,000
+Let's take a look at a basic array.
+
+19
+00:00:59,000 --> 00:01:03,000
+Like I said, arrays represent lists of values in JavaScript.
+
+20
+00:01:03,000 --> 00:01:07,000
+Now, this is useful when you have an unknown number of objects that you want to store
+
+21
+00:01:07,000 --> 00:01:10,000
+because then you cannot store them into individual variables.
+
+22
+00:01:10,000 --> 00:01:13,000
+Instead, by using an array, we can use one variable
+
+23
+00:01:13,000 --> 00:01:16,000
+to store almost any number of objects.
+
+24
+00:01:16,000 --> 00:01:18,000
+Let's create our first array.
+
+25
+00:01:18,000 --> 00:01:22,000
+We'll store it into a variable called x, and the way we define a JavaScript array
+
+26
+00:01:22,000 --> 00:01:24,000
+is using square brackets.
+
+27
+00:01:24,000 --> 00:01:27,000
+Inside of these square brackets we put in the different values 
+
+28
+00:01:27,000 --> 00:01:30,000
+that we want to store in our array.
+
+29
+00:01:30,000 --> 00:01:34,000
+For instance, let's store 3 different strings into this array that we're calling x. 
+
+30
+00:01:34,000 --> 00:01:38,000
+The first value will be a string that says &quot;some,&quot;
+
+31
+00:01:38,000 --> 00:01:42,000
+and then to separate values we use the comma.
+
+32
+00:01:42,000 --> 00:01:46,000
+We can add a second value, and we'll say &quot;words,&quot;
+
+33
+00:01:46,000 --> 00:01:49,000
+and then just by putting another comma we can have our third,
+
+34
+00:01:49,000 --> 00:01:51,000
+and we'll just say the word &quot;here.&quot;
+
+35
+00:01:51,000 --> 00:01:55,000
+We can save this out, and if we check it out in our browser by refreshing
+
+36
+00:01:55,000 --> 00:01:59,000
+and pulling up the variable x, we can see that the JavaScript tools
+
+37
+00:01:59,000 --> 00:02:03,000
+will show us the array representation of our words.
+
+38
+00:02:03,000 --> 00:02:05,000
+We say this is an array with 3 elements in it,
+
+39
+00:02:05,000 --> 00:02:08,000
+and those 3 elements are strings.
+
+40
+00:02:08,000 --> 00:02:13,000
+Now, one part of an array that we always can use is called the length. 
+
+41
+00:02:13,000 --> 00:02:17,000
+Let's do a console.log,
+
+42
+00:02:17,000 --> 00:02:21,000
+and we're going to take our variable x, and this is a property
+
+43
+00:02:21,000 --> 00:02:25,000
+on our x array, and we call .length,
+
+44
+00:02:25,000 --> 00:02:29,000
+and at any given time, .length will represent the number of elements
+
+45
+00:02:29,000 --> 00:02:32,000
+that reside inside of our array.
+
+46
+00:02:32,000 --> 00:02:35,000
+Since we can see that there are 3 elements in our array right now,
+
+47
+00:02:35,000 --> 00:02:38,000
+we should see the console.log in our developer's tool
+
+48
+00:02:38,000 --> 00:02:41,000
+show the number 3, so if we refresh,
+
+49
+00:02:41,000 --> 00:02:45,000
+we can see that 3 is the length of our array.
+
+50
+00:02:45,000 --> 00:02:49,000
+Now, if we added an extra value, we'll say a fourth value
+
+51
+00:02:49,000 --> 00:02:54,000
+with the string &quot;extra, words, here,&quot;
+
+52
+00:02:54,000 --> 00:02:57,000
+and we were to save it and refresh it, we can see x.length
+
+53
+00:02:57,000 --> 00:02:59,000
+now represents four.
+
+54
+00:02:59,000 --> 00:03:02,000
+So far our array has just contained 3 different strings,
+
+55
+00:03:02,000 --> 00:03:06,000
+but we can mix and match the types of variables that we put into our array.
+
+56
+00:03:06,000 --> 00:03:09,000
+Let's say we put &quot;var y =.&quot;
+
+57
+00:03:09,000 --> 00:03:12,000
+And then to create the array, we use our square brackets again,
+
+58
+00:03:12,000 --> 00:03:16,000
+and we can put all sorts of different values as the parts of our array.
+
+59
+00:03:16,000 --> 00:03:20,000
+For instance, we could start with &quot;a string&quot;
+
+60
+00:03:20,000 --> 00:03:23,000
+and then put a comma to put our next value.
+
+61
+00:03:23,000 --> 00:03:27,000
+Then we could put, let's say, the number 3, and then maybe a boolean value
+
+62
+00:03:27,000 --> 00:03:32,000
+like &quot;true,&quot; maybe another string, &quot;treehouse,&quot;
+
+63
+00:03:32,000 --> 00:03:34,000
+and we could even store things like functions.
+
+64
+00:03:34,000 --> 00:03:37,000
+And you'll remember functions from Introduction to Programming
+
+65
+00:03:37,000 --> 00:03:40,000
+store pieces of code that we can use later.
+
+66
+00:03:40,000 --> 00:03:43,000
+We could have a function that takes  2 arguments, a and b, 
+
+67
+00:03:43,000 --> 00:03:49,000
+and returns the result of a + b.
+
+68
+00:03:49,000 --> 00:03:52,000
+And if we go back to our browser and check it out
+
+69
+00:03:52,000 --> 00:03:56,000
+and we look at y, we can see that it's stored all those different values 
+
+70
+00:03:56,000 --> 00:04:01,000
+right into the same array, and if we took a look at y.length,
+
+71
+00:04:01,000 --> 00:04:05,000
+we'll see that y.length is 5.
+
+72
+00:04:05,000 --> 00:04:08,000
+Now, besides these simple values like strings, booleans,
+
+73
+00:04:08,000 --> 00:04:13,000
+numbers, and functions, we can also add arrays inside of arrays,
+
+74
+00:04:13,000 --> 00:04:17,000
+so let's change the third item from true to being another array.
+
+75
+00:04:17,000 --> 00:04:20,000
+And again, all we need to do is open up a square bracket,
+
+76
+00:04:20,000 --> 00:04:23,000
+and we could put some extra values in here,
+
+77
+00:04:23,000 --> 00:04:30,000
+so &quot;a sub array,&quot; and maybe some numbers.
+
+78
+00:04:30,000 --> 00:04:33,000
+And now we can see the array contains a string, a number,
+
+79
+00:04:33,000 --> 00:04:37,000
+another array, which that array contains a string and 3 numbers,
+
+80
+00:04:37,000 --> 00:04:40,000
+but then if we look at the top level array after that there's a 
+
+81
+00:04:40,000 --> 00:04:42,000
+string and then a function.
+
+82
+00:04:42,000 --> 00:04:45,000
+What is the length of our array stored in y?
+
+83
+00:04:45,000 --> 00:04:50,000
+Well, remember that the sub array counts as only 1 item in our upper array,
+
+84
+00:04:50,000 --> 00:04:54,000
+so if we count our string as 1, our number makes 2,
+
+85
+00:04:54,000 --> 00:04:59,000
+our array as a whole makes 3, treehouse makes 4, 
+
+86
+00:04:59,000 --> 00:05:02,000
+and our function makes 5 elements.
+
+87
+00:05:02,000 --> 00:05:04,000
+Just because there's an array with an extra 4 elements
+
+88
+00:05:04,000 --> 00:05:08,000
+does not mean that the array y will have a longer length.
+
+89
+00:05:08,000 --> 00:05:10,000
+The length property only counts the number of objects.
+
+90
+00:05:10,000 --> 00:05:13,000
+It doesn't count the number of objects in any sub array 
+
+91
+00:05:13,000 --> 00:05:17,000
+that you might have inside of your main array.
+
+92
+00:05:17,000 --> 00:05:21,000
+We could also create an empty array, so let's put a variable called z,
+
+93
+00:05:21,000 --> 00:05:25,000
+and to do that all we need to do is open and close our square brackets.
+
+94
+00:05:25,000 --> 00:05:29,000
+This represents an empty array, and if we go and refresh
+
+95
+00:05:29,000 --> 00:05:32,000
+and take a look at z, we see it's represented as 
+
+96
+00:05:32,000 --> 00:05:35,000
+the open and closed square brackets because there's nothing inside of our array.
+
+97
+00:05:35,000 --> 00:05:41,000
+And if we check out z.length, predictably it's 0.
+
+98
+00:05:41,000 --> 00:05:44,000
+Now, these are the main ways that we create a literal array,
+
+99
+00:05:44,000 --> 00:05:47,000
+meaning that we use a special syntax in JavaScript 
+
+100
+00:05:47,000 --> 00:05:50,000
+to define the array and the elements inside of it.
+
+101
+00:05:50,000 --> 00:05:53,000
+There is an alternative way to create an array
+
+102
+00:05:53,000 --> 00:05:56,000
+using the array constructor.
+
+103
+00:05:56,000 --> 00:05:59,000
+You may see this in code, but it's very often not what you want to do.
+
+104
+00:05:59,000 --> 00:06:03,000
+It's very easy to use this literal form, so using the array constructor
+
+105
+00:06:03,000 --> 00:06:06,000
+is not recommended, but I do want to show you what it looks like
+
+106
+00:06:06,000 --> 00:06:10,000
+so you'll recognize it if you're ever reading code and encounter it.
+
+107
+00:06:10,000 --> 00:06:13,000
+Let's say we have a variable a, and we want to create an array.
+
+108
+00:06:13,000 --> 00:06:19,000
+We could do variable a = new Array with parentheses here,
+
+109
+00:06:19,000 --> 00:06:21,000
+and this will construct a new empty array.
+
+110
+00:06:21,000 --> 00:06:26,000
+If we go back and refresh, we can see that the representation is the same,
+
+111
+00:06:26,000 --> 00:06:30,000
+and if we take a look at the length, it's still 0.
+
+112
+00:06:30,000 --> 00:06:34,000
+Since it's longer to type out, why would we ever want to do 
+
+113
+00:06:34,000 --> 00:06:37,000
+new Array when we could simply just replace it 
+
+114
+00:06:37,000 --> 00:06:40,000
+with these open and closed brackets?
+
+115
+00:06:40,000 --> 00:06:44,000
+Well, there is one case when the array constructor may be useful to you.
+
+116
+00:06:44,000 --> 00:06:48,000
+Let's say you wanted to create an array that initially has a length to it.
+
+117
+00:06:48,000 --> 00:06:53,000
+Now, this isn't useful very often because all of the values will be undefined,
+
+118
+00:06:53,000 --> 00:06:59,000
+but if you do pass a number to this array constructor, like 50,
+
+119
+00:06:59,000 --> 00:07:03,000
+and we save it out and refresh, let's take a look at a.
+
+120
+00:07:03,000 --> 00:07:07,000
+It's going to represent as empty, but if we take a look at a.length,
+
+121
+00:07:07,000 --> 00:07:09,000
+we'll see it's 50.
+
+122
+00:07:09,000 --> 00:07:12,000
+Again, I wouldn't recommend using this unless you have a good reason
+
+123
+00:07:12,000 --> 00:07:15,000
+that you need your length to be set to something else.
+
+124
+00:07:15,000 --> 00:07:19,000
+By default, the length will expand and contract as you remove
+
+125
+00:07:19,000 --> 00:07:22,000
+or add elements to your array, but I just wanted to show you 
+
+126
+00:07:22,000 --> 00:07:25,000
+this array constructor because you may see it in some code,
+
+127
+00:07:25,000 --> 00:07:27,000
+and it may confuse you.
+
+128
+00:07:27,000 --> 00:07:30,000
+But any time you're creating an array, using the square bracket literal notation
+
+129
+00:07:30,000 --> 00:07:35,000
+will definitely be an easier and more clear way to define your arrays.
+
+130
+00:07:35,000 --> 00:07:37,000
+Now we've seen how to create our arrays.
+
+131
+00:07:37,000 --> 00:07:40,000
+In the next video, we'll see how to set values into our arrays
+
+132
+00:07:40,000 --> 00:07:43,000
+and retrieve values from our arrays.
+
+133
+00:07:43,000 --> 00:07:45,000
+[? Music ?] [Treehouse] 
+

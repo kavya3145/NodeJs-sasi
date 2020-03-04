@@ -1,0 +1,500 @@
+1
+00:00:00,000 --> 00:00:07,000
+[Treehouse]
+
+2
+00:00:07,000 --> 00:00:11,000
+Now we've seen how shadowing affects our JavaScript variables.
+
+3
+00:00:11,000 --> 00:00:16,000
+Now we'll learn about a concept called hoisting and how it can affect our JavaScript programs.
+
+4
+00:00:16,000 --> 00:00:21,000
+Now we've seen variables are scoped to the function that they are declared in.
+
+5
+00:00:21,000 --> 00:00:25,000
+Now this is to say JavaScript variables have what we call &quot;function scope.&quot; 
+
+6
+00:00:25,000 --> 00:00:28,000
+Let's take a look at a piece of example code.
+
+7
+00:00:28,000 --> 00:00:33,000
+Here I've a function called &quot;doSomething,&quot; and it has parameter &quot;doit.&quot;
+
+8
+00:00:33,000 --> 00:00:38,000
+In the first line of the function we define a color variable with a value blue.
+
+9
+00:00:38,000 --> 00:00:43,000
+Then we have an if statement, and based on the value of doit, 
+
+10
+00:00:43,000 --> 00:00:50,000
+we then define var color equals red and console.log the value of color.
+
+11
+00:00:50,000 --> 00:00:54,000
+Finally, after the if statement and regardless of the value of doit,
+
+12
+00:00:54,000 --> 00:00:59,000
+we'll again call console.log displaying the color after the if statement.
+
+13
+00:00:59,000 --> 00:01:03,000
+Now, you may be wondering if the var color inside the if block 
+
+14
+00:01:03,000 --> 00:01:09,000
+is the same as the var color outside of the if block but inside of doSomething.
+
+15
+00:01:09,000 --> 00:01:13,000
+In some languages they actually would be different variables,
+
+16
+00:01:13,000 --> 00:01:17,000
+because some languages have what we call &quot;block scope,&quot;
+
+17
+00:01:17,000 --> 00:01:20,000
+meaning that any time we have a block of code like an if block,
+
+18
+00:01:20,000 --> 00:01:23,000
+it would define a whole new level of scope.
+
+19
+00:01:23,000 --> 00:01:29,000
+However, in JavaScript the var keyword has what we call &quot;functional scope.&quot;
+
+20
+00:01:29,000 --> 00:01:33,000
+Let's take a look at what would happen if we run doSomething twice,
+
+21
+00:01:33,000 --> 00:01:37,000
+once with a false value and once with a true value.
+
+22
+00:01:37,000 --> 00:01:41,000
+Let's take a look at what it would do just by running through the code.
+
+23
+00:01:41,000 --> 00:01:47,000
+In the first execution we have var color equals blue, so color equals blue.
+
+24
+00:01:47,000 --> 00:01:52,000
+Then we skip over the if block, because doit will be false,
+
+25
+00:01:52,000 --> 00:01:57,000
+and we should see console.log say that color is blue.
+
+26
+00:01:57,000 --> 00:02:02,000
+I'm actually going to remove this second call so we can just focus on this first one.
+
+27
+00:02:02,000 --> 00:02:05,000
+I have it saved out, and if we go to our browser and refresh,
+
+28
+00:02:05,000 --> 00:02:11,000
+we see color after if block is blue. This makes sense.
+
+29
+00:02:11,000 --> 00:02:15,000
+Let's see what happens if doit becomes true.
+
+30
+00:02:15,000 --> 00:02:18,000
+In this case we are going to execute the if block.
+
+31
+00:02:18,000 --> 00:02:24,000
+You might expect the first console.log that's inside of the if block to say that color is red.
+
+32
+00:02:24,000 --> 00:02:26,000
+Again, you'd be correct,
+
+33
+00:02:26,000 --> 00:02:30,000
+but you might also expect that the second one will continue to be blue
+
+34
+00:02:30,000 --> 00:02:35,000
+must like how shadowed variables do not affect variables at a higher level.
+
+35
+00:02:35,000 --> 00:02:42,000
+But if we run it and refresh, we'll see that in our second invocation inside of the if block
+
+36
+00:02:42,000 --> 00:02:46,000
+it is red and after the if block it is red.
+
+37
+00:02:46,000 --> 00:02:51,000
+That's because even though we use the &quot;var&quot; keyword inside of our if block,
+
+38
+00:02:51,000 --> 00:02:56,000
+it's still inside of the same scope as the color that's defined blue
+
+39
+00:02:56,000 --> 00:02:58,000
+after the doSomething line.
+
+40
+00:02:58,000 --> 00:03:02,000
+That's because &quot;var color equals red&quot; is the exact same variable as
+
+41
+00:03:02,000 --> 00:03:05,000
+as the color that we defined blue.
+
+42
+00:03:05,000 --> 00:03:10,000
+So the var keyword on this line here is actually completely useless.
+
+43
+00:03:10,000 --> 00:03:13,000
+It doesn't define a new variable called color.
+
+44
+00:03:13,000 --> 00:03:17,000
+It actually is simply referencing the same color.
+
+45
+00:03:17,000 --> 00:03:19,000
+This is something that's very important to remember.
+
+46
+00:03:19,000 --> 00:03:24,000
+In other languages that have block scope, the color inside of our if block
+
+47
+00:03:24,000 --> 00:03:28,000
+would actually shadow the color outside of the if block.
+
+48
+00:03:28,000 --> 00:03:33,000
+In JavaScript, the only time we get a new level of scope is when we create a new function.
+
+49
+00:03:33,000 --> 00:03:36,000
+An if block is not creating a new function.
+
+50
+00:03:36,000 --> 00:03:40,000
+Therefore it's all the same scope and it's all the same variable.
+
+51
+00:03:40,000 --> 00:03:46,000
+What if we did something like var number equals 10.
+
+52
+00:03:46,000 --> 00:03:50,000
+A very special thing happens when we do something like this.
+
+53
+00:03:50,000 --> 00:03:55,000
+You may think that the number is only declared when doit is true.
+
+54
+00:03:55,000 --> 00:03:59,000
+However, that's not actually what happens.
+
+55
+00:03:59,000 --> 00:04:03,000
+When JavaScript sees a declaration like var number equals 10
+
+56
+00:04:03,000 --> 00:04:08,000
+in the middle of a function it does something called &quot;hoisting the variable.&quot;
+
+57
+00:04:08,000 --> 00:04:14,000
+Instead, you're not actually declaring the variable on this line in the middle of the function.
+
+58
+00:04:14,000 --> 00:04:21,000
+What really happens behind the scenes is var number is declared at the top of a function.
+
+59
+00:04:21,000 --> 00:04:27,000
+Then instead of declaring it here, it actually simply assigns at that point. 
+
+60
+00:04:27,000 --> 00:04:33,000
+This is what actually happens when you have a var initialization in the middle of a function.
+
+61
+00:04:33,000 --> 00:04:37,000
+Its declaration is hoisted to the top of the function that you're in.
+
+62
+00:04:37,000 --> 00:04:42,000
+Then where you set the value it simply sets a value to that variable.
+
+63
+00:04:42,000 --> 00:04:44,000
+This is important to remember.
+
+64
+00:04:44,000 --> 00:04:48,000
+You don't have to think about it so long as you follow the simple rule of keeping 
+
+65
+00:04:48,000 --> 00:04:53,000
+all of your variable definitions at the top of your functions.
+
+66
+00:04:53,000 --> 00:04:58,000
+Anytime you see a var declaration here it's completely unnecessary
+
+67
+00:04:58,000 --> 00:05:04,000
+because instead you could do var number at the top and simply assign to it in the middle,
+
+68
+00:05:04,000 --> 00:05:08,000
+which is actually what happens when the JavaScript runs.
+
+69
+00:05:08,000 --> 00:05:14,000
+You should always try to avoid having a var declaration anywhere but at the top of your function.
+
+70
+00:05:14,000 --> 00:05:17,000
+Of course, global variables are a little bit different.
+
+71
+00:05:17,000 --> 00:05:20,000
+In that case, you probably want to define all of your global variables 
+
+72
+00:05:20,000 --> 00:05:23,000
+at the top of the file they're used in.
+
+73
+00:05:23,000 --> 00:05:27,000
+This is not only because this is how the hoisting will actually make it work,
+
+74
+00:05:27,000 --> 00:05:30,000
+but also because it allows you to see at a glance 
+
+75
+00:05:30,000 --> 00:05:34,000
+what all of the variables you are using in this file are.
+
+76
+00:05:34,000 --> 00:05:39,000
+Anytime you declare a variable, choose to have it declared at the top of your function.
+
+77
+00:05:39,000 --> 00:05:43,000
+Not only will it make it more obvious what's happening in JavaScript,
+
+78
+00:05:43,000 --> 00:05:46,000
+it'll also make your code much easier to read.
+
+79
+00:05:46,000 --> 00:05:49,000
+Simply by looking at the top of the doSomething definition,
+
+80
+00:05:49,000 --> 00:05:53,000
+we know that there are two variables in play--color and number.
+
+81
+00:05:53,000 --> 00:05:57,000
+Of course there is also the argument doit, which acts as a variable itself,
+
+82
+00:05:57,000 --> 00:06:03,000
+so you can now see the three variables that are defined inside of doSomething at a quick glance
+
+83
+00:06:03,000 --> 00:06:07,000
+instead of having to read the entire function definition.
+
+84
+00:06:07,000 --> 00:06:12,000
+Now one last thing is here we have multiple variables defined one after the other.
+
+85
+00:06:12,000 --> 00:06:15,000
+In our case, we decided to do two separate var statements--
+
+86
+00:06:15,000 --> 00:06:19,000
+var color equals blue and var number.
+
+87
+00:06:19,000 --> 00:06:25,000
+Now, this can work, and in fact it does, but there's another way that we can define multiple variabes
+
+88
+00:06:25,000 --> 00:06:28,000
+that's a little bit cleaner and preferable to use.
+
+89
+00:06:28,000 --> 00:06:33,000
+That is instead of using a semicolon after your first definition,
+
+90
+00:06:33,000 --> 00:06:36,000
+we'll simply use a comma.
+
+91
+00:06:36,000 --> 00:06:42,000
+Then we could do another variable definition like &quot;number&quot;
+
+92
+00:06:42,000 --> 00:06:47,000
+and then have a semicolon. This will have the exact same effect. 
+
+93
+00:06:47,000 --> 00:06:50,000
+We can have as many of these as we want.
+
+94
+00:06:50,000 --> 00:06:55,000
+For instance, we could have &quot;name,&quot; and we could even choose to initialize variables
+
+95
+00:06:55,000 --> 00:06:58,000
+and mix them with variables that we are not initializing.
+
+96
+00:06:58,000 --> 00:07:01,000
+We'll initialize name to Jim.
+
+97
+00:07:01,000 --> 00:07:05,000
+In this case with one var declaration we're defining a variable called color
+
+98
+00:07:05,000 --> 00:07:07,000
+and initializing it to blue.
+
+99
+00:07:07,000 --> 00:07:11,000
+We're defining a variable called &quot;number&quot; with no initial value,
+
+100
+00:07:11,000 --> 00:07:16,000
+and we're defining a variable &quot;name&quot; with the initial value of Jim.
+
+101
+00:07:16,000 --> 00:07:20,000
+Now, as you add more and more variables to this declaration, 
+
+102
+00:07:20,000 --> 00:07:23,000
+it may become a little bit unruly to have on one line.
+
+103
+00:07:23,000 --> 00:07:26,000
+To fix that you can simply split it onto multiple lines.
+
+104
+00:07:26,000 --> 00:07:30,000
+For instance you could do something like this.
+
+105
+00:07:30,000 --> 00:07:35,000
+The indentation is not necessary. It's just as valid to do this.
+
+106
+00:07:35,000 --> 00:07:39,000
+However it's not very clear that number and name are part of the var statement.
+
+107
+00:07:39,000 --> 00:07:44,000
+It's common to indent either one level or sometimes two.
+
+108
+00:07:44,000 --> 00:07:50,000
+Two levels in my case is four spaces, and since var and space is four spaces,
+
+109
+00:07:50,000 --> 00:07:54,000
+is makes all of our variables line up nicely.
+
+110
+00:07:54,000 --> 00:07:57,000
+Now, when you're doing a multi-part variable declaration, 
+
+111
+00:07:57,000 --> 00:08:01,000
+it's important to remember that all of them should be separated by commas,
+
+112
+00:08:01,000 --> 00:08:04,000
+ and the whole statement should end in a semicolon.
+
+113
+00:08:04,000 --> 00:08:09,000
+If you, for instance, use a semicolon here,
+
+114
+00:08:09,000 --> 00:08:14,000
+instead what we're doing is we have the var statement defining color equals blue
+
+115
+00:08:14,000 --> 00:08:18,000
+and number; however, name equals Jim is simply a global assignment 
+
+116
+00:08:18,000 --> 00:08:25,000
+to the variable &quot;name,&quot; which can cause the problems that we talked about in an earlier video.
+
+117
+00:08:25,000 --> 00:08:29,000
+Again, just remember that anytime you have a multi-part variable declaration
+
+118
+00:08:29,000 --> 00:08:31,000
+you separate them all by commas.
+
+119
+00:08:31,000 --> 00:08:35,000
+Otherwise you could have some unintended behavior that will cause some bugs
+
+120
+00:08:35,000 --> 00:08:38,000
+that can be pretty hard to figure out.
+
+121
+00:08:38,000 --> 00:08:41,000
+Now you should be very familiar with variables in JavaScript.
+
+122
+00:08:41,000 --> 00:08:45,000
+We learned about proper naming, about how function scope works,
+
+123
+00:08:45,000 --> 00:08:47,000
+and about shadowing and hoisting.
+
+124
+00:08:47,000 --> 00:08:51,000
+Up next we'll learn about the types of values variables can store.
+
+125
+00:08:51,000 --> 00:08:54,000
+[Treehouse]
+

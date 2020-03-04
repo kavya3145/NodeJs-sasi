@@ -1,0 +1,516 @@
+1
+00:00:00,000 --> 00:00:07,000
+[music]
+
+2
+00:00:07,000 --> 00:00:10,000
+Variables are what allow us to store and retrieve data in our programs. 
+
+3
+00:00:10,000 --> 00:00:13,000
+They're very easy to use, but there are some very specific rules
+
+4
+00:00:13,000 --> 00:00:16,000
+that we need to use in our JavaScript programs. 
+
+5
+00:00:16,000 --> 00:00:21,000
+In Netcom videos, we'll learn how to use variables in JavaScript. 
+
+6
+00:00:21,000 --> 00:00:23,000
+Setting variables is easy to do in JavaScript. 
+
+7
+00:00:23,000 --> 00:00:26,000
+Since JavaScript is dynamically typed, 
+
+8
+00:00:26,000 --> 00:00:31,000
+when we create a variable all we have to do is give it a name and any value. 
+
+9
+00:00:31,000 --> 00:00:35,000
+In other languages that are instead statically typed, 
+
+10
+00:00:35,000 --> 00:00:39,000
+each variable  must have a specific type associated with it. 
+
+11
+00:00:39,000 --> 00:00:42,000
+For instance, a variable could be just a number,
+
+12
+00:00:42,000 --> 00:00:45,000
+just a string or just some other type. 
+
+13
+00:00:45,000 --> 00:00:49,000
+But we don't have to worry about giving a type to a variable in JavaScript. 
+
+14
+00:00:49,000 --> 00:00:53,000
+We can create a variable and assign its value to a number
+
+15
+00:00:53,000 --> 00:00:56,000
+and then later, to a string; it doesn't really matter.
+
+16
+00:00:56,000 --> 00:00:59,000
+Variables can hold any type, at any time.  
+
+17
+00:00:59,000 --> 00:01:04,000
+Right here, I have a basic HTML page and JavaScript setup.
+
+18
+00:01:04,000 --> 00:01:07,000
+In the HTML page, I have just some basic HTML 
+
+19
+00:01:07,000 --> 00:01:11,000
+and I include my script with this &lt;script&gt; tag. 
+
+20
+00:01:11,000 --> 00:01:13,000
+The \&quot;myscript.js\&quot; right now is empty,
+
+21
+00:01:13,000 --> 00:01:15,000
+except for a simple comment here.
+
+22
+00:01:15,000 --> 00:01:18,000
+But this is where we'll be experimenting with variables. 
+
+23
+00:01:18,000 --> 00:01:20,000
+So let's dive in!
+
+24
+00:01:20,000 --> 00:01:25,000
+In Intro to Programming, we saw how to set variables like this:
+
+25
+00:01:25,000 --> 00:01:29,000
+var color = \&quot;red\&quot;;
+
+26
+00:01:29,000 --> 00:01:31,000
+This statement is made out of 4 parts. 
+
+27
+00:01:31,000 --> 00:01:33,000
+The first is the var keyword.
+
+28
+00:01:33,000 --> 00:01:36,000
+This says that we're declaring a variable. 
+
+29
+00:01:36,000 --> 00:01:40,000
+Right after the var keyword is the name of our variable. 
+
+30
+00:01:40,000 --> 00:01:43,000
+Now this can be almost any type of word. 
+
+31
+00:01:43,000 --> 00:01:46,000
+We'll see the rules  for the names of our variables a little bit later. 
+
+32
+00:01:46,000 --> 00:01:48,000
+Then we have the equals sign,
+
+33
+00:01:48,000 --> 00:01:50,000
+which says we're initializing a value
+
+34
+00:01:50,000 --> 00:01:53,000
+or setting an initial value. 
+
+35
+00:01:53,000 --> 00:01:56,000
+Finally, we have the value we're going to set to the variable. 
+
+36
+00:01:56,000 --> 00:01:58,000
+This can be any type--
+
+37
+00:01:58,000 --> 00:02:01,000
+like a string, a number, an array;
+
+38
+00:02:01,000 --> 00:02:05,000
+or it can be an expression, like a mathematical expression,
+
+39
+00:02:05,000 --> 00:02:07,000
+the concatenation of strings
+
+40
+00:02:07,000 --> 00:02:09,000
+or the result of a function call--
+
+41
+00:02:09,000 --> 00:02:12,000
+or really any other expression. 
+
+42
+00:02:12,000 --> 00:02:14,000
+Now we've sort of taken a look at what variables
+
+43
+00:02:14,000 --> 00:02:16,000
+can  be used for in Intro To Programming. 
+
+44
+00:02:16,000 --> 00:02:18,000
+But let me give you a concrete example 
+
+45
+00:02:18,000 --> 00:02:20,000
+of where we might want to use a variable 
+
+46
+00:02:20,000 --> 00:02:23,000
+when we're programming JavaScript in the browser. 
+
+47
+00:02:23,000 --> 00:02:25,000
+In my index.html page 
+
+48
+00:02:25,000 --> 00:02:29,000
+I have a div with the ID of \&quot;myDiv\&quot;. 
+
+49
+00:02:29,000 --> 00:02:33,000
+Now using JavaScript and some built-in functions in the browser,
+
+50
+00:02:33,000 --> 00:02:38,000
+we can manipulate things, like its color and its background color. 
+
+51
+00:02:38,000 --> 00:02:42,000
+So let's take a look at how we might do that with JavaScript. 
+
+52
+00:02:42,000 --> 00:02:44,000
+So if I use this expression right here,
+
+53
+00:02:44,000 --> 00:02:48,000
+this will take the element with the ID of \&quot;myDiv\&quot; 
+
+54
+00:02:48,000 --> 00:02:51,000
+and set its background color to black. 
+
+55
+00:02:51,000 --> 00:02:55,000
+Now, the specifics of the methods and functions called here 
+
+56
+00:02:55,000 --> 00:02:58,000
+are not important and not what we're going to focus on. 
+
+57
+00:02:58,000 --> 00:03:00,000
+But I'll give you a little overview. 
+
+58
+00:03:00,000 --> 00:03:03,000
+Document is a variable that's built into our Web page. 
+
+59
+00:03:03,000 --> 00:03:06,000
+It's always available and it represents our page. 
+
+60
+00:03:06,000 --> 00:03:09,000
+On that, we call a method called getElementById--
+
+61
+00:03:09,000 --> 00:03:12,000
+and what this will do is return the div  
+
+62
+00:03:12,000 --> 00:03:14,000
+with the ID of ('myDiv').
+
+63
+00:03:14,000 --> 00:03:20,000
+Then on myDiv there's an object named \&quot;style\&quot; with a property, \&quot;background\&quot;--
+
+64
+00:03:20,000 --> 00:03:23,000
+and we can either read from that to get the current background color 
+
+65
+00:03:23,000 --> 00:03:27,000
+of that element or we can set to it, to set its color. 
+
+66
+00:03:27,000 --> 00:03:31,000
+So if I save this out and we take a look at our page,
+
+67
+00:03:31,000 --> 00:03:33,000
+this is the div that we are focusing on. 
+
+68
+00:03:33,000 --> 00:03:37,000
+If we Refresh the page, we'll see that nothing happens--
+
+69
+00:03:37,000 --> 00:03:39,000
+and that's because the way our script is included right now, 
+
+70
+00:03:39,000 --> 00:03:42,000
+it's run before our page is set up. 
+
+71
+00:03:42,000 --> 00:03:45,000
+Now, the easiest way to fix this is to take the &lt;script&gt; tag
+
+72
+00:03:45,000 --> 00:03:47,000
+and put it at the end of our body. 
+
+73
+00:03:47,000 --> 00:03:51,000
+This means by the time our &lt;script&gt; tag is included into the page, 
+
+74
+00:03:51,000 --> 00:03:55,000
+our div, for instance, has already been put into the page and is accessible;
+
+75
+00:03:55,000 --> 00:03:58,000
+whereas before, it was not. 
+
+76
+00:03:58,000 --> 00:04:01,000
+There are other methods we could employ to fix this problem,
+
+77
+00:04:01,000 --> 00:04:04,000
+but this one's good because it lets the entire page load in
+
+78
+00:04:04,000 --> 00:04:06,000
+before we do any JavaScript interaction, 
+
+79
+00:04:06,000 --> 00:04:10,000
+which allows our page to load a little bit faster. 
+
+80
+00:04:10,000 --> 00:04:12,000
+So now if we Refresh the page, 
+
+81
+00:04:12,000 --> 00:04:15,000
+we should see our div now has the background color, black. 
+
+82
+00:04:15,000 --> 00:04:20,000
+Now that's all right--but if we go to \&quot;myscript.js\&quot; and let's say, for instance, 
+
+83
+00:04:20,000 --> 00:04:22,000
+we want to change the text color to white--
+
+84
+00:04:22,000 --> 00:04:24,000
+well, what could we do? 
+
+85
+00:04:24,000 --> 00:04:27,000
+We could do a similar line, 
+
+86
+00:04:27,000 --> 00:04:30,000
+and instead of setting \&quot;style.background\&quot; we could do \&quot;style.color\&quot;--
+
+87
+00:04:30,000 --> 00:04:35,000
+which, in this case, is how we set the CSS text color of a div. 
+
+88
+00:04:35,000 --> 00:04:38,000
+Now if we did this, this would work. 
+
+89
+00:04:38,000 --> 00:04:41,000
+And we can see, now are text color is white. 
+
+90
+00:04:41,000 --> 00:04:43,000
+But this isn't a very good way to code. 
+
+91
+00:04:43,000 --> 00:04:45,000
+We have a lot of repeated code here.
+
+92
+00:04:45,000 --> 00:04:48,000
+For instance, we get the \&quot;ElementById\&quot; twice, 
+
+93
+00:04:48,000 --> 00:04:50,000
+even though it's the same element. 
+
+94
+00:04:50,000 --> 00:04:53,000
+Instead, we could use a variable,
+
+95
+00:04:53,000 --> 00:04:55,000
+and we'll call it \&quot;myDiv\&quot;.
+
+96
+00:04:55,000 --> 00:04:57,000
+We're giving it a descriptive name--in this case, 
+
+97
+00:04:57,000 --> 00:05:01,000
+we're giving it the name of the id  that's already associated with the div, 
+
+98
+00:05:01,000 --> 00:05:03,000
+but it doesn't have to be the same. 
+
+99
+00:05:03,000 --> 00:05:08,000
+For instance, I could say \&quot;myContainer\&quot; or anything else. 
+
+100
+00:05:08,000 --> 00:05:10,000
+But to be clear, I'll do \&quot;myDiv\&quot;. 
+
+101
+00:05:10,000 --> 00:05:13,000
+Now I can use the equals sign to assign a value. 
+
+102
+00:05:13,000 --> 00:05:16,000
+And the value that I want to assign is the actual div. 
+
+103
+00:05:16,000 --> 00:05:18,000
+Now, in this expression, the div 
+
+104
+00:05:18,000 --> 00:05:21,000
+is represented by all of this, right here--
+
+105
+00:05:21,000 --> 00:05:25,000
+document.getElementById, passing at ('myDiv').
+
+106
+00:05:25,000 --> 00:05:28,000
+This evaluates to the div that we actually want. 
+
+107
+00:05:28,000 --> 00:05:31,000
+So I can take that out, and now our myDiv variable 
+
+108
+00:05:31,000 --> 00:05:35,000
+contains that div and we can use it over and over again.
+
+109
+00:05:35,000 --> 00:05:37,000
+So instead of using the document.getElementById  
+
+110
+00:05:37,000 --> 00:05:39,000
+over and over again, we can instead 
+
+111
+00:05:39,000 --> 00:05:45,000
+use the variable that we set--for instance, myDiv. 
+
+112
+00:05:45,000 --> 00:05:47,000
+And we can do it again, here. 
+
+113
+00:05:47,000 --> 00:05:50,000
+So anytime we want to get or set something on myDiv, 
+
+114
+00:05:50,000 --> 00:05:55,000
+we simply use the value stored in the myDiv variable. 
+
+115
+00:05:55,000 --> 00:05:57,000
+This allows us to easily change our code. 
+
+116
+00:05:57,000 --> 00:05:59,000
+For instance, if we change the actual ID
+
+117
+00:05:59,000 --> 00:06:01,000
+of the element that we want to use. 
+
+118
+00:06:01,000 --> 00:06:04,000
+Instead, now we'd only have to change this in 1 place--
+
+119
+00:06:04,000 --> 00:06:07,000
+right here, where we set the variable--
+
+120
+00:06:07,000 --> 00:06:11,000
+and myDiv and the rest of the code would reflect that change. 
+
+121
+00:06:11,000 --> 00:06:14,000
+So let's save this out and see if it works. 
+
+122
+00:06:14,000 --> 00:06:18,000
+If we Refresh, we can see the same behavior is taking place. 
+
+123
+00:06:18,000 --> 00:06:20,000
+The div now has a black background with white text. 
+
+124
+00:06:20,000 --> 00:06:22,000
+[?Jazzy music]
+
+125
+00:06:22,000 --> 00:06:24,000
+Now you should have a very basic understanding 
+
+126
+00:06:24,000 --> 00:06:26,000
+of how variables work in JavaScript. 
+
+127
+00:06:26,000 --> 00:06:29,000
+In the next video, we'll see the rules that JavaScript has 
+
+128
+00:06:29,000 --> 00:06:31,000
+for our variable names. 
+
+129
+00:06:31,000 --> 00:06:34,000
+[Treehouse]
+

@@ -1,0 +1,520 @@
+1
+00:00:00,000 --> 00:00:07,000
+[? Music ?] [Treehouse] 
+
+2
+00:00:08,000 --> 00:00:11,000
+So far we've seen the different ways that we can define numbers in JavaScript.
+
+3
+00:00:11,000 --> 00:00:13,000
+Now we'll take a look at a few of the mathematical operators
+
+4
+00:00:13,000 --> 00:00:17,000
+that we can use to actually work with those  numbers.
+
+5
+00:00:17,000 --> 00:00:20,000
+At this point, we should be pretty familiar with how to actually get numbers
+
+6
+00:00:20,000 --> 00:00:24,000
+into our variables or into our JavaScript code.
+
+7
+00:00:24,000 --> 00:00:26,000
+Now what can we do with them?
+
+8
+00:00:26,000 --> 00:00:29,000
+Well, the most common thing we'll do is arithmetic operations
+
+9
+00:00:29,000 --> 00:00:33,000
+like adding them, subtracting them, dividing them and multiplying them.
+
+10
+00:00:33,000 --> 00:00:36,000
+And we've already seen a little bit of this before,
+
+11
+00:00:36,000 --> 00:00:40,000
+but let's just go over the operators that we could use.
+
+12
+00:00:40,000 --> 00:00:42,000
+We'll create a variable called &quot;o,&quot;
+
+13
+00:00:42,000 --> 00:00:47,000
+and we can do something like 1 + 2.
+
+14
+00:00:47,000 --> 00:00:50,000
+Using the + operator will simply add the 2 operands together,
+
+15
+00:00:50,000 --> 00:00:52,000
+in this case, 1 and 2.
+
+16
+00:00:52,000 --> 00:00:55,000
+Or we could replace this with a variable,
+
+17
+00:00:55,000 --> 00:00:59,000
+1 + k, or we could do j + k.
+
+18
+00:00:59,000 --> 00:01:03,000
+If we take a look at the value of o, it's going to be j + k, which is 42.
+
+19
+00:01:03,000 --> 00:01:09,000
+Or we could just do 1 + k, and o would be 24.
+
+20
+00:01:09,000 --> 00:01:16,000
+And of course, if we did 1 + 2, we get 3.
+
+21
+00:01:16,000 --> 00:01:19,000
+Subtraction works exactly like you would expect it to.
+
+22
+00:01:19,000 --> 00:01:25,000
+If we wanted to do 10 - 7, we use the dash character as our subtraction operator,
+
+23
+00:01:25,000 --> 00:01:29,000
+and the value of p will of course be 3.
+
+24
+00:01:29,000 --> 00:01:32,000
+The + and - operators work both with our whole numbers
+
+25
+00:01:32,000 --> 00:01:36,000
+and our floating point, so we could do 1 + 2.4
+
+26
+00:01:36,000 --> 00:01:44,000
+and 10 - 7.3, and we'll get the values 3.4 and 2.7 as usual.
+
+27
+00:01:44,000 --> 00:01:48,000
+Nothing too crazy there.
+
+28
+00:01:48,000 --> 00:01:51,000
+Multiplication and division work pretty much the same way.
+
+29
+00:01:51,000 --> 00:01:53,000
+If we want to multiply 3 times 4, 
+
+30
+00:01:53,000 --> 00:01:56,000
+the multiplication operator is the star,
+
+31
+00:01:56,000 --> 00:02:01,000
+and on most keyboards, that's the asterisk, which is Shift and the number 8.
+
+32
+00:02:01,000 --> 00:02:07,000
+3 times 4, q should have the value of 12, which it does.
+
+33
+00:02:07,000 --> 00:02:11,000
+Again, we could do 3 times 4.2,
+
+34
+00:02:11,000 --> 00:02:15,000
+and if we refresh and check q, then we get 12.6.
+
+35
+00:02:15,000 --> 00:02:17,000
+Again, we see it's not exactly 12.6. 
+
+36
+00:02:17,000 --> 00:02:21,000
+It's 12.6, then a lot of zeros and a 1.
+
+37
+00:02:21,000 --> 00:02:24,000
+It's very near 6, but again, this is the issue 
+
+38
+00:02:24,000 --> 00:02:27,000
+with multiplying our floating point numbers together.
+
+39
+00:02:27,000 --> 00:02:31,000
+Sometimes we get these rounding errors, and we're just going to 
+
+40
+00:02:31,000 --> 00:02:33,000
+sort of deal with that right now.
+
+41
+00:02:33,000 --> 00:02:36,000
+For division, we use the forward slash operator.
+
+42
+00:02:36,000 --> 00:02:44,000
+We'll set a variable r, and if we do 16 / 8,
+
+43
+00:02:44,000 --> 00:02:47,000
+we will get 2.
+
+44
+00:02:47,000 --> 00:02:50,000
+Now, there's something very important to note about division.
+
+45
+00:02:50,000 --> 00:02:54,000
+In some languages, like I mentioned before, when we have integers or whole numbers
+
+46
+00:02:54,000 --> 00:02:57,000
+and we divide them, and they don't come out evenly,
+
+47
+00:02:57,000 --> 00:03:00,000
+there are 2 things that could happen.
+
+48
+00:03:00,000 --> 00:03:04,000
+Let's say, for instance, we divided 15 / 10.
+
+49
+00:03:04,000 --> 00:03:07,000
+The actual answer would be 1.5,
+
+50
+00:03:07,000 --> 00:03:10,000
+but in some languages, because both of our operands here were 
+
+51
+00:03:10,000 --> 00:03:14,000
+whole numbers or integers, they would want to return an integer,
+
+52
+00:03:14,000 --> 00:03:17,000
+in which case it would round down the number to 1.
+
+53
+00:03:17,000 --> 00:03:21,000
+However, in JavaScript, all of our numbers are the same floating point type
+
+54
+00:03:21,000 --> 00:03:25,000
+even if they look like whole numbers, so 15 / 10 
+
+55
+00:03:25,000 --> 00:03:30,000
+is going to in fact give us the answer 1.5.
+
+56
+00:03:30,000 --> 00:03:33,000
+Now we'll see how we could round our answer down
+
+57
+00:03:33,000 --> 00:03:36,000
+if we wanted to in the next video,
+
+58
+00:03:36,000 --> 00:03:40,000
+but now just remember that division is always going to possibly return you
+
+59
+00:03:40,000 --> 00:03:43,000
+a floating point number like 1.5.
+
+60
+00:03:43,000 --> 00:03:46,000
+The next operator you may not be very familiar with using 
+
+61
+00:03:46,000 --> 00:03:49,000
+in typical mathematical operations, but in programming
+
+62
+00:03:49,000 --> 00:03:54,000
+it's a pretty important operator, and it's called the modulo operator,
+
+63
+00:03:54,000 --> 00:03:57,000
+and it's represented by the percentage sign.
+
+64
+00:03:57,000 --> 00:04:06,000
+If we take s, and we take 15 mod or modulo using the percentage sign, 10,
+
+65
+00:04:06,000 --> 00:04:09,000
+instead of giving us the answer to 15 / 10,
+
+66
+00:04:09,000 --> 00:04:15,000
+instead it's going to give us the remainder of dividing 15 by 10.
+
+67
+00:04:15,000 --> 00:04:20,000
+If you divide 15 into 10, you get 1 with a remainder of 5,
+
+68
+00:04:20,000 --> 00:04:25,000
+so 15 mod 10 will return us 5, hopefully.
+
+69
+00:04:25,000 --> 00:04:29,000
+If we refresh, take a look at s, we get 5.
+
+70
+00:04:29,000 --> 00:04:33,000
+Again, if we did 16 mod 10
+
+71
+00:04:33,000 --> 00:04:37,000
+and take a look at s, we get 6.
+
+72
+00:04:37,000 --> 00:04:43,000
+26 mod 10 will also be 6 because 26 goes into 10 two times
+
+73
+00:04:43,000 --> 00:04:46,000
+with a remainder of 6.
+
+74
+00:04:46,000 --> 00:04:50,000
+And if we had the number 30, because 10 goes into 30  three times
+
+75
+00:04:50,000 --> 00:04:54,000
+with no remainder, the modulo answer of s would be 0.
+
+76
+00:04:54,000 --> 00:04:58,000
+Now, a little bit later on we'll see some practical applications of this operator,
+
+77
+00:04:58,000 --> 00:05:01,000
+but it's important to know that you can use it to get the remainder
+
+78
+00:05:01,000 --> 00:05:05,000
+of the division operation.
+
+79
+00:05:05,000 --> 00:05:09,000
+Now we can combine these operators together.
+
+80
+00:05:09,000 --> 00:05:17,000
+What happens if we do 1 + 2 * 3 / 4?
+
+81
+00:05:17,000 --> 00:05:21,000
+Well, it really depends on something called the order of operations.
+
+82
+00:05:21,000 --> 00:05:25,000
+You probably learned about order of operations in your math classes in school,
+
+83
+00:05:25,000 --> 00:05:27,000
+and the same thing applies in JavaScript.
+
+84
+00:05:27,000 --> 00:05:30,000
+There is an order of operations to the different operands here.
+
+85
+00:05:30,000 --> 00:05:35,000
+If there wasn't an order, for instance, we would get the number 1 + 2, 
+
+86
+00:05:35,000 --> 00:05:38,000
+which would be 3, times 3, which would be 9.
+
+87
+00:05:38,000 --> 00:05:40,000
+Then 9 / 4.
+
+88
+00:05:40,000 --> 00:05:43,000
+However, that's not the order of operations in arithmetic.
+
+89
+00:05:43,000 --> 00:05:46,000
+Instead multiplication and division operations
+
+90
+00:05:46,000 --> 00:05:50,000
+always come before addition and subtraction operations,
+
+91
+00:05:50,000 --> 00:05:53,000
+and this is no different, so instead what we get is
+
+92
+00:05:53,000 --> 00:05:57,000
+2 times 3, which is 6, divided by 4, 
+
+93
+00:05:57,000 --> 00:06:02,000
+which is 1.5, and then finally we do the addition operation,
+
+94
+00:06:02,000 --> 00:06:05,000
+so t should be 2.5.
+
+95
+00:06:05,000 --> 00:06:12,000
+If we refresh and check out the value of t,
+
+96
+00:06:12,000 --> 00:06:14,000
+we get 2.5.
+
+97
+00:06:14,000 --> 00:06:18,000
+Now what if we wanted, for instance, 1 + 2 to be calculated before
+
+98
+00:06:18,000 --> 00:06:20,000
+the multiplication and the division?
+
+99
+00:06:20,000 --> 00:06:24,000
+Just like in normal arithmetic, we can use parentheses to group them.
+
+100
+00:06:24,000 --> 00:06:29,000
+Parentheses will always be evaluated before any other operators,
+
+101
+00:06:29,000 --> 00:06:34,000
+so if we wanted 1 + 2 to be evaluated first,
+
+102
+00:06:34,000 --> 00:06:39,000
+we can simply wrap the subexpression 1 + 2 in parentheses.
+
+103
+00:06:39,000 --> 00:06:43,000
+Now 1 + 2, which will be 3, will be multiplied times 3
+
+104
+00:06:43,000 --> 00:06:47,000
+and then divided by 4, so the result will be 9 divided by 4,
+
+105
+00:06:47,000 --> 00:06:52,000
+and if we check it out, we get 2.25, which is 9 divided by 4.
+
+106
+00:06:52,000 --> 00:06:55,000
+Multiplication and division have the same level precedence
+
+107
+00:06:55,000 --> 00:06:58,000
+in our order of operations.
+
+108
+00:06:58,000 --> 00:07:01,000
+Similarly, addition and subtraction have the same level.
+
+109
+00:07:01,000 --> 00:07:04,000
+When 2 operators have the same level,
+
+110
+00:07:04,000 --> 00:07:07,000
+the mathematical operators are what we call left associative,
+
+111
+00:07:07,000 --> 00:07:09,000
+meaning that if they are at the same level,
+
+112
+00:07:09,000 --> 00:07:12,000
+it will go from left to right, so in this case
+
+113
+00:07:12,000 --> 00:07:15,000
+it will multiply our 3 times 3
+
+114
+00:07:15,000 --> 00:07:17,000
+and then divide by 4.
+
+115
+00:07:17,000 --> 00:07:21,000
+If, for instance, we wanted to divide 3 divided by 4 before we multiply them,
+
+116
+00:07:21,000 --> 00:07:24,000
+we could, again, wrap those in parentheses,
+
+117
+00:07:24,000 --> 00:07:28,000
+but it should lead to the same result, 2.25.
+
+118
+00:07:28,000 --> 00:07:31,000
+But any time you want to control the order of operations,
+
+119
+00:07:31,000 --> 00:07:35,000
+parentheses are what allow you to proceed the normal order of operations
+
+120
+00:07:35,000 --> 00:07:37,000
+of our operators.
+
+121
+00:07:37,000 --> 00:07:41,000
+Now, there are a lot of other operators besides our arithmetic operators,
+
+122
+00:07:41,000 --> 00:07:45,000
+and JavaScript has a well-defined order of operations on all of these,
+
+123
+00:07:45,000 --> 00:07:49,000
+so if  you're ever curious as to which operators will be evaluated first
+
+124
+00:07:49,000 --> 00:07:53,000
+in a complicated expression, you can refer to the operator precedence table
+
+125
+00:07:53,000 --> 00:07:55,000
+to determine exactly what will happen.
+
+126
+00:07:55,000 --> 00:07:57,000
+[Operator Precedence Table] [developer.mozilla.org/en/JavaScript/Reference/Operators/Operator_Precedence]
+
+127
+00:07:57,000 --> 00:08:00,000
+Again, you can always use parentheses to control the order of the operations
+
+128
+00:08:00,000 --> 00:08:03,000
+to how you want them to work.
+
+129
+00:08:03,000 --> 00:08:06,000
+Up next, we'll see how we can compare 2 numbers together in JavaScript.
+
+130
+00:08:06,000 --> 00:08:09,000
+[? Music ?] [Treehouse] 
+

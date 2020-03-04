@@ -1,0 +1,484 @@
+1
+00:00:00,000 --> 00:00:07,000
+[Treehouse]
+
+2
+00:00:08,000 --> 00:00:11,000
+Strings are how we represent text in Javascript.
+
+3
+00:00:11,000 --> 00:00:14,000
+Strings consist of multiple characters that represent a word, 
+
+4
+00:00:14,000 --> 00:00:18,000
+sentence, or any other piece of information that could be represented with text.
+
+5
+00:00:18,000 --> 00:00:23,000
+We're going to learn how to create strings in Javascript as well as learn how to use them.
+
+6
+00:00:23,000 --> 00:00:28,000
+Right now I have a very basic setup. I have an index.html file.
+
+7
+00:00:28,000 --> 00:00:32,000
+This html file just has a little bit of markup, but at the bottom we have a script
+
+8
+00:00:32,000 --> 00:00:34,000
+including our strings.js.
+
+9
+00:00:34,000 --> 00:00:40,000
+This strings.js file is where we will be working while we learn about strings in Javascript.
+
+10
+00:00:40,000 --> 00:00:44,000
+I'm going to pull up our strings.js file, and right now we don't have anything 
+
+11
+00:00:44,000 --> 00:00:47,000
+but a simple comment at the top of our file.
+
+12
+00:00:47,000 --> 00:00:50,000
+We've learned a little bit about strings in the previous videos, 
+
+13
+00:00:50,000 --> 00:00:53,000
+but now we'll take a more in-depth look on how we can create strings
+
+14
+00:00:53,000 --> 00:00:58,000
+and what types of characters we can include in our strings.
+
+15
+00:00:58,000 --> 00:01:02,000
+The first thing I'm going to do is create a string and store it into a variable.
+
+16
+00:01:02,000 --> 00:01:05,000
+I'm going to call this variable &quot;name.&quot;
+
+17
+00:01:05,000 --> 00:01:09,000
+We saw how to create variables in the previous videos.
+
+18
+00:01:09,000 --> 00:01:12,000
+We've seen how to create a simple string by using double quotes
+
+19
+00:01:12,000 --> 00:01:15,000
+ and then putting characters in between them.
+
+20
+00:01:15,000 --> 00:01:21,000
+For instance, I'll put in my name--Jim--and we'll add a semicolon to the end of the line.
+
+21
+00:01:21,000 --> 00:01:25,000
+This is how we can create a very simple string by just 
+
+22
+00:01:25,000 --> 00:01:30,000
+using the double quotes on the end and then whatever characters we want.
+
+23
+00:01:30,000 --> 00:01:34,000
+If we want to test it out, we could do something with this string like run console.log,
+
+24
+00:01:34,000 --> 00:01:37,000
+which we've seen in other videos.
+
+25
+00:01:37,000 --> 00:01:40,000
+By running console.log and then passing in an argument--
+
+26
+00:01:40,000 --> 00:01:45,000
+for instance, this string &quot;Jim&quot;--
+
+27
+00:01:45,000 --> 00:01:48,000
+it will display the value of the argument 
+
+28
+00:01:48,000 --> 00:01:53,000
+to console.log in the bottom of our window in our browser.
+
+29
+00:01:53,000 --> 00:01:57,000
+I'm going to save out our strings.js,
+
+30
+00:01:57,000 --> 00:01:59,000
+and we'll switch over to Chrome.
+
+31
+00:01:59,000 --> 00:02:02,000
+this is our index.html page, and I'll refresh it.
+
+32
+00:02:02,000 --> 00:02:08,000
+If you look at the bottom of the screen, you can see that &quot;Jim&quot; is output into the console.
+
+33
+00:02:08,000 --> 00:02:14,000
+Now, besides using double quotes, we could also use single quotes to define our strings.
+
+34
+00:02:14,000 --> 00:02:23,000
+For instance, I could do &quot;name2&quot; and assign that to single quote 'Jim.'
+
+35
+00:02:23,000 --> 00:02:32,000
+If we do another console.log with &quot;name2,&quot; we can save it out and refresh our page.
+
+36
+00:02:32,000 --> 00:02:35,000
+We can see that &quot;Jim&quot; was printed out twice.
+
+37
+00:02:35,000 --> 00:02:38,000
+Right now there is no difference between a double quote 
+
+38
+00:02:38,000 --> 00:02:41,000
+and a single quote when defining our strings.
+
+39
+00:02:41,000 --> 00:02:44,000
+What is the difference between a double quote and a single quote?
+
+40
+00:02:44,000 --> 00:02:47,000
+Well, it really depends on how you're creating your strings.
+
+41
+00:02:47,000 --> 00:02:49,000
+For the most part they're equivalent. 
+
+42
+00:02:49,000 --> 00:02:52,000
+You can use a double quote wherever you can use a single quote,
+
+43
+00:02:52,000 --> 00:02:56,000
+but there are some cases where you'll want to use one over the other.
+
+44
+00:02:56,000 --> 00:03:02,000
+For instance, &quot;This is Jim's string.&quot;
+
+45
+00:03:02,000 --> 00:03:07,000
+You'll notice that as I type the apostrophe my text editor actually put me outside of the string.
+
+46
+00:03:07,000 --> 00:03:11,000
+If I try to define it like this, it'd be very confusing, 
+
+47
+00:03:11,000 --> 00:03:14,000
+because the apostrophe is the same single quote character 
+
+48
+00:03:14,000 --> 00:03:17,000
+we're using to delimit the string.
+
+49
+00:03:17,000 --> 00:03:23,000
+When Javascript sees the statement, it sees a string opening with 'This is Jim'
+
+50
+00:03:23,000 --> 00:03:26,000
+and what should be our literal apostrophe character 
+
+51
+00:03:26,000 --> 00:03:30,000
+is being interpreted as the end of our string.
+
+52
+00:03:30,000 --> 00:03:36,000
+So everything from &quot;s-space-string&quot; is not part of our string.
+
+53
+00:03:36,000 --> 00:03:41,000
+Then we have another open quote, which would just be the beginning of another string.
+
+54
+00:03:41,000 --> 00:03:44,000
+If we tried to run this code, 
+
+55
+00:03:44,000 --> 00:03:49,000
+we're going to get an uncaught syntax error &quot;unexpected identifier.&quot;
+
+56
+00:03:49,000 --> 00:03:54,000
+That's because this code &quot;s string&quot; is not valid Javascript code
+
+57
+00:03:54,000 --> 00:03:56,000
+but intended to be part of our string.
+
+58
+00:03:56,000 --> 00:04:01,000
+Now, one solution we could do to avoid this is to instead of using single quotes
+
+59
+00:04:01,000 --> 00:04:04,000
+to define out string, we could change them to double quotes.
+
+60
+00:04:07,000 --> 00:04:11,000
+Now, because I used a double-quoted string to open up our string,
+
+61
+00:04:11,000 --> 00:04:15,000
+the single quote used as the apostrophe inside of our sentence here
+
+62
+00:04:15,000 --> 00:04:19,000
+will not be interpreted as the end of our string.
+
+63
+00:04:19,000 --> 00:04:22,000
+Instead, the double quote will be the end of our string,
+
+64
+00:04:22,000 --> 00:04:25,000
+and we get the result that we're looking for.
+
+65
+00:04:25,000 --> 00:04:36,000
+Let's console.log our statement and try it out in our browser.
+
+66
+00:04:36,000 --> 00:04:38,000
+That's great.
+
+67
+00:04:38,000 --> 00:04:41,000
+ Now, you could probably think of another situation 
+
+68
+00:04:41,000 --> 00:04:44,000
+where the inverse would be what you want to do.
+
+69
+00:04:44,000 --> 00:04:54,000
+For instance, our statement2, we might say something like, &quot;He said,&quot;
+
+70
+00:04:54,000 --> 00:04:58,000
+and then we want to use, for instance, the quotations marks to create a quotation in our sentence.
+
+71
+00:05:04,000 --> 00:05:08,000
+Let's put a semicolon on our other statement as well.
+
+72
+00:05:08,000 --> 00:05:11,000
+Now here we wanted the double quotes around &quot;This is awesome&quot; 
+
+73
+00:05:11,000 --> 00:05:15,000
+to be a literal part of our string.
+
+74
+00:05:15,000 --> 00:05:19,000
+But we suffer the same problem we did with our first statement
+
+75
+00:05:19,000 --> 00:05:22,000
+Because we used a double quotation mark to open our string,
+
+76
+00:05:22,000 --> 00:05:26,000
+the double quote before the word &quot;this&quot; will delimit the end of a string
+
+77
+00:05:26,000 --> 00:05:29,000
+then &quot;This is awesome&quot; will not be part of any string,
+
+78
+00:05:29,000 --> 00:05:32,000
+but instead Javascript code.
+
+79
+00:05:32,000 --> 00:05:36,000
+Finally, the two quotations at the end will just be an empty string.
+
+80
+00:05:36,000 --> 00:05:41,000
+We'll get a similar error if we save our code and refresh.
+
+81
+00:05:41,000 --> 00:05:45,000
+We see we have an uncaught syntax error &quot;unexpected identifier.&quot;
+
+82
+00:05:45,000 --> 00:05:50,000
+So we could do the same thing we did with our first statement to fix this problem.
+
+83
+00:05:50,000 --> 00:05:54,000
+Instead of using double quotes for our string delimiter, we'll switch it to single quotes.
+
+84
+00:05:57,000 --> 00:05:59,000
+And this should work.
+
+85
+00:06:04,000 --> 00:06:07,000
+We'll save it out and refresh in our browser,
+
+86
+00:06:07,000 --> 00:06:13,000
+and now we can see we have a string that has literal quotations marks inside of it.
+
+87
+00:06:13,000 --> 00:06:23,000
+Now, what if we wanted to have the string &quot;He said, 'This is Jim's string?'&quot;
+
+88
+00:06:23,000 --> 00:06:28,000
+Let's call this var statement3.
+
+89
+00:06:28,000 --> 00:06:32,000
+If we wanted to delimit this with double quotation marks, 
+
+90
+00:06:32,000 --> 00:06:35,000
+for instance using this, we have the problem of our double quotation marks 
+
+91
+00:06:35,000 --> 00:06:39,000
+inside of our string prematurely ending our string.
+
+92
+00:06:39,000 --> 00:06:43,000
+Or we could try to use a single quote, 
+
+93
+00:06:43,000 --> 00:06:46,000
+but again we have the problem of the apostrophe 
+
+94
+00:06:46,000 --> 00:06:50,000
+in &quot;Jim's&quot; prematurely ending our string once again.
+
+95
+00:06:50,000 --> 00:06:55,000
+So neither of these techniques will work to create the string that we want.
+
+96
+00:06:55,000 --> 00:06:59,000
+There is, however, another way for us to embed special characters 
+
+97
+00:06:59,000 --> 00:07:04,000
+like double quotations marks and single quotation marks inside of our string literals.
+
+98
+00:07:04,000 --> 00:07:09,000
+That's by using a special character called the &quot;backslash.&quot;
+
+99
+00:07:09,000 --> 00:07:13,000
+For instance, we'll keep our single quotes on our string here,
+
+100
+00:07:13,000 --> 00:07:17,000
+and what we'll do for the apostrophe inside the word &quot;Jim's&quot;
+
+101
+00:07:17,000 --> 00:07:21,000
+is use our escape character, the backslash.
+
+102
+00:07:21,000 --> 00:07:23,000
+It's very easy to do. 
+
+103
+00:07:23,000 --> 00:07:26,000
+All we do is right before the apostrophe we want to put in our string, 
+
+104
+00:07:26,000 --> 00:07:30,000
+we add a leading backslash.
+
+105
+00:07:30,000 --> 00:07:34,000
+The combination of backslash apostrophe is a special character 
+
+106
+00:07:34,000 --> 00:07:40,000
+which tells Javascript that inside of the string it should only be a single quote.
+
+107
+00:07:40,000 --> 00:07:44,000
+However, in our source we see that there's a backslash and a single quote.
+
+108
+00:07:44,000 --> 00:07:46,000
+But we could try this out in our browser.
+
+109
+00:07:46,000 --> 00:07:54,000
+Let's do console.log(statement3) and try it out.
+
+110
+00:07:54,000 --> 00:07:58,000
+Now we can see we have our complex string containing both double quotations 
+
+111
+00:07:58,000 --> 00:08:05,000
+and a single quotation mark without causing any errors in our Javascript source.
+
+112
+00:08:05,000 --> 00:08:10,000
+We can do the same thing for our double quotes right here just to be safe.
+
+113
+00:08:10,000 --> 00:08:13,000
+However, we don't need to do this, because our string itself 
+
+114
+00:08:13,000 --> 00:08:17,000
+is surrounded by single quotes, but it's a good thing to do 
+
+115
+00:08:17,000 --> 00:08:22,000
+to escape our double quotes and our single quotes inside of our strings.
+
+116
+00:08:22,000 --> 00:08:25,000
+If we save it out, go back to our browser and refresh it, 
+
+117
+00:08:25,000 --> 00:08:28,000
+we see that our string still works with both of our 
+
+118
+00:08:28,000 --> 00:08:31,000
+double quotes and singles quotes escaped.
+
+119
+00:08:31,000 --> 00:08:34,000
+Now we've seen how to create strings in Javascript.
+
+120
+00:08:34,000 --> 00:08:37,000
+In the next video, we'll learn about other escape characters that we can use.
+
+121
+00:08:37,000 --> 00:08:40,000
+[Treehouse]
+

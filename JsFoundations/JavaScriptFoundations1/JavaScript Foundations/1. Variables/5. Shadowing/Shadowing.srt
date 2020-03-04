@@ -1,0 +1,420 @@
+1
+00:00:00,000 --> 00:00:07,000
+[?Music?] [Treehouse]
+
+2
+00:00:07,000 --> 00:00:12,000
+In the last video, we saw that defining a variable inside of a function creates its own scope.
+
+3
+00:00:12,000 --> 00:00:16,000
+But what happens if 2 variables in different scopes share the same name?
+
+4
+00:00:16,000 --> 00:00:18,000
+Let's find out.
+
+5
+00:00:18,000 --> 00:00:21,000
+So we've seen that variables have different scopes based on the functions 
+
+6
+00:00:21,000 --> 00:00:23,000
+in which they're defined.
+
+7
+00:00:23,000 --> 00:00:27,000
+But what happens if you define a variable with a name that's already defined 
+
+8
+00:00:27,000 --> 00:00:30,000
+at a higher level of scope?
+
+9
+00:00:30,000 --> 00:00:34,000
+Well, you can do that, and it's called shadowing a variable.
+
+10
+00:00:34,000 --> 00:00:41,000
+So let's take an example down at the bottom of our script here.
+
+11
+00:00:41,000 --> 00:00:47,000
+Let's create a variable called myColor,
+
+12
+00:00:47,000 --> 00:00:51,000
+and we'll set it to \&quot;blue\&quot;.
+
+13
+00:00:51,000 --> 00:01:01,000
+We'll do a console.log, and we'll say \&quot;myColor before myFunc()\&quot;,
+
+14
+00:01:01,000 --> 00:01:06,000
+and myFunc is a variable we'll be defining in a moment,
+
+15
+00:01:06,000 --> 00:01:11,000
+and we'll add in our second value, myColor.
+
+16
+00:01:11,000 --> 00:01:16,000
+So just so we don't get any other output, what I'm going to do is, again, comment out
+
+17
+00:01:16,000 --> 00:01:18,000
+our previous code.
+
+18
+00:01:18,000 --> 00:01:20,000
+So this is all pretty simple.
+
+19
+00:01:20,000 --> 00:01:24,000
+It's everything we've seen before, simply declaring a variable called myColor,
+
+20
+00:01:24,000 --> 00:01:28,000
+giving it a value \&quot;blue\&quot;, and we'll use console.log to see what it's value is 
+
+21
+00:01:28,000 --> 00:01:30,000
+in our Javacript console.
+
+22
+00:01:30,000 --> 00:01:32,000
+ So we have it saved out,
+
+23
+00:01:32,000 --> 00:01:35,000
+and we'll go back and refresh.
+
+24
+00:01:35,000 --> 00:01:39,000
+We'll see myColor before myFunc, and the value is blue.
+
+25
+00:01:39,000 --> 00:01:45,000
+This is pretty much expected behavior, and it should be pretty obvious what's going on.
+
+26
+00:01:45,000 --> 00:01:49,000
+So now let's add a function we'll call myFunc.
+
+27
+00:01:49,000 --> 00:01:54,000
+To do this, we'll use the function keyword, call it myFunc.
+
+28
+00:01:54,000 --> 00:01:59,000
+We'll use parenthesis there to define there are no arguments to this function.
+
+29
+00:01:59,000 --> 00:02:05,000
+And now in the body of the function, we'll define a variable called myColor,
+
+30
+00:02:05,000 --> 00:02:10,000
+and we'll set its value to \&quot;yellow\&quot;.
+
+31
+00:02:10,000 --> 00:02:11,000
+So now inside of our function,
+
+32
+00:02:11,000 --> 00:02:25,000
+we'll call console.log, we'll say, \&quot;myColor inside myFunc()\&quot;, and then we'll display myColor.
+
+33
+00:02:25,000 --> 00:02:32,000
+Now again, we have to execute myFunc so we'll do that here by doing myFunc();
+
+34
+00:02:32,000 --> 00:02:34,000
+and we'll save it out.
+
+35
+00:02:34,000 --> 00:02:37,000
+When we go to our browser and we refresh the page, 
+
+36
+00:02:37,000 --> 00:02:41,000
+we can see that myColor inside of myFunc is now yellow.
+
+37
+00:02:41,000 --> 00:02:47,000
+But now the question is, is myColor inside of myFunc the same variable of myColor
+
+38
+00:02:47,000 --> 00:02:49,000
+in the global scope?
+
+39
+00:02:49,000 --> 00:02:55,000
+Well, we can test that by doing another console.log after myFunc is executed,
+
+40
+00:02:55,000 --> 00:03:06,000
+so we'll do console.log, and it'll be \&quot;myColor after myFunc()\&quot;, 
+
+41
+00:03:06,000 --> 00:03:10,000
+and we'll again pass it myColor.
+
+42
+00:03:10,000 --> 00:03:16,000
+So now let's take a look at what that value actually is by refreshing our page.
+
+43
+00:03:16,000 --> 00:03:21,000
+Now we'll see, myColor after myFunc is blue,
+
+44
+00:03:21,000 --> 00:03:25,000
+and that's because what happens is by defining a variable inside of myFunc
+
+45
+00:03:25,000 --> 00:03:31,000
+called myColor, we're creating a completely separate variable that's only accessible
+
+46
+00:03:31,000 --> 00:03:33,000
+through myFunc.
+
+47
+00:03:33,000 --> 00:03:36,000
+And this is due to how scoping of variables works.
+
+48
+00:03:36,000 --> 00:03:41,000
+If we gave it a different name, it wouldn't matter because we wouldn't be able to access 
+
+49
+00:03:41,000 --> 00:03:44,000
+that variable from outside of myFunc.
+
+50
+00:03:44,000 --> 00:03:47,000
+However, since we've named our variable the same thing as a global variable,
+
+51
+00:03:47,000 --> 00:03:54,000
+it still creates a local variable within myFunc that's completely separate from the global one.
+
+52
+00:03:54,000 --> 00:03:59,000
+So when we say myColor equals yellow, we're not effecting the global variable.
+
+53
+00:03:59,000 --> 00:04:06,000
+And this is to say the variable myColor inside of myFunc is shadowing a global variable.
+
+54
+00:04:06,000 --> 00:04:11,000
+Now this can be useful because we don't have to be concerned with the names of variables 
+
+55
+00:04:11,000 --> 00:04:13,000
+in higher scopes than we're working.
+
+56
+00:04:13,000 --> 00:04:17,000
+We can name our variable anything we want within reason without worrying 
+
+57
+00:04:17,000 --> 00:04:24,000
+that myColor maybe defined at a higher level and we might accidentally interfere with it.
+
+58
+00:04:24,000 --> 00:04:28,000
+Because we defined a variable called myColor within myFunc, 
+
+59
+00:04:28,000 --> 00:04:34,000
+we're now unable to access the global myColor from within myFunc.
+
+60
+00:04:34,000 --> 00:04:35,000
+Now this may be okay. 
+
+61
+00:04:35,000 --> 00:04:40,000
+We may not care about the global color, but it's something you have to be aware of 
+
+62
+00:04:40,000 --> 00:04:43,000
+when shadowing a variable like this.
+
+63
+00:04:43,000 --> 00:04:47,000
+Now the way we shadowed our variable is by using the var keyword.
+
+64
+00:04:47,000 --> 00:04:51,000
+If we were to accidentally or intentionally leave out the var definition here,
+
+65
+00:04:51,000 --> 00:04:55,000
+instead of declaring a local variable called myColor,
+
+66
+00:04:55,000 --> 00:05:01,000
+instead what we are doing is setting a value to the global myColor variable.
+
+67
+00:05:01,000 --> 00:05:06,000
+So by simply deleting that var keyword, we've changed how this code will work.
+
+68
+00:05:06,000 --> 00:05:10,000
+Instead of being blue, yellow, blue in our code down here, 
+
+69
+00:05:10,000 --> 00:05:14,000
+if we refresh, we'll now see it's blue, yellow, yellow,
+
+70
+00:05:14,000 --> 00:05:19,000
+and that's because now myColor is not a local shadowed variable.
+
+71
+00:05:19,000 --> 00:05:23,000
+Instead it's all referring to the same global myColor variable.
+
+72
+00:05:23,000 --> 00:05:28,000
+Now I'm going to put this back, and while we're talking about scoping of variables
+
+73
+00:05:28,000 --> 00:05:33,000
+with var or without var, I want to show you another important bug that you might run into
+
+74
+00:05:33,000 --> 00:05:36,000
+that's very important to understand.
+
+75
+00:05:36,000 --> 00:05:42,000
+So I'm going to leave var myColor as a shadowed variable that's local to myFunc.
+
+76
+00:05:42,000 --> 00:05:46,000
+However, down here I'm going to create a variable called myNumber 
+
+77
+00:05:46,000 --> 00:05:50,000
+and set it to the value 42.
+
+78
+00:05:50,000 --> 00:05:53,000
+Now you'll notice, I left off the var,
+
+79
+00:05:53,000 --> 00:05:55,000
+so what do you think might happen?
+
+80
+00:05:55,000 --> 00:05:59,000
+Well, myNumber is not declared at the global scope so you may wonder what it's 
+
+81
+00:05:59,000 --> 00:06:01,000
+going to assign to.
+
+82
+00:06:01,000 --> 00:06:03,000
+So let's just run it.
+
+83
+00:06:03,000 --> 00:06:10,000
+But first, let's add a console.log to see what it looks like in the global scope.
+
+84
+00:06:10,000 --> 00:06:21,000
+So we'll say \&quot;myNumber after myFunc()\&quot;, and if we run this,
+
+85
+00:06:21,000 --> 00:06:26,000
+we can see that from the global scope, we're actually able to access myNumber,
+
+86
+00:06:26,000 --> 00:06:32,000
+and that's because from within any Javascript function, if we assign to a variable that 
+
+87
+00:06:32,000 --> 00:06:38,000
+doesn't exist yet, Javascript, by default, will create a global variable with that name,
+
+88
+00:06:38,000 --> 00:06:41,000
+and assign to it.
+
+89
+00:06:41,000 --> 00:06:45,000
+Now this may not seem like a problem because your code still may execute,
+
+90
+00:06:45,000 --> 00:06:50,000
+however, it can become a problem when doing loops or calling a function multiple times
+
+91
+00:06:50,000 --> 00:06:56,000
+because you may be expecting this variable to be reset in each function or in each loop
+
+92
+00:06:56,000 --> 00:06:59,000
+however, since it's a global variable, it'll maintain its state 
+
+93
+00:06:59,000 --> 00:07:02,000
+and cause some really weird bugs.
+
+94
+00:07:02,000 --> 00:07:07,000
+That's why it's very, very important anytime you declare a variable to ensure that var
+
+95
+00:07:07,000 --> 00:07:10,000
+precedes the variable definition.
+
+96
+00:07:10,000 --> 00:07:15,000
+If we save this out now with var myNumber is 42,
+
+97
+00:07:15,000 --> 00:07:19,000
+we'll see that myNumber is not defined just like it should be.
+
+98
+00:07:19,000 --> 00:07:23,000
+This is a very common bug that can cause you a lot of confusion,
+
+99
+00:07:23,000 --> 00:07:28,000
+so if you are running into weird bugs where variables don't have quite the value
+
+100
+00:07:28,000 --> 00:07:31,000
+you thought they should, check all around for your variable definitions
+
+101
+00:07:31,000 --> 00:07:34,000
+and make sure they all have the var keyword.
+
+102
+00:07:34,000 --> 00:07:37,000
+This is very, very important.
+
+103
+00:07:37,000 --> 00:07:40,000
+Up next, we'll take a more in-depth look into variable scope
+
+104
+00:07:40,000 --> 00:07:43,000
+and some best practices to use with variables.
+
+105
+00:07:43,000 --> 00:07:45,000
+[?Music?] [Treehouse]
+

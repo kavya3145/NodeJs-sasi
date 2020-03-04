@@ -1,0 +1,520 @@
+1
+00:00:00,000 --> 00:00:07,000
+[? Music ?] [Treehouse]
+
+2
+00:00:07,000 --> 00:00:10,000
+In the last video, we saw how to use arguments 
+
+3
+00:00:10,000 --> 00:00:12,000
+to provide input to our functions.
+
+4
+00:00:12,000 --> 00:00:15,000
+Now we'll see how to return a value as output.
+
+5
+00:00:15,000 --> 00:00:18,000
+So far we've seen how to create basic named functions
+
+6
+00:00:18,000 --> 00:00:21,000
+that take arguments and perform certain actions.
+
+7
+00:00:21,000 --> 00:00:23,000
+In our case we created a function called &quot;sayHello,&quot;
+
+8
+00:00:23,000 --> 00:00:25,000
+which takes 2 arguments, name and greeting.
+
+9
+00:00:25,000 --> 00:00:27,000
+And we've seen what happens if we call sayHello 
+
+10
+00:00:27,000 --> 00:00:30,000
+with both a name and a greeting and also what happens
+
+11
+00:00:30,000 --> 00:00:32,000
+if we just call it with name.
+
+12
+00:00:32,000 --> 00:00:35,000
+In that case, greeting is undefined and we used an if statement
+
+13
+00:00:35,000 --> 00:00:37,000
+to set a default value for greeting.
+
+14
+00:00:37,000 --> 00:00:40,000
+Now, you can think of arguments as the input to a function,
+
+15
+00:00:40,000 --> 00:00:42,000
+but there's also an output from a function call,
+
+16
+00:00:42,000 --> 00:00:45,000
+and that's called the return value.
+
+17
+00:00:45,000 --> 00:00:48,000
+We saw this a little bit earlier when we were in our console.
+
+18
+00:00:48,000 --> 00:00:53,000
+If we go in our console and type &quot;sayHello,&quot;
+
+19
+00:00:53,000 --> 00:00:56,000
+and we'll say the name is &quot;world,&quot; and we'll just leave
+
+20
+00:00:56,000 --> 00:01:00,000
+ the second argument empty, what happens?
+
+21
+00:01:00,000 --> 00:01:03,000
+Well, we see a line where our console.log is called,
+
+22
+00:01:03,000 --> 00:01:06,000
+but we also have this output arrow that says &quot;undefined&quot;
+
+23
+00:01:06,000 --> 00:01:09,000
+and then in console this means this is the return value 
+
+24
+00:01:09,000 --> 00:01:13,000
+or the value of the expression we previously called.
+
+25
+00:01:13,000 --> 00:01:17,000
+In our case, sayHello, when we execute it, evaluated to undefined,
+
+26
+00:01:17,000 --> 00:01:20,000
+and that's because we did not provide a return value.
+
+27
+00:01:20,000 --> 00:01:24,000
+We can change what this is by simply using the keyword return,
+
+28
+00:01:24,000 --> 00:01:26,000
+and let's see what that is.
+
+29
+00:01:26,000 --> 00:01:29,000
+What we can do is after we've done all of our logic here
+
+30
+00:01:29,000 --> 00:01:34,000
+we'll use the return keyword and then we pass it a value,
+
+31
+00:01:34,000 --> 00:01:38,000
+so let's say we want to return the string done. 
+
+32
+00:01:38,000 --> 00:01:43,000
+That's easy enough, so what will happen if we call sayHello?
+
+33
+00:01:43,000 --> 00:01:45,000
+Well, let's just try it in the console real quick.
+
+34
+00:01:45,000 --> 00:01:48,000
+We have our 2 different calls that come from our script,
+
+35
+00:01:48,000 --> 00:01:52,000
+but if we call sayHello one more time we see our Hello world! call,
+
+36
+00:01:52,000 --> 00:01:57,000
+but now instead of saying undefined as the expression value it's the string done,
+
+37
+00:01:57,000 --> 00:02:00,000
+and that's because we called return with that string.
+
+38
+00:02:00,000 --> 00:02:03,000
+Now, not all functions that we write will have a return value 
+
+39
+00:02:03,000 --> 00:02:07,000
+that you want to return, in which case we could just call return,
+
+40
+00:02:07,000 --> 00:02:12,000
+and let's see what happens if we don't pass it a value.
+
+41
+00:02:12,000 --> 00:02:16,000
+If we refresh and we call sayHello again
+
+42
+00:02:16,000 --> 00:02:20,000
+now we get undefined, so essentially what we've done is just called return,
+
+43
+00:02:20,000 --> 00:02:23,000
+which will return nothing or undefined.
+
+44
+00:02:23,000 --> 00:02:26,000
+Now, since that's no different from us not calling return at all
+
+45
+00:02:26,000 --> 00:02:29,000
+this piece of code right here wouldn't make much sense,
+
+46
+00:02:29,000 --> 00:02:32,000
+but we'll see how maybe a return call could be useful
+
+47
+00:02:32,000 --> 00:02:35,000
+even if you're not returning something, so let's take a look
+
+48
+00:02:35,000 --> 00:02:40,000
+at what would happen if we want to return a different value or a dynamic value.
+
+49
+00:02:40,000 --> 00:02:44,000
+Now, really sayHello doesn't have much meaningful value,
+
+50
+00:02:44,000 --> 00:02:48,000
+but if we write a different function that maybe joins 2 strings together
+
+51
+00:02:48,000 --> 00:02:52,000
+or performs some sort of other action that you may want to use somewhere else
+
+52
+00:02:52,000 --> 00:02:55,000
+your return value is a great thing to use.
+
+53
+00:02:55,000 --> 00:02:59,000
+Right now let's say we want to return the length of name.
+
+54
+00:02:59,000 --> 00:03:04,000
+Because name will be a string, we can use the .length property,
+
+55
+00:03:04,000 --> 00:03:07,000
+and that would return us the number of characters in our string.
+
+56
+00:03:07,000 --> 00:03:10,000
+I'm going to change our execution code right here to 
+
+57
+00:03:10,000 --> 00:03:14,000
+console.log the values.
+
+58
+00:03:14,000 --> 00:03:18,000
+Since sayHello will now return a value we can actually use that value,
+
+59
+00:03:18,000 --> 00:03:20,000
+and we'll just say &quot;console.log.&quot;
+
+60
+00:03:20,000 --> 00:03:26,000
+I'll do the same here.
+
+61
+00:03:26,000 --> 00:03:31,000
+If we go back and we refresh we'll see both times we get the return value 3.
+
+62
+00:03:31,000 --> 00:03:36,000
+This first call right here is the console.log coming from inside of our sayHello function
+
+63
+00:03:36,000 --> 00:03:38,000
+saying &quot;Greetings World! Jim.&quot;
+
+64
+00:03:38,000 --> 00:03:41,000
+And the second console.log is the one from line 12
+
+65
+00:03:41,000 --> 00:03:45,000
+that's actually logging the return value of sayHello.
+
+66
+00:03:45,000 --> 00:03:50,000
+Now, let's just change these a little bit around so we don't get 3 for both of them
+
+67
+00:03:50,000 --> 00:03:55,000
+and change the first one to James, and now we can see that the return value is different.
+
+68
+00:03:55,000 --> 00:03:58,000
+It's dependent on the name being passed in.
+
+69
+00:03:58,000 --> 00:04:02,000
+Now, we'll see some other functions later and see how the return value can be used.
+
+70
+00:04:02,000 --> 00:04:07,000
+There's one other thing to note about return that's really important and really useful.
+
+71
+00:04:07,000 --> 00:04:13,000
+Any code that we have after a return call in a function will not be executed.
+
+72
+00:04:13,000 --> 00:04:15,000
+Let's take a look at that.
+
+73
+00:04:15,000 --> 00:04:23,000
+If we call return name.length and say &quot;console.log('End of function')&quot;
+
+74
+00:04:23,000 --> 00:04:27,000
+and we refresh we'll see that the code doesn't change at all.
+
+75
+00:04:27,000 --> 00:04:30,000
+Now, this isn't a very useful property right now,
+
+76
+00:04:30,000 --> 00:04:34,000
+but what we can do is call return in a conditional statement.
+
+77
+00:04:34,000 --> 00:04:38,000
+Right now we've defined that greeting can be undefined,
+
+78
+00:04:38,000 --> 00:04:42,000
+and we've handled it using if type of greeting is undefined we'll set a value.
+
+79
+00:04:42,000 --> 00:04:46,000
+However, I don't want name to be an optional value,
+
+80
+00:04:46,000 --> 00:04:50,000
+so what happens if we call console.log--so we can see the output value--
+
+81
+00:04:50,000 --> 00:04:54,000
+and we call sayHello with no arguments?
+
+82
+00:04:54,000 --> 00:04:58,000
+Well, right now what we get is we get uncaught type error
+
+83
+00:04:58,000 --> 00:05:00,000
+because we can't call length of undefined.
+
+84
+00:05:00,000 --> 00:05:02,000
+When we call sayHello with no name value
+
+85
+00:05:02,000 --> 00:05:06,000
+name will be undefined, and on line 9 we return name.length,
+
+86
+00:05:06,000 --> 00:05:08,000
+which means that we still have an error.
+
+87
+00:05:08,000 --> 00:05:12,000
+But for me sayHello doesn't make sense without the name,
+
+88
+00:05:12,000 --> 00:05:16,000
+so I'm going to change my function to require it to actually do anything.
+
+89
+00:05:16,000 --> 00:05:18,000
+What I'm going to do here is we'll do a similar thing.
+
+90
+00:05:18,000 --> 00:05:25,000
+If type of our name is undefined, then what are we going to do?
+
+91
+00:05:25,000 --> 00:05:27,000
+Well, we don't want to set a default value because I've defined 
+
+92
+00:05:27,000 --> 00:05:30,000
+that sayHello needs a name, so if we have a name
+
+93
+00:05:30,000 --> 00:05:35,000
+we'll just return 0.
+
+94
+00:05:35,000 --> 00:05:38,000
+Now what we have here is an optional return.
+
+95
+00:05:38,000 --> 00:05:42,000
+This value on line 5 will only get called if name is undefined,
+
+96
+00:05:42,000 --> 00:05:45,000
+and since return is called on line 5 in that case
+
+97
+00:05:45,000 --> 00:05:48,000
+lines 6, 7, 8, 9 and the rest are not called,
+
+98
+00:05:48,000 --> 00:05:54,000
+meaning we shouldn't see a console.log or the return of name.length,
+
+99
+00:05:54,000 --> 00:05:58,000
+meaning we should avoid the error and get a much more predictable output.
+
+100
+00:05:58,000 --> 00:06:02,000
+If we take a look we see our &quot;Greetings world!&quot; for James, and it returns 5
+
+101
+00:06:02,000 --> 00:06:05,000
+because 5 is the number of letters in James.
+
+102
+00:06:05,000 --> 00:06:10,000
+Then we see &quot;Hello world! Jim&quot; which is returning 3 for Jim,
+
+103
+00:06:10,000 --> 00:06:14,000
+and then this last console.log output is 0
+
+104
+00:06:14,000 --> 00:06:19,000
+because that is what we returned in the case of name being undefined,
+
+105
+00:06:19,000 --> 00:06:21,000
+which is our last call. 
+
+106
+00:06:21,000 --> 00:06:25,000
+If we remove the 0 here and just call return,
+
+107
+00:06:25,000 --> 00:06:28,000
+remember that that returns the undefined value,
+
+108
+00:06:28,000 --> 00:06:31,000
+so if we refresh we now have undefined.
+
+109
+00:06:31,000 --> 00:06:35,000
+If we don't pass anything in undefined is what it will return,
+
+110
+00:06:35,000 --> 00:06:38,000
+and if we do pass it in that will be the return value
+
+111
+00:06:38,000 --> 00:06:42,000
+or what the expression of calling our function will evaluate to.
+
+112
+00:06:42,000 --> 00:06:44,000
+This is the basic idea of a function.
+
+113
+00:06:44,000 --> 00:06:46,000
+It takes an input. 
+
+114
+00:06:46,000 --> 00:06:48,000
+It performs an action, and it returns an output.
+
+115
+00:06:48,000 --> 00:06:52,000
+Our different functions may rely on different parts of those 3 options
+
+116
+00:06:52,000 --> 00:06:54,000
+in different capacities.
+
+117
+00:06:54,000 --> 00:06:58,000
+Some functions may take in properties and not return anything meaningful.
+
+118
+00:06:58,000 --> 00:07:02,000
+Some functions may not take any arguments and return something,
+
+119
+00:07:02,000 --> 00:07:05,000
+and some functions will be some mix of those.
+
+120
+00:07:05,000 --> 00:07:07,000
+We have our inputs, outputs, and what we call side effects
+
+121
+00:07:07,000 --> 00:07:09,000
+like calling console.log.
+
+122
+00:07:09,000 --> 00:07:11,000
+It's neither an input or an output,
+
+123
+00:07:11,000 --> 00:07:15,000
+but it's something that is triggered by calling our function.
+
+124
+00:07:15,000 --> 00:07:17,000
+We can have a function that takes no arguments
+
+125
+00:07:17,000 --> 00:07:19,000
+and returns no value but still is useful
+
+126
+00:07:19,000 --> 00:07:22,000
+because it performs some action.
+
+127
+00:07:22,000 --> 00:07:26,000
+Now we've seen how arguments and return values work in functions.
+
+128
+00:07:26,000 --> 00:07:28,000
+There's also another key feature called scopes 
+
+129
+00:07:28,000 --> 00:07:31,000
+which we'll explore in the next video.
+
+130
+00:07:31,000 --> 00:07:33,000
+[? Music ?] [Treehouse]
+

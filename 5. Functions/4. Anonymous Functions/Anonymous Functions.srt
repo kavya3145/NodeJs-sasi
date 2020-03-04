@@ -1,0 +1,980 @@
+1
+00:00:00,000 --> 00:00:07,000
+[??] [Treehouse]
+
+2
+00:00:08,000 --> 00:00:12,000
+So far, we've created all of our functions with explicit names.
+
+3
+00:00:12,000 --> 00:00:16,000
+However, we can create functions without names called anonymous functions.
+
+4
+00:00:16,000 --> 00:00:21,000
+So far, we've defined our functions using what we call the named function syntax,
+
+5
+00:00:21,000 --> 00:00:23,000
+and it goes a little something like this.
+
+6
+00:00:23,000 --> 00:00:28,000
+We enter the keyword function, give it a name like myFunction,
+
+7
+00:00:28,000 --> 00:00:33,000
+give it the parameters that it will take, the arguments in parentheses here,
+
+8
+00:00:33,000 --> 00:00:36,000
+and then give it a function body.
+
+9
+00:00:36,000 --> 00:00:41,000
+And then later, we can call myFunction like so.
+
+10
+00:00:41,000 --> 00:00:46,000
+This named function is only 1 way that we can create a function in JavaScript.
+
+11
+00:00:46,000 --> 00:00:49,000
+Functions are just like any other value in JavaScript.
+
+12
+00:00:49,000 --> 00:00:52,000
+Much like arrays, numbers, and strings, 
+
+13
+00:00:52,000 --> 00:00:54,000
+they can be stored into variables,
+
+14
+00:00:54,000 --> 00:00:58,000
+and that's kind of what's happening in this named function syntax.
+
+15
+00:00:58,000 --> 00:01:04,000
+myFunction is really just a variable that holds a function with some code in it.
+
+16
+00:01:04,000 --> 00:01:08,000
+However, there's a different way that we could go about doing this.
+
+17
+00:01:08,000 --> 00:01:10,000
+Instead of beginning with the myFunction keyword,
+
+18
+00:01:10,000 --> 00:01:13,000
+we can actually store it into a variable.
+
+19
+00:01:13,000 --> 00:01:17,000
+So let's create a var called myFunction.
+
+20
+00:01:17,000 --> 00:01:21,000
+And again, variable names are following the same rules as function names,
+
+21
+00:01:21,000 --> 00:01:24,000
+so why not just store it into a variable?
+
+22
+00:01:24,000 --> 00:01:27,000
+So we're creating a variable called myFunction,
+
+23
+00:01:27,000 --> 00:01:29,000
+and we're assigning it what?
+
+24
+00:01:29,000 --> 00:01:32,000
+Well, we can use the keyword function,
+
+25
+00:01:32,000 --> 00:01:35,000
+but instead of putting a name here, we'll skip it altogether
+
+26
+00:01:35,000 --> 00:01:39,000
+and move straight to the arguments by putting a space, parentheses--
+
+27
+00:01:39,000 --> 00:01:44,000
+in our case we'll take no arguments--and then the body of a function.
+
+28
+00:01:44,000 --> 00:01:53,000
+And let's just put some simple body here like console.log('myFunction was called').
+
+29
+00:01:53,000 --> 00:01:56,000
+So now what we have is we have defined a function
+
+30
+00:01:56,000 --> 00:01:59,000
+and stored it into myFunction, the variable.
+
+31
+00:01:59,000 --> 00:02:03,000
+And if we call myFunction just like we do any normal function,
+
+32
+00:02:03,000 --> 00:02:06,000
+we should get a very familiar result.
+
+33
+00:02:06,000 --> 00:02:10,000
+So let's refresh, and we can see myFunction was called.
+
+34
+00:02:10,000 --> 00:02:13,000
+We can just treat myFunction like we have any other function.
+
+35
+00:02:13,000 --> 00:02:17,000
+Just call it. It has return values, it takes arguments.
+
+36
+00:02:17,000 --> 00:02:20,000
+It's almost indistinguishable from the previous syntax that we used.
+
+37
+00:02:20,000 --> 00:02:26,000
+Since we don't give this function a name in the same way that we did before,
+
+38
+00:02:26,000 --> 00:02:28,000
+we call this an anonymous function.
+
+39
+00:02:28,000 --> 00:02:30,000
+We use the function keyword, define the arguments,
+
+40
+00:02:30,000 --> 00:02:36,000
+and define the body of the function all without giving it a specific name.
+
+41
+00:02:36,000 --> 00:02:38,000
+You can think of that as a named function 
+
+42
+00:02:38,000 --> 00:02:41,000
+because we immediately stored it into a variable that has a name,
+
+43
+00:02:41,000 --> 00:02:45,000
+but that doesn't always have to be what we do with our anonymous functions.
+
+44
+00:02:45,000 --> 00:02:51,000
+Let's say I want to create another function that's going to call a function twice.
+
+45
+00:02:51,000 --> 00:02:55,000
+So since I'm creating a function, I can either use the anonymous function
+
+46
+00:02:55,000 --> 00:02:59,000
+that we assigned into a variable or use a named function.
+
+47
+00:02:59,000 --> 00:03:02,000
+In most cases, the difference is almost indistinguishable.
+
+48
+00:03:02,000 --> 00:03:05,000
+However, there are some subtle differences,
+
+49
+00:03:05,000 --> 00:03:07,000
+and so it's a matter of style choice.
+
+50
+00:03:07,000 --> 00:03:11,000
+I usually prefer to store my functions as anonymous functions inside variables.
+
+51
+00:03:11,000 --> 00:03:15,000
+However, I'll show you in a moment why a named function might be preferable.
+
+52
+00:03:15,000 --> 00:03:19,000
+Let's just say var callTwice = 
+
+53
+00:03:19,000 --> 00:03:22,000
+and we'll take a function.
+
+54
+00:03:22,000 --> 00:03:28,000
+And the argument I want to pass to it is actually going to be another function.
+
+55
+00:03:28,000 --> 00:03:32,000
+Like I said before, functions are just like any other value in JavaScript.
+
+56
+00:03:32,000 --> 00:03:35,000
+They can be stored into variables and passed around.
+
+57
+00:03:35,000 --> 00:03:41,000
+So we'll say (targetFunction) is the name of our parameter,
+
+58
+00:03:41,000 --> 00:03:47,000
+and in the body of our function, since I have targetFunction,
+
+59
+00:03:47,000 --> 00:03:50,000
+this should be holding a function value,
+
+60
+00:03:50,000 --> 00:03:56,000
+which means that we can call the function by simply adding parentheses to the end.
+
+61
+00:03:56,000 --> 00:04:02,000
+And we'll say that it will call targetFunction with no properties twice.
+
+62
+00:04:06,000 --> 00:04:08,000
+So now what do I want to do?
+
+63
+00:04:08,000 --> 00:04:11,000
+I'm going to remove this myFunction here
+
+64
+00:04:11,000 --> 00:04:16,000
+and instead I'm going to call the function that I have stored and callTwice.
+
+65
+00:04:16,000 --> 00:04:19,000
+I do that by simply opening parentheses,
+
+66
+00:04:19,000 --> 00:04:23,000
+and now I need to pass it the argument that will be stored into targetFunction.
+
+67
+00:04:23,000 --> 00:04:27,000
+Well, my callTwice can only take functions as arguments,
+
+68
+00:04:27,000 --> 00:04:32,000
+and I already have a function stored into a variable called myFunction.
+
+69
+00:04:32,000 --> 00:04:34,000
+So let's see what happens.
+
+70
+00:04:35,000 --> 00:04:40,000
+You'll notice when I typed in myFunction here, I left off the parentheses.
+
+71
+00:04:40,000 --> 00:04:44,000
+I did not say myFunction, parenthesis open, parenthesis close.
+
+72
+00:04:44,000 --> 00:04:47,000
+That would be completely different from what I want to do.
+
+73
+00:04:47,000 --> 00:04:52,000
+If I left this code in place, what I would be doing is before I pass it to callTwice,
+
+74
+00:04:52,000 --> 00:04:55,000
+I'd be calling myFunction.
+
+75
+00:04:55,000 --> 00:04:58,000
+And remember, calling myFunction will evaluate to the return value,
+
+76
+00:04:58,000 --> 00:05:02,000
+which in my case, since there is no return value, would be undefined.
+
+77
+00:05:02,000 --> 00:05:07,000
+So targetFunction in callTwice would be the value undefined.
+
+78
+00:05:07,000 --> 00:05:11,000
+But if I don't put these parentheses, instead of calling myFunction, 
+
+79
+00:05:11,000 --> 00:05:16,000
+I'm actually passing the value that's stored in myFunction the variable,
+
+80
+00:05:16,000 --> 00:05:19,000
+and that's an actual function object.
+
+81
+00:05:19,000 --> 00:05:23,000
+That function object is then assigned to targetFunction inside callTwice,
+
+82
+00:05:23,000 --> 00:05:26,000
+and targetFunction is called twice.
+
+83
+00:05:26,000 --> 00:05:29,000
+So let's see the behavior of that.
+
+84
+00:05:29,000 --> 00:05:34,000
+As you might guess, myFunction was called twice. That's pretty useful.
+
+85
+00:05:34,000 --> 00:05:36,000
+Just to show you that the same thing would have worked 
+
+86
+00:05:36,000 --> 00:05:39,000
+if we had used the named function syntax,
+
+87
+00:05:39,000 --> 00:05:44,000
+I'm going to change this to myFunction.
+
+88
+00:05:44,000 --> 00:05:47,000
+So if we go back and refresh, we can see myFunction was called.
+
+89
+00:05:47,000 --> 00:05:49,000
+Now, why might this be useful?
+
+90
+00:05:49,000 --> 00:05:53,000
+Here's the reason that a named function might be more useful to you,
+
+91
+00:05:53,000 --> 00:05:58,000
+especially in development, as compared to assigning an anonymous function
+
+92
+00:05:58,000 --> 00:06:00,000
+into a variable.
+
+93
+00:06:00,000 --> 00:06:09,000
+Let's say I did something like undeclaredVariable.
+
+94
+00:06:09,000 --> 00:06:14,000
+When I actually call this, it will actually try to find the variable called undeclaredVariable,
+
+95
+00:06:14,000 --> 00:06:16,000
+which there is none.
+
+96
+00:06:16,000 --> 00:06:20,000
+And in JavaScript, that will result in a reference error, which we've seen before.
+
+97
+00:06:20,000 --> 00:06:22,000
+So let's see what happens.
+
+98
+00:06:22,000 --> 00:06:26,000
+We get &quot;Uncaught ReferenceError: undeclaredVariable is not defined.&quot;
+
+99
+00:06:26,000 --> 00:06:29,000
+This is where the debugging comes in handy.
+
+100
+00:06:29,000 --> 00:06:33,000
+In the console, it will give us a little bit of information about where this error came from.
+
+101
+00:06:33,000 --> 00:06:37,000
+For instance, we can see the type of error it is--a reference error--
+
+102
+00:06:37,000 --> 00:06:40,000
+as well as some description right here.
+
+103
+00:06:40,000 --> 00:06:44,000
+We also get the line number where it comes from, which is well linked right in here
+
+104
+00:06:44,000 --> 00:06:46,000
+so we can jump right to the code.
+
+105
+00:06:46,000 --> 00:06:48,000
+But sometimes that's not enough information for us.
+
+106
+00:06:48,000 --> 00:06:52,000
+If we called myFunction multiple times, 
+
+107
+00:06:52,000 --> 00:06:57,000
+we want to find out exactly which call of myFunction raised that error.
+
+108
+00:06:57,000 --> 00:07:01,000
+This little disclosure triangle here will open up what's called the call stack.
+
+109
+00:07:01,000 --> 00:07:05,000
+Every function that we call is called by another function or an outer function.
+
+110
+00:07:05,000 --> 00:07:10,000
+And so starting at the top is closest to where it actually got called.
+
+111
+00:07:10,000 --> 00:07:14,000
+So since the error happened inside of myFunction, we see this name here,
+
+112
+00:07:14,000 --> 00:07:18,000
+and we see that myFunction was called inside of callTwice.
+
+113
+00:07:18,000 --> 00:07:23,000
+Right now in Chrome, it looks like it's actually being quite smart about this.
+
+114
+00:07:23,000 --> 00:07:28,000
+In some browsers, however, if we had defined our function in the anonymous sense--
+
+115
+00:07:28,000 --> 00:07:31,000
+that is, say, myFunction;
+
+116
+00:07:31,000 --> 00:07:34,000
+don't forget the var, which is very important--
+
+117
+00:07:34,000 --> 00:07:41,000
+and remove this actually named part of our function,
+
+118
+00:07:41,000 --> 00:07:44,000
+now we can see that the call stack has given us myFunction 
+
+119
+00:07:44,000 --> 00:07:47,000
+and callTwice as names that help us out.
+
+120
+00:07:47,000 --> 00:07:50,000
+However, the top level is anonymous function.
+
+121
+00:07:50,000 --> 00:07:53,000
+In some browsers, if we had gone with var myFunction
+
+122
+00:07:53,000 --> 00:07:56,000
+and assigned it an anonymous function,
+
+123
+00:07:56,000 --> 00:07:59,000
+it will not have that name associated with it
+
+124
+00:07:59,000 --> 00:08:04,000
+and our tools wouldn't be able to tell us very easily where or what function it is.
+
+125
+00:08:04,000 --> 00:08:10,000
+However, later versions of more modern browsers are now really smart about this
+
+126
+00:08:10,000 --> 00:08:14,000
+and can detect when you're assigning an anonymous function into a variable
+
+127
+00:08:14,000 --> 00:08:18,000
+and it will keep track of that name for you whenever it can.
+
+128
+00:08:18,000 --> 00:08:21,000
+There are still cases where it can't quite do that,
+
+129
+00:08:21,000 --> 00:08:24,000
+and we'll see that in a moment.
+
+130
+00:08:25,000 --> 00:08:27,000
+So let's go back to callTwice here.
+
+131
+00:08:27,000 --> 00:08:31,000
+We've seen we're able to pass in an argument that's stored in a variable,
+
+132
+00:08:31,000 --> 00:08:35,000
+which can either be stored in the variable using var myFunction = 
+
+133
+00:08:35,000 --> 00:08:37,000
+the anonymous function
+
+134
+00:08:37,000 --> 00:08:39,000
+or by using a named function.
+
+135
+00:08:39,000 --> 00:08:42,000
+However, we can use an anonymous function directly 
+
+136
+00:08:42,000 --> 00:08:45,000
+without worrying about assigning it to a variable.
+
+137
+00:08:45,000 --> 00:08:49,000
+In some cases, we may only want to use this function this 1 time,
+
+138
+00:08:49,000 --> 00:08:53,000
+and storing it into a variable is unnecessary just to call this.
+
+139
+00:08:53,000 --> 00:08:59,000
+Well, since an anonymous function is really just an expression that returns a function,
+
+140
+00:08:59,000 --> 00:09:01,000
+we can just use that anonymous function.
+
+141
+00:09:01,000 --> 00:09:05,000
+So instead of giving it a name, we'll just pass into callTwice
+
+142
+00:09:05,000 --> 00:09:07,000
+the expression that we use to build a function--
+
+143
+00:09:07,000 --> 00:09:11,000
+that is, the function keyword, the parameters, and the body.
+
+144
+00:09:11,000 --> 00:09:14,000
+Usually, we want to split the body onto multiple lines,
+
+145
+00:09:14,000 --> 00:09:16,000
+and that is totally okay to do.
+
+146
+00:09:16,000 --> 00:09:18,000
+We've opened up our curly brace.
+
+147
+00:09:18,000 --> 00:09:24,000
+Inside of here we're talking about our function that we're defining inside of this callTwice call.
+
+148
+00:09:24,000 --> 00:09:27,000
+And then we close our function with these curly braces,
+
+149
+00:09:27,000 --> 00:09:32,000
+and this last parentheses here is the closing parentheses of the callTwice call.
+
+150
+00:09:32,000 --> 00:09:37,000
+So what happens is when we call this code, it'll evaluate this function definition
+
+151
+00:09:37,000 --> 00:09:40,000
+and then it'll pass that function into callTwice.
+
+152
+00:09:40,000 --> 00:09:50,000
+So we can do console.log(&quot;Hello from anon function&quot;).
+
+153
+00:09:50,000 --> 00:09:55,000
+And so if we refresh now, we see we get twice Hello from anonymous function.
+
+154
+00:09:55,000 --> 00:10:00,000
+So let's see what happens if we do undeclaredVariable here.
+
+155
+00:10:00,000 --> 00:10:03,000
+We get &quot;undeclaredVariable is not defined.&quot;
+
+156
+00:10:03,000 --> 00:10:06,000
+This is what we tried to demonstrate in the first time.
+
+157
+00:10:06,000 --> 00:10:12,000
+If we unravel this, now we can see the call stack is slightly less helpful.
+
+158
+00:10:12,000 --> 00:10:15,000
+We have anonymous function, which was called from callTwice.
+
+159
+00:10:15,000 --> 00:10:17,000
+And the reason it can't give us a name 
+
+160
+00:10:17,000 --> 00:10:20,000
+is because there really is no name for this function.
+
+161
+00:10:20,000 --> 00:10:22,000
+This is quite literally an anonymous function, 
+
+162
+00:10:22,000 --> 00:10:27,000
+and JavaScript can't figure out a name for it because we didn't assign it into a variable
+
+163
+00:10:27,000 --> 00:10:29,000
+or give it a name.
+
+164
+00:10:29,000 --> 00:10:33,000
+Now, if we wanted to change that, we can do something like this.
+
+165
+00:10:33,000 --> 00:10:39,000
+We can do (function namedFunction) and give it a name 
+
+166
+00:10:39,000 --> 00:10:44,000
+just like we had normally done in our named function syntax.
+
+167
+00:10:44,000 --> 00:10:47,000
+Let's see how this differs here.
+
+168
+00:10:47,000 --> 00:10:50,000
+Now we can see that it does have a name,
+
+169
+00:10:50,000 --> 00:10:53,000
+and anonymous function has been replaced with named function.
+
+170
+00:10:53,000 --> 00:10:56,000
+However, this does create the variable called named function,
+
+171
+00:10:56,000 --> 00:10:58,000
+which is accessible from the global scope,
+
+172
+00:10:58,000 --> 00:11:04,000
+so really what this is doing is it's exactly the same as declaring a variable and passing it in.
+
+173
+00:11:04,000 --> 00:11:07,000
+However, it just does it all in line.
+
+174
+00:11:07,000 --> 00:11:11,000
+If you're never going to use named function again, it may not be helpful to give it a name
+
+175
+00:11:11,000 --> 00:11:13,000
+since you're never going to use it again.
+
+176
+00:11:13,000 --> 00:11:18,000
+But again, you saw how it could be useful in debugging by giving it this name.
+
+177
+00:11:18,000 --> 00:11:22,000
+In this particular case, it's pretty easy to figure out what's going on 
+
+178
+00:11:22,000 --> 00:11:25,000
+in that type of error debugging because really,
+
+179
+00:11:25,000 --> 00:11:29,000
+we just called the function immediately from inside callTwice.
+
+180
+00:11:29,000 --> 00:11:32,000
+But if callTwice had passed that function to another function
+
+181
+00:11:32,000 --> 00:11:35,000
+and another function and called much later,
+
+182
+00:11:35,000 --> 00:11:39,000
+it may be very far disconnected from where we actually defined our anonymous function
+
+183
+00:11:39,000 --> 00:11:43,000
+to where it's actually called because it could be stored into a variable and called much later.
+
+184
+00:11:43,000 --> 00:11:49,000
+By putting that name on it, if we are still unsure of where that anonymous function came from,
+
+185
+00:11:49,000 --> 00:11:52,000
+the name can offer us a tool for tracking it down.
+
+186
+00:11:52,000 --> 00:11:55,000
+One last thing about anonymous functions.
+
+187
+00:11:55,000 --> 00:11:58,000
+There's a cool little trick that you'll see very often in anonymous functions,
+
+188
+00:11:58,000 --> 00:12:02,000
+and that's called a self-executing anonymous function.
+
+189
+00:12:02,000 --> 00:12:04,000
+You remember that functions create their own scope.
+
+190
+00:12:04,000 --> 00:12:08,000
+And in JavaScript, that's the only way to create a new scope.
+
+191
+00:12:08,000 --> 00:12:12,000
+In other languages, different structures can create new levels of scope
+
+192
+00:12:12,000 --> 00:12:16,000
+for either creating new variables that don't leak out to the global scope
+
+193
+00:12:16,000 --> 00:12:19,000
+or reusing variables by shadowing.
+
+194
+00:12:19,000 --> 00:12:22,000
+But in JavaScript, the only way you can create a new scope is through a function.
+
+195
+00:12:22,000 --> 00:12:27,000
+But sometimes it doesn't make sense to really name a function and just call it.
+
+196
+00:12:27,000 --> 00:12:30,000
+Well, what we can do is if we wanted to create a new scope, we can do exactly that.
+
+197
+00:12:30,000 --> 00:12:33,000
+Let's create a function and call it immediately.
+
+198
+00:12:33,000 --> 00:12:38,000
+One way you could do this is we'll say tempFunction,
+
+199
+00:12:38,000 --> 00:12:45,000
+and then from within here we can create any variable we want--a, b, c--
+
+200
+00:12:45,000 --> 00:12:47,000
+use them to our heart's content, 
+
+201
+00:12:47,000 --> 00:12:51,000
+and not worry about a, b, and c being visible from the global scope.
+
+202
+00:12:51,000 --> 00:12:55,000
+This is especially needed in JavaScript because all of the scripts in our page
+
+203
+00:12:55,000 --> 00:12:57,000
+run in the same global scope.
+
+204
+00:12:57,000 --> 00:12:59,000
+So if 2 scripts use the same variable,
+
+205
+00:12:59,000 --> 00:13:02,000
+at the global scope they could interact poorly.
+
+206
+00:13:02,000 --> 00:13:04,000
+So it's good to scope all your variables.
+
+207
+00:13:04,000 --> 00:13:08,000
+And then what we could do is just call tempFunction,
+
+208
+00:13:08,000 --> 00:13:13,000
+and what we would essentially have is the code running on line 67 here
+
+209
+00:13:13,000 --> 00:13:18,000
+and whatever extra code here that actually uses a, b, and c running immediately, 
+
+210
+00:13:18,000 --> 00:13:22,000
+but it would keep all the variables contained within that scope.
+
+211
+00:13:22,000 --> 00:13:26,000
+And that's really useful, but it's a lot of code. And I made a mistake there. 
+
+212
+00:13:26,000 --> 00:13:28,000
+That should have been function tempFunction, 
+
+213
+00:13:28,000 --> 00:13:32,000
+or we could have stored an anonymous function into it.
+
+214
+00:13:32,000 --> 00:13:34,000
+But let's see what we can do with this.
+
+215
+00:13:34,000 --> 00:13:38,000
+How about instead of naming the function we create it anonymously?
+
+216
+00:13:38,000 --> 00:13:40,000
+Since we don't have a name, we can't execute it like that,
+
+217
+00:13:40,000 --> 00:13:43,000
+but what if we could execute it right from here?
+
+218
+00:13:43,000 --> 00:13:47,000
+If we surround these in parentheses,
+
+219
+00:13:47,000 --> 00:13:50,000
+parentheses here are not acting as a function call.
+
+220
+00:13:50,000 --> 00:13:54,000
+Rather, as parentheses would act in a mathematical expression,
+
+221
+00:13:54,000 --> 00:13:59,000
+parentheses around a value will just evaluate to that value.
+
+222
+00:13:59,000 --> 00:14:03,000
+So now right here these parentheses evaluate to a function object.
+
+223
+00:14:03,000 --> 00:14:09,000
+And since we have a function object, we can call it immediately by using parentheses again.
+
+224
+00:14:09,000 --> 00:14:13,000
+These parentheses are function execution parentheses,
+
+225
+00:14:13,000 --> 00:14:20,000
+meaning they can take arguments like arg1, arg2,
+
+226
+00:14:20,000 --> 00:14:26,000
+but these parentheses here are for syntax reasons--these parentheses right here.
+
+227
+00:14:26,000 --> 00:14:30,000
+So this is saying everything in here evaluates to a function,
+
+228
+00:14:30,000 --> 00:14:34,000
+and now that we have this function, we can call it immediately.
+
+229
+00:14:34,000 --> 00:14:36,000
+This will allow us to do anything we want.
+
+230
+00:14:36,000 --> 00:14:45,000
+So we can say console.log('from anon function')
+
+231
+00:14:45,000 --> 00:14:50,000
+And let's just say we're going to pass in 1 and 'hello'.
+
+232
+00:14:50,000 --> 00:14:53,000
+So if we refresh, we see from anonymous function.
+
+233
+00:14:53,000 --> 00:14:56,000
+I just had a typo there.
+
+234
+00:14:58,000 --> 00:15:01,000
+So you'll see this in a lot of JavaScript libraries,
+
+235
+00:15:01,000 --> 00:15:05,000
+and the reason it's useful is because var a, b, and c
+
+236
+00:15:05,000 --> 00:15:08,000
+we can create all the variables we want, do all of the stuff that we want,
+
+237
+00:15:08,000 --> 00:15:11,000
+and we don't have to worry about any variables that we declare properly
+
+238
+00:15:11,000 --> 00:15:16,000
+being leaked to the global scope and being accessible by other code.
+
+239
+00:15:16,000 --> 00:15:20,000
+So this is just a little pattern that you'll see very often when you want to create a private scope
+
+240
+00:15:20,000 --> 00:15:24,000
+where you can put all your variables and not have to worry about them interacting
+
+241
+00:15:24,000 --> 00:15:29,000
+either by other scripts or other libraries using those same variable names.
+
+242
+00:15:29,000 --> 00:15:33,000
+So now we've learned how to declare and use functions in JavaScript.
+
+243
+00:15:33,000 --> 00:15:35,000
+Up next, we'll take a look at some practical examples 
+
+244
+00:15:35,000 --> 00:15:39,000
+of how functions are used in common JavaScript operations.
+
+245
+00:15:39,000 --> 00:15:42,000
+[??] [Treehouse]
+

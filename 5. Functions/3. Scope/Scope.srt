@@ -1,0 +1,676 @@
+1
+00:00:00,000 --> 00:00:07,000
+[? Music ?] [Treehouse]
+
+2
+00:00:07,000 --> 00:00:10,000
+So far we've seen  how to use 2 features of functions,
+
+3
+00:00:10,000 --> 00:00:12,000
+arguments and return values.
+
+4
+00:00:12,000 --> 00:00:15,000
+Now we'll learn about how scope works in functions.
+
+5
+00:00:15,000 --> 00:00:19,000
+We've seen a basic example of creating a function that takes arguments,
+
+6
+00:00:19,000 --> 00:00:22,000
+performs some actions, and returns a value.
+
+7
+00:00:22,000 --> 00:00:24,000
+Now, there's another property of functions that's very important
+
+8
+00:00:24,000 --> 00:00:28,000
+in JavaScript to understand, and that's called &quot;scope.&quot;
+
+9
+00:00:28,000 --> 00:00:32,000
+Let's take a look at a very simple example.
+
+10
+00:00:32,000 --> 00:00:35,000
+Let's say I have a variable named &quot;color,&quot;
+
+11
+00:00:35,000 --> 00:00:38,000
+and I'll set its value to the string black,
+
+12
+00:00:38,000 --> 00:00:43,000
+and let's say I have a function showColor, 
+
+13
+00:00:43,000 --> 00:00:46,000
+and right now we'll say it takes no arguments,
+
+14
+00:00:46,000 --> 00:00:49,000
+and our body of our function is going to be this.
+
+15
+00:00:49,000 --> 00:00:55,000
+We're going to say &quot;var color = green.&quot;
+
+16
+00:00:55,000 --> 00:00:59,000
+What I'm going to do from inside our function is call console.log
+
+17
+00:00:59,000 --> 00:01:02,000
+and use the variable color.
+
+18
+00:01:02,000 --> 00:01:05,000
+On line 26 we created a variable called color.
+
+19
+00:01:05,000 --> 00:01:08,000
+Then we defined a function called showColor inside of which
+
+20
+00:01:08,000 --> 00:01:11,000
+we also defined another variable called color
+
+21
+00:01:11,000 --> 00:01:13,000
+and have given it another value.
+
+22
+00:01:13,000 --> 00:01:17,000
+The question is when we call showColor
+
+23
+00:01:17,000 --> 00:01:20,000
+what are we going to get?
+
+24
+00:01:20,000 --> 00:01:22,000
+Place your bets now.
+
+25
+00:01:22,000 --> 00:01:24,000
+Are we going to get black? Are we going to get green?
+
+26
+00:01:24,000 --> 00:01:26,000
+Are we going to get an error? What's going to happen?
+
+27
+00:01:26,000 --> 00:01:28,000
+Well, let's take a look, and we're back on our page here,
+
+28
+00:01:28,000 --> 00:01:32,000
+and if I refresh we see we get green.
+
+29
+00:01:32,000 --> 00:01:34,000
+Now, why does it do this?
+
+30
+00:01:34,000 --> 00:01:36,000
+Well, on line 26 we created a variable,
+
+31
+00:01:36,000 --> 00:01:39,000
+and we've created it at the global scope,
+
+32
+00:01:39,000 --> 00:01:43,000
+which means that we've created it outside of any function.
+
+33
+00:01:43,000 --> 00:01:47,000
+Now, what we've done on line 29 is created another variable called &quot;color.&quot;
+
+34
+00:01:47,000 --> 00:01:53,000
+However, the difference is we've created it in what we call a new scope,
+
+35
+00:01:53,000 --> 00:01:57,000
+and you can think of scope as sort of a name space for our variables.
+
+36
+00:01:57,000 --> 00:02:00,000
+Even though we already had a variable named color, 
+
+37
+00:02:00,000 --> 00:02:02,000
+we've created a whole new layer or a whole new name space
+
+38
+00:02:02,000 --> 00:02:05,000
+that we can define new variables in.
+
+39
+00:02:05,000 --> 00:02:08,000
+And if we define new variables from inside a function
+
+40
+00:02:08,000 --> 00:02:11,000
+they will not collide with anything from a higher scope
+
+41
+00:02:11,000 --> 00:02:17,000
+including our global scope where our current color variable lives.
+
+42
+00:02:17,000 --> 00:02:22,000
+On line 29 it does not interact at all with the color that we've defined on line 26.
+
+43
+00:02:22,000 --> 00:02:27,000
+Instead it creates a brand-new variable that from within showColor 
+
+44
+00:02:27,000 --> 00:02:30,000
+now the color variable will refer to that color green
+
+45
+00:02:30,000 --> 00:02:35,000
+and not the color black, and to show that assigning the variable color
+
+46
+00:02:35,000 --> 00:02:39,000
+equals green on line 29 does not interact with the color
+
+47
+00:02:39,000 --> 00:02:43,000
+from outside of our function after we call showColor
+
+48
+00:02:43,000 --> 00:02:52,000
+let's do console.log('Global color', color).
+
+49
+00:02:52,000 --> 00:02:55,000
+I'm going to change this console.log here,
+
+50
+00:02:55,000 --> 00:02:59,000
+and we'll add in another prefix here, and we'll say
+
+51
+00:02:59,000 --> 00:03:07,000
+our showColor color and pass it the color from inside of showColor.
+
+52
+00:03:07,000 --> 00:03:10,000
+So, now what we are doing is we are calling showColor,
+
+53
+00:03:10,000 --> 00:03:14,000
+which will execute the line 29, var color = green,
+
+54
+00:03:14,000 --> 00:03:17,000
+and then we'll inspect color from inside of our function,
+
+55
+00:03:17,000 --> 00:03:21,000
+and we'll see that it will be green, which we saw last time,
+
+56
+00:03:21,000 --> 00:03:23,000
+but let's see what happens after we call showColor,
+
+57
+00:03:23,000 --> 00:03:28,000
+and on line 37 again try to console.log the variable called &quot;color.&quot;
+
+58
+00:03:28,000 --> 00:03:33,000
+If we refresh we can see our showColor color is green,
+
+59
+00:03:33,000 --> 00:03:36,000
+and our global color is still black.
+
+60
+00:03:36,000 --> 00:03:39,000
+Now, does that mean from within a function we can't reach variables
+
+61
+00:03:39,000 --> 00:03:41,000
+that are at a higher scope?
+
+62
+00:03:41,000 --> 00:03:43,000
+Well, let's do another example.
+
+63
+00:03:43,000 --> 00:03:49,000
+Let's say &quot;var number = 1.&quot;
+
+64
+00:03:49,000 --> 00:03:54,000
+And let's say from within showColor here
+
+65
+00:03:54,000 --> 00:04:04,000
+we log our number, and let's do the same thing after we call our showColor.
+
+66
+00:04:04,000 --> 00:04:07,000
+We've defined a variable number at our global scope,
+
+67
+00:04:07,000 --> 00:04:11,000
+and when we call showColor we're reaching that number in our console.log
+
+68
+00:04:11,000 --> 00:04:13,000
+and logging its value.
+
+69
+00:04:13,000 --> 00:04:16,000
+Then afterwards we're also logging number once again on line 40,
+
+70
+00:04:16,000 --> 00:04:18,000
+so what happens?
+
+71
+00:04:18,000 --> 00:04:21,000
+We see that the number is 1 from inside of showColor,
+
+72
+00:04:21,000 --> 00:04:24,000
+and number is also 1 inside of global,
+
+73
+00:04:24,000 --> 00:04:29,000
+which means we're able to access higher level variables from within our function.
+
+74
+00:04:29,000 --> 00:04:31,000
+However, what would happen if we wanted to reach the global color
+
+75
+00:04:31,000 --> 00:04:35,000
+from within our function where we've already defined a local color variable?
+
+76
+00:04:35,000 --> 00:04:38,000
+Well, that's actually pretty difficult to do 
+
+77
+00:04:38,000 --> 00:04:41,000
+because now that we've defined a local color and assigned it green 
+
+78
+00:04:41,000 --> 00:04:46,000
+it's hard to reach that global color which was holding the value black.
+
+79
+00:04:46,000 --> 00:04:49,000
+Now, in our case since it is global there is a technique we can use,
+
+80
+00:04:49,000 --> 00:04:51,000
+but let's not look at that right now.
+
+81
+00:04:51,000 --> 00:04:54,000
+Essentially what we've done is we've shadowed the variable.
+
+82
+00:04:54,000 --> 00:04:58,000
+By giving a local variable the same name as a variable 
+
+83
+00:04:58,000 --> 00:05:01,000
+in a higher scope we've made it inaccessible to us.
+
+84
+00:05:01,000 --> 00:05:04,000
+Now, really this is avoided by not giving variables 
+
+85
+00:05:04,000 --> 00:05:07,000
+at different scopes the same name.
+
+86
+00:05:07,000 --> 00:05:10,000
+You can see we have no problem with number reaching up to the global scope,
+
+87
+00:05:10,000 --> 00:05:13,000
+but since color is defined at a closer scope 
+
+88
+00:05:13,000 --> 00:05:15,000
+than the global scope, which we might want,
+
+89
+00:05:15,000 --> 00:05:17,000
+we're unable to reach it, and this is called shadowing.
+
+90
+00:05:17,000 --> 00:05:21,000
+Now, can we modify variables at a higher scope?
+
+91
+00:05:21,000 --> 00:05:27,000
+Let's say we want to say number now equals 2.
+
+92
+00:05:27,000 --> 00:05:29,000
+Now, what would happen?
+
+93
+00:05:29,000 --> 00:05:32,000
+If we refresh we can see that number has not only changed to 2
+
+94
+00:05:32,000 --> 00:05:37,000
+from inside of showColor but it's also changed at the global scope.
+
+95
+00:05:37,000 --> 00:05:41,000
+That's because on line 32 number refers to the exact variable
+
+96
+00:05:41,000 --> 00:05:46,000
+that's defined on line 27, so just like we can assign a value to a variable
+
+97
+00:05:46,000 --> 00:05:51,000
+from the global scope we can also do it from inside the local scope.
+
+98
+00:05:51,000 --> 00:05:53,000
+Now, why might this be a problem?
+
+99
+00:05:53,000 --> 00:05:57,000
+You'll remember when I talked about defining variables in the previous videos
+
+100
+00:05:57,000 --> 00:06:00,000
+that I said the var keyword is very important,
+
+101
+00:06:00,000 --> 00:06:03,000
+and here's why it's really important.
+
+102
+00:06:03,000 --> 00:06:07,000
+When we take a look here at our output we see that the showColor color is green,
+
+103
+00:06:07,000 --> 00:06:09,000
+but the global color remains black.
+
+104
+00:06:09,000 --> 00:06:13,000
+We talked about how they created a variable at a different scope.
+
+105
+00:06:13,000 --> 00:06:19,000
+But what happens if we forgot to put the var keyword in front of color here?
+
+106
+00:06:19,000 --> 00:06:21,000
+Well, that changes things.
+
+107
+00:06:21,000 --> 00:06:23,000
+We're no longer defining a new variable called &quot;color&quot;
+
+108
+00:06:23,000 --> 00:06:25,000
+at the local level.
+
+109
+00:06:25,000 --> 00:06:29,000
+Instead what we're doing is we're referring to the color variable
+
+110
+00:06:29,000 --> 00:06:33,000
+at the global scope and assigning to it and changing it,
+
+111
+00:06:33,000 --> 00:06:37,000
+so if we refresh we'll now see it's actually changed the global color,
+
+112
+00:06:37,000 --> 00:06:42,000
+and that can be very, very dangerous and very confusing to debug.
+
+113
+00:06:42,000 --> 00:06:45,000
+If you forget var when you meant to create a new variable
+
+114
+00:06:45,000 --> 00:06:50,000
+you might be actually changing the value of a variable at a higher level scope.
+
+115
+00:06:50,000 --> 00:06:54,000
+Once again, this is something that you can avoid by not shadowing your variables
+
+116
+00:06:54,000 --> 00:06:57,000
+or giving variables the same name at different level scopes.
+
+117
+00:06:57,000 --> 00:07:00,000
+That way you don't have to worry about which one is which,
+
+118
+00:07:00,000 --> 00:07:02,000
+but let's put var back in here.
+
+119
+00:07:02,000 --> 00:07:05,000
+Now, there's another curious property here.
+
+120
+00:07:05,000 --> 00:07:12,000
+What if we were to do this?
+
+121
+00:07:12,000 --> 00:07:17,000
+If we change and console.log our shape here,
+
+122
+00:07:17,000 --> 00:07:26,000
+and let's also console it from the global scope,
+
+123
+00:07:26,000 --> 00:07:28,000
+what would happen?
+
+124
+00:07:28,000 --> 00:07:31,000
+Well, you might think since shape is not defined at the global scope
+
+125
+00:07:31,000 --> 00:07:35,000
+it will define a new variable called shape at showColor,
+
+126
+00:07:35,000 --> 00:07:38,000
+but we'll see what happens is actually a little bit different.
+
+127
+00:07:38,000 --> 00:07:43,000
+If we refresh we can see the shape from inside showColor is square,
+
+128
+00:07:43,000 --> 00:07:48,000
+but also global has a variable called shape which is also square.
+
+129
+00:07:48,000 --> 00:07:51,000
+Now, this may appear to work in our code if we miss this error.
+
+130
+00:07:51,000 --> 00:07:54,000
+However, it might become very confusing because 
+
+131
+00:07:54,000 --> 00:07:59,000
+every time we call showColor it will refer to the exact same shape instance
+
+132
+00:07:59,000 --> 00:08:01,000
+because what's happened here is we assigned to a variable 
+
+133
+00:08:01,000 --> 00:08:04,000
+that we have not declared with a var keyword.
+
+134
+00:08:04,000 --> 00:08:06,000
+And what JavaScript does in this case is it creates
+
+135
+00:08:06,000 --> 00:08:10,000
+a global variable called shape and assigns it square
+
+136
+00:08:10,000 --> 00:08:13,000
+because it didn't know what level to define that variable,
+
+137
+00:08:13,000 --> 00:08:15,000
+so it went to global.
+
+138
+00:08:15,000 --> 00:08:20,000
+Now, this is a behavior that some consider to be a bug in JavaScript,
+
+139
+00:08:20,000 --> 00:08:22,000
+but ultimately it's just something that can be harmful,
+
+140
+00:08:22,000 --> 00:08:25,000
+and there's actually some settings that we can change 
+
+141
+00:08:25,000 --> 00:08:28,000
+that will avoid this behavior in the future.
+
+142
+00:08:28,000 --> 00:08:31,000
+However, in JavaScript if we forget the var keyword
+
+143
+00:08:31,000 --> 00:08:35,000
+it creates this global variable, and while showColor
+
+144
+00:08:35,000 --> 00:08:37,000
+may seem to still work the way we want
+
+145
+00:08:37,000 --> 00:08:39,000
+we're now creating a new global variable, 
+
+146
+00:08:39,000 --> 00:08:42,000
+and the implications of that may not be obvious
+
+147
+00:08:42,000 --> 00:08:45,000
+and may result in some  unusual bugs, 
+
+148
+00:08:45,000 --> 00:08:49,000
+so that's why the var keyword is so vitally important.
+
+149
+00:08:49,000 --> 00:08:53,000
+If we were to put a var in front of that line here
+
+150
+00:08:53,000 --> 00:08:57,000
+this changes the meaning of our code entirely.
+
+151
+00:08:57,000 --> 00:08:59,000
+Now instead of creating a global shape with square
+
+152
+00:08:59,000 --> 00:09:02,000
+we've only created a local one, which means on line 45 
+
+153
+00:09:02,000 --> 00:09:06,000
+where we log the shape from the global scope
+
+154
+00:09:06,000 --> 00:09:09,000
+we now get the correct output, which is a reference error
+
+155
+00:09:09,000 --> 00:09:12,000
+because we have not defined shape at the global scope.
+
+156
+00:09:12,000 --> 00:09:16,000
+And by trying to access it, that causes an error in JavaScript,
+
+157
+00:09:16,000 --> 00:09:19,000
+and that shows you that a function creates a brand-new scope
+
+158
+00:09:19,000 --> 00:09:22,000
+where whenever we use the var keyword
+
+159
+00:09:22,000 --> 00:09:27,000
+we're creating a variable only accessible from within this function call,
+
+160
+00:09:27,000 --> 00:09:29,000
+which means that we can create all the variables we want 
+
+161
+00:09:29,000 --> 00:09:33,000
+inside of showColor without worrying about bleeding them out to the global scope
+
+162
+00:09:33,000 --> 00:09:37,000
+where they might be interacting with other things that are using that name
+
+163
+00:09:37,000 --> 00:09:40,000
+or just producing unwanted behavior.
+
+164
+00:09:40,000 --> 00:09:44,000
+We'll see how function scope can be useful in an upcoming video
+
+165
+00:09:44,000 --> 00:09:46,000
+where we talk about how functions can be used also
+
+166
+00:09:46,000 --> 00:09:50,000
+as a tool to define scopes.
+
+167
+00:09:50,000 --> 00:09:53,000
+In the next video we'll see why scope is so important
+
+168
+00:09:53,000 --> 00:09:56,000
+when we learn about anonymous functions.
+
+169
+00:09:56,000 --> 00:09:58,000
+[? Music ?] [Treehouse]
+

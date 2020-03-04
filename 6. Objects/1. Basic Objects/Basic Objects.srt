@@ -1,0 +1,784 @@
+1
+00:00:00,000 --> 00:00:07,000
+[Treehouse]
+
+2
+00:00:08,000 --> 00:00:10,000
+In JavaScript, objects are the foundations
+
+3
+00:00:10,000 --> 00:00:12,000
+for almost every type that we use.
+
+4
+00:00:12,000 --> 00:00:17,000
+In this video, we'll learn how to create basic JavaScript objects for our programs.
+
+5
+00:00:17,000 --> 00:00:19,000
+So now we'll be learning about 1 of the most
+
+6
+00:00:19,000 --> 00:00:21,000
+core and foundational pieces of JavaScript,
+
+7
+00:00:21,000 --> 00:00:23,000
+the object.
+
+8
+00:00:23,000 --> 00:00:25,000
+Objects can be very simple to begin with, 
+
+9
+00:00:25,000 --> 00:00:27,000
+but there's very interesting and complex
+
+10
+00:00:27,000 --> 00:00:29,000
+parts when we start wanting to do more
+
+11
+00:00:29,000 --> 00:00:32,000
+advanced things with our objects.
+
+12
+00:00:32,000 --> 00:00:35,000
+In this video, we'll be working on a very basic HTML page
+
+13
+00:00:35,000 --> 00:00:37,000
+much like our previous pages that we used
+
+14
+00:00:37,000 --> 00:00:40,000
+to learn arrays and other types.
+
+15
+00:00:40,000 --> 00:00:43,000
+It's a simple HTML page 
+
+16
+00:00:43,000 --> 00:00:46,000
+that includes 1 JavaScript file called objects.js
+
+17
+00:00:46,000 --> 00:00:49,000
+and this is where we'll be experimenting 
+
+18
+00:00:49,000 --> 00:00:51,000
+and learning about objects.
+
+19
+00:00:51,000 --> 00:00:52,000
+So what is an object?
+
+20
+00:00:52,000 --> 00:00:55,000
+In JavaScript, an object is simply 
+
+21
+00:00:55,000 --> 00:00:59,000
+a datatype that associates keys and values.
+
+22
+00:00:59,000 --> 00:01:02,000
+Much like how the JavaScript array stores 
+
+23
+00:01:02,000 --> 00:01:05,000
+multiple values by numeric key or index,
+
+24
+00:01:05,000 --> 00:01:08,000
+a JavaScript object can store many values
+
+25
+00:01:08,000 --> 00:01:11,000
+by a key that is described by a string.
+
+26
+00:01:11,000 --> 00:01:13,000
+So let me show you what that looks like.
+
+27
+00:01:13,000 --> 00:01:15,000
+I'm going to create an object that
+
+28
+00:01:15,000 --> 00:01:17,000
+ represents me, or Jim.
+
+29
+00:01:17,000 --> 00:01:20,000
+So I'm going to create a normal variable
+
+30
+00:01:20,000 --> 00:01:24,000
+and I'm going to name this variable Jim,
+
+31
+00:01:24,000 --> 00:01:27,000
+and the way we create an object or an object literal 
+
+32
+00:01:27,000 --> 00:01:29,000
+is with curly braces.
+
+33
+00:01:29,000 --> 00:01:30,000
+Now inside of these curly braces, 
+
+34
+00:01:30,000 --> 00:01:33,000
+what we are going to define are the 
+
+35
+00:01:33,000 --> 00:01:35,000
+keys and values of our object.
+
+36
+00:01:35,000 --> 00:01:37,000
+Remember that arrays were ordered so we
+
+37
+00:01:37,000 --> 00:01:39,000
+didn't have to give it the keys,
+
+38
+00:01:39,000 --> 00:01:41,000
+but because the key of the object could be anything, 
+
+39
+00:01:41,000 --> 00:01:44,000
+we have to specify our keys next to our values.
+
+40
+00:01:44,000 --> 00:01:47,000
+So let's assign some keys and values to Jim.
+
+41
+00:01:47,000 --> 00:01:51,000
+One key would be name,
+
+42
+00:01:51,000 --> 00:01:52,000
+and the way we
+
+43
+00:01:52,000 --> 00:01:54,000
+ differentiate keys and values is 
+
+44
+00:01:54,000 --> 00:01:56,000
+first, we give the key,
+
+45
+00:01:56,000 --> 00:01:58,000
+then we have a colon,
+
+46
+00:01:58,000 --> 00:02:00,000
+and then the value comes after that,
+
+47
+00:02:00,000 --> 00:02:05,000
+and our value for name would be Jim.
+
+48
+00:02:05,000 --> 00:02:07,000
+Now this is a very basic object.
+
+49
+00:02:07,000 --> 00:02:09,000
+It only has 1 key and value pair.
+
+50
+00:02:09,000 --> 00:02:11,000
+You can see that on the left-hand side of the colon,
+
+51
+00:02:11,000 --> 00:02:13,000
+name specifies the key,
+
+52
+00:02:13,000 --> 00:02:15,000
+and on the right-hand side
+
+53
+00:02:15,000 --> 00:02:17,000
+is the value for that key.
+
+54
+00:02:17,000 --> 00:02:20,000
+So the way that we can access that is
+
+55
+00:02:20,000 --> 00:02:24,000
+for instance, we could do Jim.name
+
+56
+00:02:24,000 --> 00:02:26,000
+Now let's see what's inside of this.
+
+57
+00:02:26,000 --> 00:02:29,000
+We can do console.log
+
+58
+00:02:29,000 --> 00:02:32,000
+and pass at jim.name
+
+59
+00:02:32,000 --> 00:02:35,000
+So if we save this and we refresh,
+
+60
+00:02:35,000 --> 00:02:38,000
+we can see that it logged Jim to the console,
+
+61
+00:02:38,000 --> 00:02:41,000
+because Jim.name is Jim,
+
+62
+00:02:41,000 --> 00:02:43,000
+and we can play with our object interactively. 
+
+63
+00:02:43,000 --> 00:02:46,000
+For instance, if we do Jim.name,
+
+64
+00:02:46,000 --> 00:02:48,000
+we can see it's a string Jim.
+
+65
+00:02:48,000 --> 00:02:51,000
+Additionally, we can assign values to our keys
+
+66
+00:02:51,000 --> 00:02:54,000
+by doing Jim.name equals
+
+67
+00:02:54,000 --> 00:02:58,000
+and maybe a different value, like James.
+
+68
+00:02:58,000 --> 00:03:01,000
+So now if we inspect Jim.name,
+
+69
+00:03:01,000 --> 00:03:05,000
+we can see that it stores the new string, James.
+
+70
+00:03:05,000 --> 00:03:07,000
+So these keys and values are much like variables
+
+71
+00:03:07,000 --> 00:03:10,000
+except they're associated with an object.
+
+72
+00:03:10,000 --> 00:03:14,000
+Now we can add multiple key and value pairs to our object 
+
+73
+00:03:14,000 --> 00:03:17,000
+by separating them with a comma. 
+
+74
+00:03:17,000 --> 00:03:19,000
+If we wanted to add some more information,
+
+75
+00:03:19,000 --> 00:03:22,000
+like skills,
+
+76
+00:03:22,000 --> 00:03:28,000
+we could put a comma, our next key, a colon, and then our next value. 
+
+77
+00:03:28,000 --> 00:03:30,000
+The values don't have to be strings.
+
+78
+00:03:30,000 --> 00:03:32,000
+They can be any type that we can store in a variable;
+
+79
+00:03:32,000 --> 00:03:34,000
+for instance, an array.
+
+80
+00:03:34,000 --> 00:03:36,000
+So we can say, for instance, my skills are 
+
+81
+00:03:36,000 --> 00:03:41,000
+JavaScript and let's say Ruby 
+
+82
+00:03:41,000 --> 00:03:43,000
+and dancing.
+
+83
+00:03:43,000 --> 00:03:45,000
+I'm an excellent dancer.
+
+84
+00:03:45,000 --> 00:03:48,000
+So if we save this out, 
+
+85
+00:03:48,000 --> 00:03:49,000
+and we were to come back and we can
+
+86
+00:03:49,000 --> 00:03:52,000
+inspect our object again by, let's say,
+
+87
+00:03:52,000 --> 00:03:57,000
+typing Jim.skills,
+
+88
+00:03:57,000 --> 00:04:00,000
+and we can see we get the array of my skills back,
+
+89
+00:04:00,000 --> 00:04:03,000
+and we can modify this array just like any other object.
+
+90
+00:04:03,000 --> 00:04:08,000
+We could reassign skills to a different set of objects or even a string.
+
+91
+00:04:08,000 --> 00:04:11,000
+But this is the simple way we read values from our object.
+
+92
+00:04:11,000 --> 00:04:14,000
+Similarly, we can write values into our keys
+
+93
+00:04:14,000 --> 00:04:24,000
+by simply doing Jim.skills equals everything.
+
+94
+00:04:24,000 --> 00:04:27,000
+So that's the basics of objects.
+
+95
+00:04:27,000 --> 00:04:29,000
+It's very simple; it's just a series of
+
+96
+00:04:29,000 --> 00:04:32,000
+keys and values that we can assign to and read from.
+
+97
+00:04:32,000 --> 00:04:35,000
+Let's take a look our object literal again.
+
+98
+00:04:35,000 --> 00:04:37,000
+Our line is getting pretty long.
+
+99
+00:04:37,000 --> 00:04:38,000
+It looks like we're reaching the 
+
+100
+00:04:38,000 --> 00:04:39,000
+right-hand side of our screen, 
+
+101
+00:04:39,000 --> 00:04:41,000
+so it's a little bit difficult to read.
+
+102
+00:04:41,000 --> 00:04:43,000
+So let's take a look at the way we would
+
+103
+00:04:43,000 --> 00:04:47,000
+normally indent or format object literals.
+
+104
+00:04:47,000 --> 00:04:49,000
+Usually, what we can do is,
+
+105
+00:04:49,000 --> 00:04:51,000
+after we have our opening curly brace,
+
+106
+00:04:51,000 --> 00:04:54,000
+we can add a new line and indent it.
+
+107
+00:04:54,000 --> 00:04:57,000
+Right now, my indentation is about 4 spaces
+
+108
+00:04:57,000 --> 00:05:02,000
+but depending on your indentation, it may go further or less far.
+
+109
+00:05:02,000 --> 00:05:04,000
+And usually what we do is
+
+110
+00:05:04,000 --> 00:05:10,000
+break up each key and value pair onto a different line.
+
+111
+00:05:10,000 --> 00:05:12,000
+Finally, we'll have the closing curly brace
+
+112
+00:05:12,000 --> 00:05:14,000
+for our object literal
+
+113
+00:05:14,000 --> 00:05:19,000
+on another line out-dented to the original level of indentation. 
+
+114
+00:05:19,000 --> 00:05:21,000
+This makes it very easy to see where the 
+
+115
+00:05:21,000 --> 00:05:25,000
+beginning of our Jim object definition begins and ends.
+
+116
+00:05:25,000 --> 00:05:28,000
+Now there's another interesting thing we can do here.
+
+117
+00:05:28,000 --> 00:05:31,000
+Well see that our keys right now are strings,
+
+118
+00:05:31,000 --> 00:05:34,000
+and they are surrounded by quotation marks. 
+
+119
+00:05:34,000 --> 00:05:37,000
+This is not strictly necessary with the keys
+
+120
+00:05:37,000 --> 00:05:38,000
+that we're using here,
+
+121
+00:05:38,000 --> 00:05:42,000
+because if we use a key that is a valid identifier,
+
+122
+00:05:42,000 --> 00:05:46,000
+that is, it would be acceptable to use as a variable name
+
+123
+00:05:46,000 --> 00:05:48,000
+or as a function name,
+
+124
+00:05:48,000 --> 00:05:53,000
+then we don't have to surround the key in our literal with quotes.
+
+125
+00:05:53,000 --> 00:05:58,000
+So basically, anything that's a valid variable name could be written like this.
+
+126
+00:05:58,000 --> 00:06:04,000
+And this is just a shorthand that makes a little bit easier to parse and modify our code.
+
+127
+00:06:04,000 --> 00:06:08,000
+Again, you're always safe quoting your key strings,
+
+128
+00:06:08,000 --> 00:06:12,000
+but in these cases, usually we have identifiers for our keys that
+
+129
+00:06:12,000 --> 00:06:14,000
+don't need quotation marks,
+
+130
+00:06:14,000 --> 00:06:15,000
+so we'll just skip it.
+
+131
+00:06:15,000 --> 00:06:19,000
+We can see by loading the page, it behaves the exact same way.
+
+132
+00:06:19,000 --> 00:06:23,000
+So we put in Jim.name and get back Jim.
+
+133
+00:06:23,000 --> 00:06:28,000
+And we can do skills and everything works just fine.
+
+134
+00:06:28,000 --> 00:06:32,000
+Now we've seen that we can use this dot notation.
+
+135
+00:06:32,000 --> 00:06:33,000
+Jim.name
+
+136
+00:06:33,000 --> 00:06:37,000
+which basically means from the object Jim,
+
+137
+00:06:37,000 --> 00:06:40,000
+we're going to retrieve the key name,
+
+138
+00:06:40,000 --> 00:06:44,000
+and this works for the identifiers that we've given it.
+
+139
+00:06:44,000 --> 00:06:46,000
+However, what happens if we have a key that is,
+
+140
+00:06:46,000 --> 00:06:49,000
+for instance, favorite color.
+
+141
+00:06:49,000 --> 00:06:52,000
+And I'm just talking favorite color with a space.
+
+142
+00:06:52,000 --> 00:06:54,000
+Well, since there's a space in our key,
+
+143
+00:06:54,000 --> 00:06:57,000
+we have to wrap it in quotation marks,
+
+144
+00:06:57,000 --> 00:06:59,000
+and we can give our key a name.
+
+145
+00:06:59,000 --> 00:07:03,000
+We'll save favorite color.
+
+146
+00:07:03,000 --> 00:07:05,000
+Now this isn't a great key name;
+
+147
+00:07:05,000 --> 00:07:06,000
+however, we can use it,
+
+148
+00:07:06,000 --> 00:07:10,000
+because any string can be used as our key.
+
+149
+00:07:10,000 --> 00:07:15,000
+And we'll say the value is green.
+
+150
+00:07:15,000 --> 00:07:18,000
+You'll notice I added another comma after skills
+
+151
+00:07:18,000 --> 00:07:21,000
+before adding in our next key value pair,
+
+152
+00:07:21,000 --> 00:07:23,000
+and this is necessary.
+
+153
+00:07:23,000 --> 00:07:25,000
+So, we can refresh,
+
+154
+00:07:25,000 --> 00:07:27,000
+and we'll see if that's fine.
+
+155
+00:07:27,000 --> 00:07:29,000
+However, how do we access that?
+
+156
+00:07:29,000 --> 00:07:32,000
+We can't do something like this.
+
+157
+00:07:32,000 --> 00:07:38,000
+Jim.favorite color
+
+158
+00:07:38,000 --> 00:07:42,000
+As you can imagine, that's not going to work in the JavaScript processor.
+
+159
+00:07:42,000 --> 00:07:45,000
+If we refresh, we'll actually get a syntax error,
+
+160
+00:07:45,000 --> 00:07:47,000
+because we can't just have a space here.
+
+161
+00:07:47,000 --> 00:07:49,000
+It doesn't really know what to do with it.
+
+162
+00:07:49,000 --> 00:07:51,000
+Fortunately, we have an alternate way of 
+
+163
+00:07:51,000 --> 00:07:54,000
+specifying the key that we want to retrieve 
+
+164
+00:07:54,000 --> 00:07:56,000
+or set on our object,
+
+165
+00:07:56,000 --> 00:07:57,000
+and it will look familiar,
+
+166
+00:07:57,000 --> 00:08:00,000
+because it's the way we access values in our arrays.
+
+167
+00:08:00,000 --> 00:08:04,000
+We use a square bracket around our key,
+
+168
+00:08:04,000 --> 00:08:08,000
+and then of course, we have to wrap our key in a string.
+
+169
+00:08:08,000 --> 00:08:12,000
+We'll just do console.log
+
+170
+00:08:12,000 --> 00:08:14,000
+and we can refresh,
+
+171
+00:08:14,000 --> 00:08:17,000
+and we can see we can now access green.
+
+172
+00:08:17,000 --> 00:08:20,000
+Now in fact, we can do that all the way around.
+
+173
+00:08:20,000 --> 00:08:22,000
+We can even do it with name;
+
+174
+00:08:22,000 --> 00:08:27,000
+again, it has to be quoted if it's inside of the square brackets.
+
+175
+00:08:27,000 --> 00:08:28,000
+So you'll see, it's exactly the same, 
+
+176
+00:08:28,000 --> 00:08:30,000
+and we can even assign to it by doing 
+
+177
+00:08:30,000 --> 00:08:31,000
+jim
+
+178
+00:08:31,000 --> 00:08:36,000
+the key, favorite color
+
+179
+00:08:36,000 --> 00:08:40,000
+equals blue.
+
+180
+00:08:40,000 --> 00:08:42,000
+So now before we actually log our favorite color,
+
+181
+00:08:42,000 --> 00:08:45,000
+we'll have have changed it from green to blue.
+
+182
+00:08:45,000 --> 00:08:49,000
+We should see blue output in the console.
+
+183
+00:08:49,000 --> 00:08:51,000
+So that's the very basics of it. 
+
+184
+00:08:51,000 --> 00:08:53,000
+We can access our keys by either using the 
+
+185
+00:08:53,000 --> 00:08:56,000
+dot notation or the square bracket notation
+
+186
+00:08:56,000 --> 00:08:58,000
+with a expression inside;
+
+187
+00:08:58,000 --> 00:09:01,000
+for instance, our string that represents our key,
+
+188
+00:09:01,000 --> 00:09:04,000
+and when we define our object literals,
+
+189
+00:09:04,000 --> 00:09:06,000
+we can use any string key,
+
+190
+00:09:06,000 --> 00:09:08,000
+and if that key happens to be a valid identifier,
+
+191
+00:09:08,000 --> 00:09:11,000
+we can actually omit the quotation marks 
+
+192
+00:09:11,000 --> 00:09:14,000
+to make it a little bit easier to read.
+
+193
+00:09:14,000 --> 00:09:16,000
+So now we've seen how to create basic objects.
+
+194
+00:09:16,000 --> 00:09:19,000
+In the next video, we'll be adding functions to our objects 
+
+195
+00:09:19,000 --> 00:09:21,000
+to create something called methods.
+
+196
+00:09:21,000 --> 00:09:25,000
+[Treehouse]
+

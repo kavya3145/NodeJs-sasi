@@ -1,0 +1,1236 @@
+1
+00:00:00,000 --> 00:00:07,000
+[Treehouse]
+
+2
+00:00:08,000 --> 00:00:11,000
+In the last video, we saw how to create some very basic objects
+
+3
+00:00:11,000 --> 00:00:13,000
+but now we're going to be adding functions to our objects
+
+4
+00:00:13,000 --> 00:00:15,000
+to create something called a method.
+
+5
+00:00:15,000 --> 00:00:19,000
+So we've seen how encode keys and values into our objects,
+
+6
+00:00:19,000 --> 00:00:21,000
+but here's a cool thing that we can do.
+
+7
+00:00:21,000 --> 00:00:24,000
+Let's say we want to not only just have not only a regular value
+
+8
+00:00:24,000 --> 00:00:28,000
+but remember, values are functions just like any other.
+
+9
+00:00:28,000 --> 00:00:31,000
+So what if we wanted to assign to the value
+
+10
+00:00:31,000 --> 00:00:34,000
+greet
+
+11
+00:00:34,000 --> 00:00:36,000
+the function 
+
+12
+00:00:36,000 --> 00:00:38,000
+We'll take no parameters.
+
+13
+00:00:38,000 --> 00:00:41,000
+and the body will be something like this:
+
+14
+00:00:41,000 --> 00:00:44,000
+console.log
+
+15
+00:00:44,000 --> 00:00:46,000
+Hello
+
+16
+00:00:46,000 --> 00:00:50,000
+I am Jim
+
+17
+00:00:50,000 --> 00:00:52,000
+So what can we do with that?
+
+18
+00:00:52,000 --> 00:00:54,000
+Well, let's go ahead, and let's comment out
+
+19
+00:00:54,000 --> 00:00:56,000
+all of this code right here, since we don't need it,
+
+20
+00:00:56,000 --> 00:00:58,000
+and what we can do is, we can say
+
+21
+00:00:58,000 --> 00:01:01,000
+Jim.greet
+
+22
+00:01:01,000 --> 00:01:03,000
+and remember, this is just a function,
+
+23
+00:01:03,000 --> 00:01:05,000
+so we could execute it by adding 
+
+24
+00:01:05,000 --> 00:01:08,000
+parentheses after Jim.greet
+
+25
+00:01:08,000 --> 00:01:10,000
+So what we should see here,
+
+26
+00:01:10,000 --> 00:01:11,000
+if we refresh,
+
+27
+00:01:11,000 --> 00:01:14,000
+is hello, I am Jim.
+
+28
+00:01:14,000 --> 00:01:18,000
+Now there's nothing particularly interesting about that.
+
+29
+00:01:18,000 --> 00:01:21,000
+I mean, yeah, we added a function into our object,
+
+30
+00:01:21,000 --> 00:01:23,000
+and in fact, we've seen that a lot.
+
+31
+00:01:23,000 --> 00:01:26,000
+In fact, everytime we type console.log,
+
+32
+00:01:26,000 --> 00:01:28,000
+we see the exact same thing.
+
+33
+00:01:28,000 --> 00:01:31,000
+Console is an object that has a key
+
+34
+00:01:31,000 --> 00:01:34,000
+of log that happens to be a function,
+
+35
+00:01:34,000 --> 00:01:38,000
+which we execute with parentheses.
+
+36
+00:01:38,000 --> 00:01:40,000
+So that's what's been going on with console.log
+
+37
+00:01:40,000 --> 00:01:43,000
+and a few of the other methods that we've seen.
+
+38
+00:01:43,000 --> 00:01:46,000
+We use method to describe a function
+
+39
+00:01:46,000 --> 00:01:48,000
+that is a property of an object.
+
+40
+00:01:48,000 --> 00:01:51,000
+So if we just had the function called greet,
+
+41
+00:01:51,000 --> 00:01:53,000
+we'd generally refer to that as a function;
+
+42
+00:01:53,000 --> 00:01:55,000
+however, since the function greet right now
+
+43
+00:01:55,000 --> 00:01:58,000
+is associated with the object Jim,
+
+44
+00:01:58,000 --> 00:02:01,000
+we refer to it as a method on the object Jim,
+
+45
+00:02:01,000 --> 00:02:05,000
+because it's a function associated with specific object.
+
+46
+00:02:05,000 --> 00:02:07,000
+Now, we'll see a little bit more about how
+
+47
+00:02:07,000 --> 00:02:10,000
+ methods can differ slightly from functions,
+
+48
+00:02:10,000 --> 00:02:13,000
+but let's just take a look at what we have now.
+
+49
+00:02:13,000 --> 00:02:15,000
+We have a basic function that just says 
+
+50
+00:02:15,000 --> 00:02:17,000
+Hello, I am Jim.
+
+51
+00:02:17,000 --> 00:02:20,000
+However, you'll notice that there is some repeated information here.
+
+52
+00:02:20,000 --> 00:02:25,000
+The name Jim is also part of the key name.
+
+53
+00:02:25,000 --> 00:02:31,000
+So if we said Jim.name is James,
+
+54
+00:02:31,000 --> 00:02:33,000
+what would happen?
+
+55
+00:02:33,000 --> 00:02:35,000
+We would still get Hello, I am Jim,
+
+56
+00:02:35,000 --> 00:02:38,000
+but if we take a look at Jim.name,
+
+57
+00:02:38,000 --> 00:02:39,000
+it's James.
+
+58
+00:02:39,000 --> 00:02:42,000
+So if we type Jim.greet,
+
+59
+00:02:42,000 --> 00:02:46,000
+the information isn't quite up to date.
+
+60
+00:02:46,000 --> 00:02:49,000
+Ideally, when we say Hello, I am,
+
+61
+00:02:49,000 --> 00:02:53,000
+we should read the name property of this person.
+
+62
+00:02:53,000 --> 00:02:54,000
+So how could we do that? 
+
+63
+00:02:54,000 --> 00:02:57,000
+Well, let's take a look at 1 way we can do this.
+
+64
+00:02:57,000 --> 00:03:00,000
+We could say hello, I am
+
+65
+00:03:00,000 --> 00:03:02,000
+leave a space there
+
+66
+00:03:02,000 --> 00:03:05,000
+and then use + to concatenate another string,
+
+67
+00:03:05,000 --> 00:03:07,000
+and we want to get this right here,
+
+68
+00:03:07,000 --> 00:03:10,000
+Jim.name
+
+69
+00:03:10,000 --> 00:03:14,000
+So we can type in Jim.name
+
+70
+00:03:14,000 --> 00:03:17,000
+and if we refresh, we can see it says
+
+71
+00:03:17,000 --> 00:03:19,000
+Hello, I am James, because it's now reading
+
+72
+00:03:19,000 --> 00:03:20,000
+Jim.name
+
+73
+00:03:20,000 --> 00:03:23,000
+which we we changed in the code on line 17
+
+74
+00:03:23,000 --> 00:03:26,000
+to be the value James.
+
+75
+00:03:26,000 --> 00:03:28,000
+And if we change it back to Jim by doing
+
+76
+00:03:28,000 --> 00:03:32,000
+Jim.name=Jim
+
+77
+00:03:32,000 --> 00:03:34,000
+and then we type Jim.greet
+
+78
+00:03:34,000 --> 00:03:36,000
+to call that method once again, 
+
+79
+00:03:36,000 --> 00:03:39,000
+we'll see it now says Hello, I am Jim.
+
+80
+00:03:39,000 --> 00:03:41,000
+Now this kind of works;
+
+81
+00:03:41,000 --> 00:03:43,000
+however, if we, for instance,
+
+82
+00:03:43,000 --> 00:03:47,000
+wanted to create another object representing another person--
+
+83
+00:03:47,000 --> 00:03:52,000
+let's say we create Nick,
+
+84
+00:03:52,000 --> 00:03:57,000
+and I'm going to remove some of these extra things that we don't need.
+
+85
+00:03:57,000 --> 00:03:59,000
+Let's just change the name to Nick,
+
+86
+00:03:59,000 --> 00:04:01,000
+and then what do we have to do?
+
+87
+00:04:01,000 --> 00:04:04,000
+Well, if we had just left it like that,
+
+88
+00:04:04,000 --> 00:04:08,000
+if we did Nick.greet,
+
+89
+00:04:08,000 --> 00:04:10,000
+it says Hello, I am James.
+
+90
+00:04:10,000 --> 00:04:12,000
+What what we would have to do there is
+
+91
+00:04:12,000 --> 00:04:15,000
+change it to say Nick,
+
+92
+00:04:15,000 --> 00:04:17,000
+and it gets to be too much to handle.
+
+93
+00:04:17,000 --> 00:04:19,000
+Even though they're the same methods,
+
+94
+00:04:19,000 --> 00:04:21,000
+really all we want to have changed is 
+
+95
+00:04:21,000 --> 00:04:23,000
+what's in here.
+
+96
+00:04:23,000 --> 00:04:25,000
+So ideally, we wouldn't have 2 different methods;
+
+97
+00:04:25,000 --> 00:04:27,000
+we'd have the same method, but it would be 
+
+98
+00:04:27,000 --> 00:04:30,000
+relative to the person we're talking about,
+
+99
+00:04:30,000 --> 00:04:33,000
+or it would have context as to what object
+
+100
+00:04:33,000 --> 00:04:35,000
+we are referring to.
+
+101
+00:04:35,000 --> 00:04:37,000
+So 1 way we can think about maybe 
+
+102
+00:04:37,000 --> 00:04:39,000
+abstracting this a little more is
+
+103
+00:04:39,000 --> 00:04:41,000
+instead of greet taking no parameters,
+
+104
+00:04:41,000 --> 00:04:45,000
+we could say it takes a parameter called person.
+
+105
+00:04:45,000 --> 00:04:46,000
+Instead of saying Jim.name,
+
+106
+00:04:46,000 --> 00:04:50,000
+we'll say person.name
+
+107
+00:04:50,000 --> 00:04:53,000
+and I'll just copy this function between the 2 of them.
+
+108
+00:04:53,000 --> 00:04:55,000
+Again, we don't want to copy and paste our code,
+
+109
+00:04:55,000 --> 00:04:57,000
+but we'll see how JavaScript allows us to
+
+110
+00:04:57,000 --> 00:05:01,000
+get the same effect without doing this ugly code right here. 
+
+111
+00:05:01,000 --> 00:05:03,000
+So I'll just re-indent that.
+
+112
+00:05:03,000 --> 00:05:06,000
+So the greet functions between Jim and Nick
+
+113
+00:05:06,000 --> 00:05:08,000
+are the same,
+
+114
+00:05:08,000 --> 00:05:10,000
+so if we refresh,
+
+115
+00:05:10,000 --> 00:05:12,000
+it looks like we have an error here,
+
+116
+00:05:12,000 --> 00:05:14,000
+and that's because it cannot read
+
+117
+00:05:14,000 --> 00:05:16,000
+property name of undefined,
+
+118
+00:05:16,000 --> 00:05:19,000
+because we've changed how greet works,
+
+119
+00:05:19,000 --> 00:05:22,000
+so we can't just say Jim.greet and pass at nothing.
+
+120
+00:05:22,000 --> 00:05:26,000
+We have to give it the context of the person we want to use.
+
+121
+00:05:26,000 --> 00:05:29,000
+In this case, we'll say Jim.greet and we'll pass ourselves in
+
+122
+00:05:29,000 --> 00:05:32,000
+or Jim as the object.
+
+123
+00:05:32,000 --> 00:05:34,000
+So if you refresh, it says now
+
+124
+00:05:34,000 --> 00:05:36,000
+Hello, my name is James.
+
+125
+00:05:36,000 --> 00:05:39,000
+We can do the same thing for Nick.greet
+
+126
+00:05:39,000 --> 00:05:44,000
+and we'll pass at the context, which is Nick,
+
+127
+00:05:44,000 --> 00:05:45,000
+And we can see we get Hello, I am Nick
+
+128
+00:05:45,000 --> 00:05:47,000
+and Hello, I am James.
+
+129
+00:05:47,000 --> 00:05:50,000
+But again, this isn't ideal.
+
+130
+00:05:50,000 --> 00:05:51,000
+Obviously, this seems pretty stupid 
+
+131
+00:05:51,000 --> 00:05:53,000
+when we do Jim.greet and pass Jim
+
+132
+00:05:53,000 --> 00:05:56,000
+or Nick.greet and pass Nick.
+
+133
+00:05:56,000 --> 00:05:58,000
+We're duplicating our information on the line
+
+134
+00:05:58,000 --> 00:06:01,000
+when really, there should be a way to 
+
+135
+00:06:01,000 --> 00:06:04,000
+get the context of the object of the 
+
+136
+00:06:04,000 --> 00:06:06,000
+method being called.
+
+137
+00:06:06,000 --> 00:06:08,000
+For instance, if we're calling Jim.greet,
+
+138
+00:06:08,000 --> 00:06:10,000
+we should know that this greet method
+
+139
+00:06:10,000 --> 00:06:12,000
+is referring to the object, Jim
+
+140
+00:06:12,000 --> 00:06:15,000
+without having to explicitly pass it in.
+
+141
+00:06:15,000 --> 00:06:18,000
+Similarly, when we say Nick.greet,
+
+142
+00:06:18,000 --> 00:06:20,000
+the greet method should know that we're 
+
+143
+00:06:20,000 --> 00:06:22,000
+operating on the object, Nick
+
+144
+00:06:22,000 --> 00:06:25,000
+without having to explicitly pass that context in, as well.
+
+145
+00:06:25,000 --> 00:06:28,000
+Well, fortunately JavaScript provides us a
+
+146
+00:06:28,000 --> 00:06:31,000
+special sort of variable,
+
+147
+00:06:31,000 --> 00:06:33,000
+though it's not really a variable,
+
+148
+00:06:33,000 --> 00:06:35,000
+but it acts a lot like one,
+
+149
+00:06:35,000 --> 00:06:37,000
+and it's called this,
+
+150
+00:06:37,000 --> 00:06:39,000
+and that's this, THIS.
+
+151
+00:06:39,000 --> 00:06:41,000
+It's a little bit confusing to talk about,
+
+152
+00:06:41,000 --> 00:06:43,000
+but I'll try to put some emphasis when I'm
+
+153
+00:06:43,000 --> 00:06:46,000
+referring to the this object in JavaScript.
+
+154
+00:06:46,000 --> 00:06:49,000
+So why don't we try a new approach?
+
+155
+00:06:49,000 --> 00:06:51,000
+Instead of saying person
+
+156
+00:06:51,000 --> 00:06:53,000
+and passing it in to greet,
+
+157
+00:06:53,000 --> 00:06:56,000
+we'll use this thing called &quot;this&quot; in its place.
+
+158
+00:06:56,000 --> 00:07:00,000
+You'll notice our editor has highlighted this
+
+159
+00:07:00,000 --> 00:07:01,000
+with a special color,
+
+160
+00:07:01,000 --> 00:07:05,000
+because it has a special meaning in JavaScript.
+
+161
+00:07:05,000 --> 00:07:07,000
+Now I'm gonna do the same thing for Nick,
+
+162
+00:07:07,000 --> 00:07:08,000
+so we can just see that we have 
+
+163
+00:07:08,000 --> 00:07:11,000
+the same object between the 2 of them.
+
+164
+00:07:11,000 --> 00:07:14,000
+I will change our code here.
+
+165
+00:07:14,000 --> 00:07:16,000
+Instead of passing in our context,
+
+166
+00:07:16,000 --> 00:07:18,000
+we use this to give us the context
+
+167
+00:07:18,000 --> 00:07:21,000
+of how our methods were called.
+
+168
+00:07:21,000 --> 00:07:23,000
+Even though these are 2 different methods,
+
+169
+00:07:23,000 --> 00:07:24,000
+they could be the same.
+
+170
+00:07:24,000 --> 00:07:29,000
+For instance, we could do this,
+
+171
+00:07:29,000 --> 00:07:31,000
+so we don't duplicate our code. 
+
+172
+00:07:31,000 --> 00:07:34,000
+You'll notice I'm not calling greet,
+
+173
+00:07:34,000 --> 00:07:35,000
+so I'm saying Nick's greet
+
+174
+00:07:35,000 --> 00:07:37,000
+is the same as Jim's greet.
+
+175
+00:07:37,000 --> 00:07:40,000
+So if we run this,
+
+176
+00:07:40,000 --> 00:07:42,000
+I refreshed it, and we get the same code.
+
+177
+00:07:42,000 --> 00:07:44,000
+The greet functions between the 2 of them
+
+178
+00:07:44,000 --> 00:07:47,000
+are exactly the same.
+
+179
+00:07:47,000 --> 00:07:48,000
+However, when they are invoked, 
+
+180
+00:07:48,000 --> 00:07:51,000
+they're invoked with 2 different contexts.
+
+181
+00:07:51,000 --> 00:07:53,000
+When we call it Jim.greet,
+
+182
+00:07:53,000 --> 00:07:56,000
+this holds the value of Jim.
+
+183
+00:07:56,000 --> 00:07:58,000
+However, when we call it Nick.greet,
+
+184
+00:07:58,000 --> 00:08:03,000
+this holds the value of Nick.
+
+185
+00:08:03,000 --> 00:08:06,000
+And this is always going to be bound to the
+
+186
+00:08:06,000 --> 00:08:09,000
+value at the very last second.
+
+187
+00:08:09,000 --> 00:08:11,000
+Normally, our variables are easy to reason about
+
+188
+00:08:11,000 --> 00:08:14,000
+because we can look at our variable scope
+
+189
+00:08:14,000 --> 00:08:17,000
+in our actual code and reason fairly easily
+
+190
+00:08:17,000 --> 00:08:19,000
+about what any variable will bind to.
+
+191
+00:08:19,000 --> 00:08:22,000
+However, this is very special
+
+192
+00:08:22,000 --> 00:08:26,000
+in that its actually given its value when we call our method
+
+193
+00:08:26,000 --> 00:08:28,000
+instead of when we write our method. 
+
+194
+00:08:28,000 --> 00:08:30,000
+So how does this get its binding?
+
+195
+00:08:30,000 --> 00:08:32,000
+Or how does this get its context?
+
+196
+00:08:32,000 --> 00:08:35,000
+Well, its all in how we call our method.
+
+197
+00:08:35,000 --> 00:08:39,000
+For instance, if we call it Jim.greet,
+
+198
+00:08:39,000 --> 00:08:41,000
+because we called it like a method using
+
+199
+00:08:41,000 --> 00:08:43,000
+this dot notation.
+
+200
+00:08:43,000 --> 00:08:46,000
+When we call greet, it's called with this
+
+201
+00:08:46,000 --> 00:08:48,000
+bound to what's on the left-hand side 
+
+202
+00:08:48,000 --> 00:08:49,000
+of our dot here,
+
+203
+00:08:49,000 --> 00:08:51,000
+which is Jim.
+
+204
+00:08:51,000 --> 00:08:52,000
+The same thing happens for Nick.
+
+205
+00:08:52,000 --> 00:08:54,000
+When we call Nick.greet,
+
+206
+00:08:54,000 --> 00:08:58,000
+JavaScript sees that we're calling the method on an object Nick,
+
+207
+00:08:58,000 --> 00:09:02,000
+and it will assign this to the value of Nick.
+
+208
+00:09:02,000 --> 00:09:05,000
+So if we refresh, we can see it still works
+
+209
+00:09:05,000 --> 00:09:09,000
+and this binding works with the square bracket notation, as well.
+
+210
+00:09:09,000 --> 00:09:16,000
+If we say Jim, with the open square bracket, greet
+
+211
+00:09:16,000 --> 00:09:18,000
+and then we're calling the method,
+
+212
+00:09:18,000 --> 00:09:21,000
+so we have close square brackets and then our parentheses
+
+213
+00:09:21,000 --> 00:09:24,000
+the effect will be exactly the same.
+
+214
+00:09:24,000 --> 00:09:26,000
+Now there is a gotcha here.
+
+215
+00:09:26,000 --> 00:09:29,000
+So this works, because we're calling 
+
+216
+00:09:29,000 --> 00:09:32,000
+Jim &quot;greet&quot; then parentheses here.
+
+217
+00:09:32,000 --> 00:09:35,000
+What what happens if we try to take our
+
+218
+00:09:35,000 --> 00:09:39,000
+greet method and store it into a variable?
+
+219
+00:09:39,000 --> 00:09:46,000
+With a var Jim greet = Jim.greet
+
+220
+00:09:46,000 --> 00:09:47,000
+and we're not putting parentheses.
+
+221
+00:09:47,000 --> 00:09:50,000
+We're trying to actually get a reference to our function,
+
+222
+00:09:50,000 --> 00:09:53,000
+so Jim.greet will now contain a function.
+
+223
+00:09:53,000 --> 00:09:55,000
+But what happens when we try to
+
+224
+00:09:55,000 --> 00:10:00,000
+call JimGreet like that?
+
+225
+00:10:00,000 --> 00:10:03,000
+What will happen?
+
+226
+00:10:03,000 --> 00:10:07,000
+If we refresh, we'll see it says Hello I am.
+
+227
+00:10:07,000 --> 00:10:11,000
+And that's because, when we call JimGreet 
+
+228
+00:10:11,000 --> 00:10:12,000
+here on line 29,
+
+229
+00:10:12,000 --> 00:10:14,000
+we're calling it as a normal function
+
+230
+00:10:14,000 --> 00:10:17,000
+not as a property of Jim.
+
+231
+00:10:17,000 --> 00:10:20,000
+So this binding of this to the object
+
+232
+00:10:20,000 --> 00:10:24,000
+only happens when we call it like Nick.greet
+
+233
+00:10:24,000 --> 00:10:28,000
+or using square brackets Jim open square brackets greet
+
+234
+00:10:28,000 --> 00:10:30,000
+and call it immediately.
+
+235
+00:10:30,000 --> 00:10:33,000
+If we grab that function out of the object
+
+236
+00:10:33,000 --> 00:10:36,000
+and store it into a variable and call it later,
+
+237
+00:10:36,000 --> 00:10:41,000
+we've lost the context to what that method was referring to,
+
+238
+00:10:41,000 --> 00:10:43,000
+and it just becomes a normal function.
+
+239
+00:10:43,000 --> 00:10:47,000
+But what happened, we just see, Hello, I am
+
+240
+00:10:47,000 --> 00:10:49,000
+and that's actually interesting, because 
+
+241
+00:10:49,000 --> 00:10:52,000
+what is this when we call a normal function 
+
+242
+00:10:52,000 --> 00:10:57,000
+that is not being invoked like a method?
+
+243
+00:10:57,000 --> 00:10:59,000
+Let's just check it out.
+
+244
+00:10:59,000 --> 00:11:07,000
+We'll create a function called what is this?
+
+245
+00:11:07,000 --> 00:11:13,000
+It will simply console.log the value of this,
+
+246
+00:11:13,000 --> 00:11:16,000
+so our last line here in our console.log
+
+247
+00:11:16,000 --> 00:11:18,000
+we'll call what is this 
+
+248
+00:11:18,000 --> 00:11:21,000
+and our last line when we see it here
+
+249
+00:11:21,000 --> 00:11:25,000
+is we see logged something called DOM window.
+
+250
+00:11:25,000 --> 00:11:28,000
+Now this is a very problematic part of JavaScript here.
+
+251
+00:11:28,000 --> 00:11:32,000
+When we call a function without a method binding,
+
+252
+00:11:32,000 --> 00:11:35,000
+like Jim.greet, we just call it.
+
+253
+00:11:35,000 --> 00:11:38,000
+This refers to the global object.
+
+254
+00:11:38,000 --> 00:11:40,000
+What's the global object?
+
+255
+00:11:40,000 --> 00:11:42,000
+Well, in our case, inside the browser,
+
+256
+00:11:42,000 --> 00:11:43,000
+it's window,
+
+257
+00:11:43,000 --> 00:11:45,000
+which means anytime we create a variable,
+
+258
+00:11:45,000 --> 00:11:48,000
+it actually is created as property of 
+
+259
+00:11:48,000 --> 00:11:49,000
+this global object. 
+
+260
+00:11:49,000 --> 00:11:52,000
+For instance, windw is just an object;
+
+261
+00:11:52,000 --> 00:11:54,000
+however, any of our global variables,
+
+262
+00:11:54,000 --> 00:11:58,000
+like, for instance, in this script, we've defined a variable called Jim,
+
+263
+00:11:58,000 --> 00:12:03,000
+it's assigned as a property of the window object.
+
+264
+00:12:03,000 --> 00:12:05,000
+So to reach the variable Jim,
+
+265
+00:12:05,000 --> 00:12:07,000
+we can just type window.Jim
+
+266
+00:12:07,000 --> 00:12:09,000
+and we see we see we get the object which
+
+267
+00:12:09,000 --> 00:12:10,000
+represents Jim. 
+
+268
+00:12:10,000 --> 00:12:12,000
+So what happened is when we call
+
+269
+00:12:12,000 --> 00:12:13,000
+what is this,
+
+270
+00:12:13,000 --> 00:12:16,000
+this is literally window.
+
+271
+00:12:16,000 --> 00:12:19,000
+And the reason we got an empty string
+
+272
+00:12:19,000 --> 00:12:20,000
+after I am
+
+273
+00:12:20,000 --> 00:12:24,000
+is because window in the browser actually has a name property,
+
+274
+00:12:24,000 --> 00:12:26,000
+and by default, 
+
+275
+00:12:26,000 --> 00:12:28,000
+it's the empty string.
+
+276
+00:12:28,000 --> 00:12:30,000
+So what if we change window.name
+
+277
+00:12:30,000 --> 00:12:38,000
+or what if we just said var name = the window?
+
+278
+00:12:38,000 --> 00:12:40,000
+So by doing that,
+
+279
+00:12:40,000 --> 00:12:44,000
+window.name is the window,
+
+280
+00:12:44,000 --> 00:12:48,000
+and if we call it Jim Greet again,
+
+281
+00:12:48,000 --> 00:12:50,000
+since we're calling it like a function, this
+
+282
+00:12:50,000 --> 00:12:53,000
+will be bound to window and window.name
+
+283
+00:12:53,000 --> 00:12:56,000
+is the window.
+
+284
+00:12:56,000 --> 00:12:58,000
+So this is actually a very dangerous part.
+
+285
+00:12:58,000 --> 00:13:01,000
+If we call our method in the incorrect way
+
+286
+00:13:01,000 --> 00:13:03,000
+and use this,
+
+287
+00:13:03,000 --> 00:13:05,000
+we could end up reading from or signing to
+
+288
+00:13:05,000 --> 00:13:07,000
+the global name space,
+
+289
+00:13:07,000 --> 00:13:10,000
+which can really difficult to debug
+
+290
+00:13:10,000 --> 00:13:12,000
+and really harmful to our programs.
+
+291
+00:13:12,000 --> 00:13:15,000
+In fact, in later versions of JavaScript
+
+292
+00:13:15,000 --> 00:13:18,000
+that are being developed now and even in some browsers
+
+293
+00:13:18,000 --> 00:13:22,000
+in strict mode, when we call a function,
+
+294
+00:13:22,000 --> 00:13:24,000
+like this, what is this?
+
+295
+00:13:24,000 --> 00:13:26,000
+without any context,
+
+296
+00:13:26,000 --> 00:13:28,000
+this will be undefined.
+
+297
+00:13:28,000 --> 00:13:32,000
+However, the default behavior is that this will be the window,
+
+298
+00:13:32,000 --> 00:13:34,000
+which can be problematic.
+
+299
+00:13:34,000 --> 00:13:35,000
+So be careful.
+
+300
+00:13:35,000 --> 00:13:38,000
+Whenever you see this in a function,
+
+301
+00:13:38,000 --> 00:13:41,000
+recognize that it's to be used as a method,
+
+302
+00:13:41,000 --> 00:13:42,000
+meaning that it should only be called 
+
+303
+00:13:42,000 --> 00:13:47,000
+in a way where this will be bound to an object that you're referring to.
+
+304
+00:13:47,000 --> 00:13:50,000
+Actually, we can assign the the value of this
+
+305
+00:13:50,000 --> 00:13:53,000
+when we envoke it ourselves,
+
+306
+00:13:53,000 --> 00:13:56,000
+and we'll be doing that in the next video.
+
+307
+00:13:56,000 --> 00:13:57,000
+In the next video, we'll see how to control 
+
+308
+00:13:57,000 --> 00:14:01,000
+the value of this with the call and apply methods.
+
+309
+00:14:01,000 --> 00:14:04,000
+[Treehouse]
+
